@@ -8,7 +8,7 @@ import { ApiService } from '../../../core/services/api.service';
     standalone: true,
     imports: [CommonModule, RouterModule],
     template: `
-    <div class="relative w-full overflow-hidden group h-[60vh] min-h-[400px] lg:h-[650px]">
+    <div class="relative w-full overflow-hidden group" [ngClass]="heightClass">
         <!-- Loading State -->
         <div *ngIf="loading" class="absolute inset-0 z-50 flex items-center justify-center bg-brand-purple">
             <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-brand-orange"></div>
@@ -22,7 +22,7 @@ import { ApiService } from '../../../core/services/api.service';
                 <img [src]="img" class="w-full h-full object-cover transform scale-105 transition-transform duration-[10000ms] ease-linear"
                      [ngClass]="{'scale-100': i === currentBgIndex}" alt="Background">
                  <!-- Gradient Overlay to ensure text readability -->
-                <div class="absolute inset-0 bg-gradient-to-t from-brand-purple/95 via-brand-purple/80 to-brand-purple/60 mix-blend-multiply"></div>
+                <div class="absolute inset-0" [ngClass]="gradientClass"></div>
                 <div class="absolute inset-0 bg-black/20"></div>
             </div>
         </div>
@@ -67,6 +67,8 @@ export class BannerCarouselComponent implements OnInit, OnDestroy {
     @Input() pageContext: string = 'HOME';
     @Input() fallbackTitle: string = 'Welcome to KMATI';
     @Input() fallbackSubtitle: string = 'Innovating for the Future';
+    @Input() heightClass: string = 'h-[60vh] min-h-[400px] lg:h-[650px]';
+    @Input() gradientClass: string = 'bg-gradient-to-t from-brand-purple/95 via-brand-purple/80 to-brand-purple/60 mix-blend-multiply';
 
     banners: any[] = [];
     loading = true;

@@ -124,12 +124,74 @@ def populate():
 
     for section in automotive_sections:
         IndustrySection.objects.create(industry=automotive, **section)
-    other_industries = ["Logistics", "Pharma"]
-    for ind_name in other_industries:
-        ind = Industry.objects.create(name=ind_name, description=f"Solutions for {ind_name} sector.")
-        IndustrySection.objects.create(industry=ind, title="Coming Soon", content="Specific details for this industry are coming soon.")
 
-    print(f"Created and populated Healthcare industry + {len(other_industries)} placeholder industries.")
+    # Logistics Data
+    logistics = Industry.objects.create(
+        name="Logistics",
+        description="Helping clients build an insight-driven culture for better business. The rapid evolution in the logistics sector has streamlined Operations & Efficiency, but at the same time, the digital age has impacted majorly on the industry. The effects can be seen in Customer Experience, Digitalization of Transactions, and Technology Adaption with respect to the transaction volume and the Evermore demanding consumers. Thereby enormous flow of goods will generate a huge amount of data that can be harnessed using Intelligent Analytics.",
+        banner_image="industries/banners/logistics_banner.jpg" 
+    )
+
+    logistics_sections = [
+        {
+            "title": "Last Mile Delivery",
+            "content": "Last-mile delivery is one of the most challenging components of the whole shipping process, despite being one of the most important variables in customer satisfaction. Processing of data collected from GPS helps build a system at its core. Optimizing the route with telematics databases can be tapped to automatically adjust the routes based on real-time data of the latest order, Routing, Address identification for ease of delivery.",
+            "image": "industries/sections/logistics_last_mile.jpg"
+        },
+        {
+            "title": "Warehouse surveillance – Video Analytics",
+            "content": "Securing warehouses from both external and Internal threats/thefts has been a critical challenge with the increase in the trading of goods. It is a critical decision to make sure the valuables are well protected from break-Ins in a commercial space which can now be enabled using smart video analytics application.",
+            "image": "industries/sections/logistics_warehouse.jpg"
+        },
+        {
+            "title": "Demand Forecasting",
+            "content": "To anticipate future events using data analytics, the data sources and datasets are used with the combination of machine learning algorithms to discover patterns, demand signals, and spot intricate relationships. AI-powered forecasting models can cut errors by 30 to 50 percent with the increased accuracy resulting in a 65 percent reduction in missed sales.",
+            "image": "industries/sections/logistics_forecasting.jpg"
+        },
+        {
+            "title": "Sentiment analysis",
+            "content": "Classification of text based on keywords.<br><br><a href='#' class='btn-primary'>Download Case Study</a>",
+            "image": "industries/sections/logistics_sentiment.jpg"
+        }
+    ]
+
+    for section in logistics_sections:
+        IndustrySection.objects.create(industry=logistics, **section)
+
+    # Pharma Data
+    pharma = Industry.objects.create(
+        name="Pharma",
+        description="Technology for enabling better client experience. The pharmaceutical landscape has made a progress in the field of precision medicines has opened up numerous possibilities to target different health maladies out of which major focus for precision health, rare genetic disorders, mutation spectrum of genetic and complex diseases which makes an array of opportunities for personalized medicine. The current challenges of having semi-structured data to develop breakthrough therapies is still stagnant.",
+        banner_image="industries/banners/pharma_banner.jpg" 
+    )
+
+    pharma_sections = [
+        {
+            "title": "Data Lake Preparation for Genomic Data",
+            "content": "Practical challenges with genomic datasets containing semi-structured records layering with respect to its size & complexity while uncertainty in the interpretation of regulatory requirements for return of results. Data from Medical Devices, Medical Records, Images and Insurance claims (Stage-1).",
+            "image": "industries/sections/pharma_data_lake.jpg"
+        },
+        {
+            "title": "Developing models to show correlation between Genomic data",
+            "content": "The variation being less than 1% while comparing a healthy person Genome with a person having Genetic disorder as its needs a huge computation/processing to find the sequence of records to discover the variation patterns. Developing models to show correlation between Genomic data and other set of data to provide greater insights into research findings (Stage-2).",
+            "image": "industries/sections/pharma_models.jpg"
+        },
+        {
+            "title": "Genomic Data Analysis for faster Drug Discovery",
+            "content": "Genomic sequence can be Patient data analysis which can be performed combining the stage 1 records and stage 2 insights which helps for a drug discovery, Advance Personalization in healthcare & predict the hereditary diseases.",
+            "image": "industries/sections/pharma_drug_discovery.jpg"
+        },
+        {
+            "title": "Recommend next best steps for sales",
+            "content": "The competitive landscape market for the Genomic insights & bioinformatics progression will boost the companies to excel their Diagnostics & Research Advancements resulting the spike in growth trajectory to Novel Pharma discoveries & Genetic solutions.",
+            "image": "industries/sections/pharma_sales.jpg"
+        }
+    ]
+
+    for section in pharma_sections:
+        IndustrySection.objects.create(industry=pharma, **section)
+
+    print(f"Created and populated Healthcare, Automotive, Logistics, and Pharma industries.")
 
     # 2. Leadership
     leadership_data = [
