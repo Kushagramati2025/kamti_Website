@@ -1,0 +1,116 @@
+<div class="bg-gray-50 min-h-screen">
+    <!-- Dynamic Banner Carousel -->
+    <app-banner-carousel pageContext="ABOUT" fallbackTitle="About KMATI"
+        fallbackSubtitle="Empowering businesses through innovation since 2018">
+    </app-banner-carousel>
+
+    <!-- Content Section -->
+    <div class="relative py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <!-- Image Side -->
+                <div class="relative opacity-0 animate-slide-in-right" style="animation-fill-mode: forwards;">
+                    <div
+                        class="w-full h-full object-cover rounded-2xl shadow-2xl overflow-hidden transform hover:rotate-1 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80"
+                            alt="Team collaboration" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Text Side -->
+                <div class="mt-12 lg:mt-0 opacity-0 animate-fade-in-up"
+                    style="animation-delay: 400ms; animation-fill-mode: forwards;">
+                    <h2 class="text-3xl font-extrabold text-brand-dark sm:text-4xl mb-6">About Us</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        KMATI is a team of serial entrepreneurs and domain experts with a core focus on Data Analytics,
+                        Cloud Computing, Artificial Intelligence, and Machine Learning.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Our mission is to be a globally dominant platform-based services company in chosen industry
+                        segments by 2025. We strive to enhance the quality of life by building world-class products and
+                        solutions through the innovative application of technology.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div
+                            class="p-4 bg-white rounded-xl shadow-md border-l-4 border-brand-orange hover:-translate-y-1 transition-transform">
+                            <span class="block text-3xl font-bold text-brand-dark mb-1">5+</span>
+                            <span class="text-sm text-gray-500 font-medium uppercase">Years of Excellence</span>
+                        </div>
+                        <div
+                            class="p-4 bg-white rounded-xl shadow-md border-l-4 border-brand-purple hover:-translate-y-1 transition-transform">
+                            <span class="block text-3xl font-bold text-brand-dark mb-1">100+</span>
+                            <span class="text-sm text-gray-500 font-medium uppercase">Projects Delivered</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Values Section -->
+    <div class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold text-brand-dark mb-12">Our Core Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Value 1 -->
+                <div
+                    class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2 group">
+                    <div
+                        class="w-16 h-16 bg-brand-purple/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-purple transition-colors">
+                        <svg class="w-8 h-8 text-brand-purple group-hover:text-white" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2">Freedom to Innovate</h3>
+                    <p class="text-sm text-gray-500">We encourage creativity and new ideas.</p>
+                </div>
+                <!-- Value 2 -->
+                <div
+                    class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2 group">
+                    <div
+                        class="w-16 h-16 bg-brand-orange/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-orange transition-colors">
+                        <svg class="w-8 h-8 text-brand-orange group-hover:text-white" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2">Tolerance for Failure</h3>
+                    <p class="text-sm text-gray-500">Embracing "fast fail" to accelerate learning.</p>
+                </div>
+                <!-- Value 3 -->
+                <div
+                    class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2 group">
+                    <div
+                        class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-500 transition-colors">
+                        <svg class="w-8 h-8 text-green-600 group-hover:text-white" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2">Individual Brilliance</h3>
+                    <p class="text-sm text-gray-500">Recognizing talent within the context of team play.</p>
+                </div>
+                <!-- Value 4 -->
+                <div
+                    class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2 group">
+                    <div
+                        class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-500 transition-colors">
+                        <svg class="w-8 h-8 text-blue-600 group-hover:text-white" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2">Value-based Relationships</h3>
+                    <p class="text-sm text-gray-500">Mutually beneficial relationships with all stakeholders.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

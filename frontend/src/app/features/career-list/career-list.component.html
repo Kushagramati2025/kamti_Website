@@ -1,0 +1,49 @@
+<div class="bg-gray-50 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-brand-dark sm:text-4xl">Join Our Team</h2>
+            <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                Explore exciting opportunities to shape the future of technology with us.
+            </p>
+        </div>
+
+        <div *ngIf="loading" class="flex justify-center">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+        </div>
+
+        <div *ngIf="!loading" class="space-y-4">
+            <div *ngFor="let job of jobs"
+                class="bg-white shadow overflow-hidden rounded-md cursor-pointer hover:shadow-md transition-shadow">
+                <a [routerLink]="['/careers', job.id]" class="block hover:bg-gray-50">
+                    <div class="px-4 py-4 sm:px-6">
+                        <div class="flex items-center justify-between">
+                            <p class="text-sm font-medium text-primary truncate">{{ job.title }}</p>
+                            <div class="ml-2 flex-shrink-0 flex">
+                                <p
+                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                    {{ job.job_type }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mt-2 sm:flex sm:justify-between">
+                            <div class="sm:flex">
+                                <p class="flex items-center text-sm text-gray-500">
+                                    <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    {{ job.location }}
+                                </p>
+                            </div>
+                            <div class="mt-2 flex items-center text-sm text-gray-500 sm:mt-0">
+                                <p>Posted on {{ job.posted_date }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

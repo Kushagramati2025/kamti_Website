@@ -1,0 +1,34 @@
+<div *ngIf="loading" class="min-h-screen flex justify-center items-center">
+    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+</div>
+
+<div *ngIf="!loading && post" class="relative py-16 bg-white overflow-hidden">
+    <div class="relative px-4 sm:px-6 lg:px-8">
+        <div class="text-lg max-w-prose mx-auto">
+            <h1>
+                <span class="block text-base text-center text-primary font-semibold tracking-wide uppercase">{{
+                    post.category || 'Blog' }}</span>
+                <span
+                    class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-brand-dark sm:text-4xl">{{
+                    post.title }}</span>
+            </h1>
+            <div class="mt-8 flex justify-center">
+                <img class="rounded-lg shadow-lg object-cover h-96 w-full" [src]="post.image" alt="">
+            </div>
+            <p class="mt-8 text-xl text-gray-500 leading-8 text-justify whitespace-pre-wrap">{{ post.content }}</p>
+        </div>
+
+        <div class="max-w-prose mx-auto mt-6 flex items-center justify-between border-t border-gray-200 pt-6">
+            <div class="flex items-center">
+                <div
+                    class="h-10 w-10 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 font-bold">
+                    {{ post.author.charAt(0) }}
+                </div>
+                <div class="ml-3">
+                    <p class="text-sm font-medium text-brand-dark">{{ post.author }}</p>
+                    <p class="text-sm text-gray-500">{{ post.created_at | date:'mediumDate' }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

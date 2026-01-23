@@ -1,0 +1,154 @@
+<div class="relative h-screen w-full bg-gray-50 overflow-hidden">
+
+    <!-- FIXED FLOATING CARD (Overlay) -->
+    <!-- Positioned fixed in the TOP-RIGHT corner, floating 'on' the sliding window -->
+    <!-- Size reduced (w-48) and moved to right (right-10) as requested -->
+    <div
+        class="fixed right-10 top-24 z-50 flex flex-col items-center justify-center pointer-events-none md:block hidden animate-fade-in-down">
+
+        <!-- The Card Itself (Pointer events enabled for hover) -->
+        <div class="relative pointer-events-auto transform transition-all duration-500 hover:scale-105 hover:rotate-1">
+            <!-- Glow Effect -->
+            <div class="absolute -inset-4 bg-brand-purple/20 rounded-full blur-xl animate-pulse-slow"></div>
+
+            <div class="relative bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl p-2 border border-white/40">
+                <img src="assets/certified-logo.avif" alt="Certified Logo" class="w-32 h-auto rounded-xl">
+
+                <!-- Shine effect -->
+                <div
+                    class="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/40 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- MAIN SCROLLING CONTENT (The "Sliding Window") -->
+    <!-- Full width and height, scrolls independently behind the fixed card -->
+    <div class="h-full w-full overflow-y-auto relative no-scrollbar bg-white scroll-smooth p-0 m-0">
+
+        <!-- Content Loader -->
+        <div *ngIf="loading" class="fixed inset-0 z-[60] flex items-center justify-center bg-white/90 backdrop-blur-sm">
+            <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-brand-purple"></div>
+        </div>
+
+        <!-- Banner Carousel -->
+        <div class="relative w-full">
+            <app-banner-carousel pageContext="HOME" fallbackTitle="Welcome to KMATI"
+                fallbackSubtitle="Innovating for the Future">
+            </app-banner-carousel>
+        </div>
+
+        <!-- Overlapping Industries Section with Navigation -->
+        <div class="relative w-full z-30 -mt-24 md:-mt-48 pb-12">
+            <div class="w-full px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-8 items-stretch justify-between">
+                    <!-- Industries Grid -->
+                    <div class="flex-1">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                            <!-- Healthcare -->
+                            <a routerLink="/industries/healthcare"
+                                class="group bg-white rounded-xl shadow-xl p-6 flex flex-col items-center text-center transform hover:scale-110 hover:-translate-y-4 transition-all duration-300 border border-gray-100 hover:border-brand-orange hover:shadow-2xl hover:shadow-brand-orange/20 h-full animate-fade-in-up cursor-pointer"
+                                style="animation-delay: 0.1s">
+                                <div
+                                    class="w-14 h-14 mb-4 flex items-center justify-center rounded-full bg-brand-light group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
+                                    <svg class="w-8 h-8 text-brand-orange group-hover:text-white" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                    </svg>
+                                </div>
+                                <h3
+                                    class="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-orange transition-colors">
+                                    Healthcare</h3>
+                                <p class="text-xs text-gray-500 group-hover:text-gray-700">Predictive analytics for
+                                    better patient outcomes.</p>
+                            </a>
+
+                            <!-- Automotive -->
+                            <a routerLink="/industries/automotive"
+                                class="group bg-white rounded-xl shadow-xl p-6 flex flex-col items-center text-center transform hover:scale-110 hover:-translate-y-4 transition-all duration-300 border border-gray-100 hover:border-brand-orange hover:shadow-2xl hover:shadow-brand-orange/20 h-full animate-fade-in-up cursor-pointer"
+                                style="animation-delay: 0.2s">
+                                <div
+                                    class="w-14 h-14 mb-4 flex items-center justify-center rounded-full bg-brand-light group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
+                                    <svg class="w-8 h-8 text-brand-orange group-hover:text-white" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <h3
+                                    class="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-orange transition-colors">
+                                    Automotive</h3>
+                                <p class="text-xs text-gray-500 group-hover:text-gray-700">Driving efficiency in supply
+                                    chains and sales.</p>
+                            </a>
+
+                            <!-- Logistics -->
+                            <a routerLink="/industries/logistics"
+                                class="group bg-white rounded-xl shadow-xl p-6 flex flex-col items-center text-center transform hover:scale-110 hover:-translate-y-4 transition-all duration-300 border border-gray-100 hover:border-brand-orange hover:shadow-2xl hover:shadow-brand-orange/20 h-full animate-fade-in-up cursor-pointer"
+                                style="animation-delay: 0.3s">
+                                <div
+                                    class="w-14 h-14 mb-4 flex items-center justify-center rounded-full bg-brand-light group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
+                                    <svg class="w-8 h-8 text-brand-orange group-hover:text-white" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <h3
+                                    class="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-orange transition-colors">
+                                    Logistics</h3>
+                                <p class="text-xs text-gray-500 group-hover:text-gray-700">Optimizing routes and fleet
+                                    management.</p>
+                            </a>
+
+                            <!-- Pharma -->
+                            <a routerLink="/industries/pharma"
+                                class="group bg-white rounded-xl shadow-xl p-6 flex flex-col items-center text-center transform hover:scale-110 hover:-translate-y-4 transition-all duration-300 border border-gray-100 hover:border-brand-orange hover:shadow-2xl hover:shadow-brand-orange/20 h-full animate-fade-in-up cursor-pointer"
+                                style="animation-delay: 0.4s">
+                                <div
+                                    class="w-14 h-14 mb-4 flex items-center justify-center rounded-full bg-brand-light group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
+                                    <svg class="w-8 h-8 text-brand-orange group-hover:text-white" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                                    </svg>
+                                </div>
+                                <h3
+                                    class="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-orange transition-colors">
+                                    Pharma</h3>
+                                <p class="text-xs text-gray-500 group-hover:text-gray-700">Accelerating drug discovery
+                                    and compliance.</p>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Horizontal Quick Links Menu -->
+                <div class="mt-12 flex flex-wrap justify-center items-center gap-6 md:gap-12 pb-8">
+                    <a routerLink="/leadership"
+                        class="text-sm md:text-base font-extrabold text-brand-purple hover:text-brand-orange uppercase tracking-widest transition-all duration-300 hover:scale-110 drop-shadow-sm">Leadership</a>
+                    <a routerLink="/partners"
+                        class="text-sm md:text-base font-extrabold text-brand-purple hover:text-brand-orange uppercase tracking-widest transition-all duration-300 hover:scale-110 drop-shadow-sm">Partners</a>
+                    <a routerLink="/values"
+                        class="text-sm md:text-base font-extrabold text-brand-purple hover:text-brand-orange uppercase tracking-widest transition-all duration-300 hover:scale-110 drop-shadow-sm">Values</a>
+                    <a routerLink="/vision-mission"
+                        class="text-sm md:text-base font-extrabold text-brand-purple hover:text-brand-orange uppercase tracking-widest transition-all duration-300 hover:scale-110 drop-shadow-sm">Vision
+                        and Mission</a>
+                    <a routerLink="/blog"
+                        class="text-sm md:text-base font-extrabold text-brand-purple hover:text-brand-orange uppercase tracking-widest transition-all duration-300 hover:scale-110 drop-shadow-sm">Blog</a>
+                    <a routerLink="/contact"
+                        class="text-sm md:text-base font-extrabold text-brand-purple hover:text-brand-orange uppercase tracking-widest transition-all duration-300 hover:scale-110 drop-shadow-sm">Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of content -->
+        <app-footer></app-footer>
+    </div>
+</div>

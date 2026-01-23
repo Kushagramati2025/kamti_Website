@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+
+<!-- HOME PAGE: Content manages its own scrolling (Sliding Window) -->
+<ng-container *ngIf="isHome">
+    <main class="h-full w-full">
+        <router-outlet></router-outlet>
+    </main>
+</ng-container>
+
+<!-- OTHER PAGES: Main Layout provides scrolling wrapper -->
+<div *ngIf="!isHome" class="fixed inset-0 top-0 overflow-y-auto w-full bg-gray-50 scroll-smooth z-0 pt-20">
+    <main class="min-h-[calc(100vh-80px)]">
+        <router-outlet></router-outlet>
+    </main>
+    <app-footer></app-footer>
+</div>

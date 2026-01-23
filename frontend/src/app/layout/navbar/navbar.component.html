@@ -1,0 +1,113 @@
+<nav class="fixed w-full top-0 z-50 bg-white shadow-md transition-all duration-300">
+    <div class="w-full px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20">
+            <!-- Logo Section -->
+            <div class="flex-shrink-0 flex items-center pl-0">
+                <a routerLink="/" class="flex items-center">
+                    <img src="assets/logo.avif" alt="Kushagramati Analytics" class="h-16 w-auto">
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                <a routerLink="/" routerLinkActive="border-b-2 border-brand-orange"
+                    [routerLinkActiveOptions]="{exact: true}"
+                    class="inline-flex items-center px-1 pt-1 text-sm font-bold uppercase tracking-wide transition-colors h-full text-gray-700 hover:text-brand-orange">
+                    Home
+                </a>
+
+                <a routerLink="/services" routerLinkActive="border-b-2 border-brand-orange"
+                    class="inline-flex items-center px-1 pt-1 text-sm font-bold uppercase tracking-wide transition-colors h-full text-gray-700 hover:text-brand-orange">
+                    Services
+                </a>
+
+                <!-- Industry Dropdown -->
+                <div class="relative h-full flex items-center group">
+                    <button type="button"
+                        class="inline-flex items-center px-1 pt-1 text-sm font-bold uppercase tracking-wide transition-colors focus:outline-none h-full bg-transparent text-gray-700 group-hover:text-brand-orange">
+                        Industry Solutions
+                        <svg class="ml-1 h-4 w-4 text-gray-400 group-hover:text-brand-orange"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+
+                    <!-- Dropdown Menu (Remains White Background) -->
+                    <div
+                        class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 translate-y-2 top-full text-left">
+                        <div class="py-1" role="menu">
+                            <a routerLink="/industries/healthcare"
+                                class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-brand-orange border-b border-gray-100 uppercase font-medium">Healthcare</a>
+                            <a routerLink="/industries/automotive"
+                                class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-brand-orange border-b border-gray-100 uppercase font-medium">Automotive</a>
+                            <a routerLink="/industries/logistics"
+                                class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-brand-orange border-b border-gray-100 uppercase font-medium">Logistics</a>
+                            <a routerLink="/industries/pharma"
+                                class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-brand-orange uppercase font-medium">Pharma</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a routerLink="/about" routerLinkActive="border-b-2 border-brand-orange"
+                    class="inline-flex items-center px-1 pt-1 text-sm font-bold uppercase tracking-wide transition-colors h-full text-gray-700 hover:text-brand-orange">
+                    About Us
+                </a>
+
+                <a routerLink="/careers" routerLinkActive="border-b-2 border-brand-orange"
+                    class="inline-flex items-center px-1 pt-1 text-sm font-bold uppercase tracking-wide transition-colors h-full text-gray-700 hover:text-brand-orange">
+                    Careers
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="-mr-2 flex items-center md:hidden">
+                <button (click)="isMobileMenuOpen = !isMobileMenuOpen" type="button"
+                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-purple">
+                    <span class="sr-only">Open main menu</span>
+                    <svg [class.hidden]="isMobileMenuOpen" [class.block]="!isMobileMenuOpen" class="h-6 w-6"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg [class.hidden]="!isMobileMenuOpen" [class.block]="isMobileMenuOpen" class="h-6 w-6"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden" [class.hidden]="!isMobileMenuOpen">
+        <div class="pt-2 pb-3 space-y-1">
+            <a routerLink="/"
+                class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-brand-orange hover:text-brand-orange uppercase">Home</a>
+            <a routerLink="/services"
+                class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-brand-orange hover:text-brand-orange uppercase">Services</a>
+
+            <div class="pl-3 pr-4 py-2">
+                <span class="text-base font-medium text-gray-500 uppercase">Industry Solutions</span>
+                <div class="mt-2 pl-4 space-y-2 border-l-2 border-gray-100">
+                    <a routerLink="/industries/healthcare"
+                        class="block text-sm font-medium text-gray-600 hover:text-brand-orange uppercase">Healthcare</a>
+                    <a routerLink="/industries/automotive"
+                        class="block text-sm font-medium text-gray-600 hover:text-brand-orange uppercase">Automotive</a>
+                    <a routerLink="/industries/logistics"
+                        class="block text-sm font-medium text-gray-600 hover:text-brand-orange uppercase">Logistics</a>
+                    <a routerLink="/industries/pharma"
+                        class="block text-sm font-medium text-gray-600 hover:text-brand-orange uppercase">Pharma</a>
+                </div>
+            </div>
+
+            <a routerLink="/about"
+                class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-brand-orange hover:text-brand-orange uppercase">About
+                Us</a>
+            <a routerLink="/careers"
+                class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-brand-orange hover:text-brand-orange uppercase">Careers</a>
+        </div>
+    </div>
+</nav>

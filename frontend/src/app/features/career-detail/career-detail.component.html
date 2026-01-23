@@ -1,0 +1,31 @@
+<div *ngIf="loading" class="min-h-screen flex justify-center items-center">
+    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+</div>
+
+<div *ngIf="!loading && job" class="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
+    <div class="relative max-w-xl mx-auto">
+        <div class="text-center">
+            <h2 class="text-3xl font-extrabold tracking-tight text-brand-dark sm:text-4xl">
+                {{ job.title }}
+            </h2>
+            <p class="mt-4 text-lg leading-6 text-gray-500">
+                {{ job.location }} | {{ job.job_type }}
+            </p>
+        </div>
+
+        <div class="mt-12">
+            <h3 class="text-lg font-bold text-brand-dark">Description</h3>
+            <p class="mt-4 text-lg text-gray-500 whitespace-pre-wrap">{{ job.description }}</p>
+
+            <h3 class="mt-8 text-lg font-bold text-brand-dark">Requirements</h3>
+            <p class="mt-4 text-lg text-gray-500 whitespace-pre-wrap">{{ job.requirements }}</p>
+        </div>
+
+        <div class="mt-12 text-center">
+            <a href="mailto:careers@kmati.in?subject=Application for {{job.title}}"
+                class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-secondary">
+                Apply Now
+            </a>
+        </div>
+    </div>
+</div>

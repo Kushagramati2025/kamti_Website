@@ -1,0 +1,571 @@
+<div class="flex flex-col h-full w-full bg-white">
+
+    <!-- Tabs Navigation -->
+    <div class="w-full bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center space-x-12 overflow-x-auto">
+                <button *ngFor="let tab of tabs" (click)="setActiveTab(tab)"
+                    [class.border-brand-purple]="activeTab === tab" [class.text-brand-dark]="activeTab === tab"
+                    [class.text-gray-500]="activeTab !== tab"
+                    class="group relative inline-flex items-center px-1 py-4 border-b-4 border-transparent hover:text-brand-purple hover:border-brand-purple/50 transition-all duration-200 text-lg font-bold cursor-pointer outline-none whitespace-nowrap">
+                    {{ tab }}
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Area -->
+    <div
+        class="flex-grow relative w-full bg-gray-50 overflow-hidden flex items-center justify-center min-h-[600px] p-8">
+
+        <!-- Tab 1: Kusha at glance -->
+        <div *ngIf="activeTab === 'Kusha at glance'"
+            class="w-full h-full flex items-center justify-center animate-fade-in-up p-4">
+            <div class="w-full max-w-7xl flex flex-col xl:flex-row items-stretch gap-6 h-full font-sans">
+
+                <!-- Left Panel: Core Competency Hub -->
+                <div
+                    class="flex-1 bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 relative group min-h-[500px]">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-purple to-brand-orange">
+                    </div>
+                    <div class="p-4 h-full flex flex-col items-center justify-center relative">
+
+                        <!-- Center Circle -->
+                        <div class="relative w-80 h-80 mb-8 flex-shrink-0 animate-[float_6s_ease-in-out_infinite]">
+                            <!-- Outer Rim -->
+                            <div
+                                class="absolute inset-0 rounded-full border-[12px] border-brand-purple/10 animate-[spin_30s_linear_infinite]">
+                            </div>
+                            <div class="absolute inset-4 rounded-full border-[2px] border-dashed border-gray-300"></div>
+
+                            <!-- Top Hemisphere: App Services -->
+                            <div
+                                class="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-brand-purple/90 to-brand-purple/70 rounded-t-full flex items-end justify-center pb-8 text-white z-10 transition-all hover:scale-105 origin-bottom duration-300 cursor-pointer shadow-lg">
+                                <div class="text-center transform translate-y-2">
+                                    <h3 class="font-bold text-lg leading-tight tracking-wider">APPLICATION<br>SERVICES
+                                    </h3>
+                                    <div class="text-[0.6rem] opacity-80 mt-1 uppercase tracking-widest font-semibold">
+                                        Organization Adrenaline</div>
+                                </div>
+                            </div>
+
+                            <!-- Bottom Hemisphere: Data Analytics -->
+                            <div
+                                class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-b from-brand-orange/70 to-brand-orange/90 rounded-b-full flex items-start justify-center pt-8 text-white z-10 transition-all hover:scale-105 origin-top duration-300 cursor-pointer shadow-lg">
+                                <div class="text-center transform -translate-y-2">
+                                    <h3 class="font-bold text-lg leading-tight tracking-wider">DATA<br>ANALYTICS</h3>
+                                    <div class="text-[0.6rem] opacity-80 mt-1 uppercase tracking-widest font-semibold">
+                                        Business Intelligence</div>
+                                </div>
+                            </div>
+
+                            <!-- Core Competency Label -->
+                            <div
+                                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-full w-28 h-28 flex items-center justify-center z-20 shadow-xl border-4 border-gray-50 scale-100 hover:scale-110 transition-transform duration-300">
+                                <span
+                                    class="text-xs font-black text-center text-gray-800 leading-tight tracking-tight">CORE<br>COMPETENCY</span>
+                            </div>
+                        </div>
+
+                        <!-- Surrounding Pillars -->
+                        <div class="grid grid-cols-2 gap-x-12 gap-y-4 w-full max-w-2xl px-4">
+                            <div class="flex flex-col space-y-3 items-end">
+                                <div
+                                    class="bg-purple-50 px-4 py-2 rounded-lg border-l-4 border-brand-purple text-sm font-bold text-gray-700 w-full text-right shadow-sm hover:shadow-md transition-all">
+                                    Digital Transformation</div>
+                                <div
+                                    class="bg-purple-50 px-4 py-2 rounded-lg border-l-4 border-brand-purple text-sm font-bold text-gray-700 w-full text-right shadow-sm hover:shadow-md transition-all">
+                                    Cloud Strategy</div>
+                                <div
+                                    class="bg-purple-50 px-4 py-2 rounded-lg border-l-4 border-brand-purple text-sm font-bold text-gray-700 w-full text-right shadow-sm hover:shadow-md transition-all">
+                                    Solution Integration</div>
+                                <div
+                                    class="bg-purple-50 px-4 py-2 rounded-lg border-l-4 border-brand-purple text-sm font-bold text-gray-700 w-full text-right shadow-sm hover:shadow-md transition-all">
+                                    App Modernization</div>
+                            </div>
+                            <div class="flex flex-col space-y-3 items-start">
+                                <div
+                                    class="bg-orange-50 px-4 py-2 rounded-lg border-r-4 border-brand-orange text-sm font-bold text-gray-700 w-full text-left shadow-sm hover:shadow-md transition-all">
+                                    Data Engineering</div>
+                                <div
+                                    class="bg-orange-50 px-4 py-2 rounded-lg border-r-4 border-brand-orange text-sm font-bold text-gray-700 w-full text-left shadow-sm hover:shadow-md transition-all">
+                                    Data Transformation</div>
+                                <div
+                                    class="bg-orange-50 px-4 py-2 rounded-lg border-r-4 border-brand-orange text-sm font-bold text-gray-700 w-full text-left shadow-sm hover:shadow-md transition-all">
+                                    AI / ML Modelling</div>
+                                <div
+                                    class="bg-orange-50 px-4 py-2 rounded-lg border-r-4 border-brand-orange text-sm font-bold text-gray-700 w-full text-left shadow-sm hover:shadow-md transition-all">
+                                    Data Visualization</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Panel: Industry Focus -->
+                <div
+                    class="w-full xl:w-80 bg-gray-900 rounded-3xl shadow-xl flex flex-col items-center justify-center py-10 px-6 text-white relative overflow-hidden flex-shrink-0">
+                    <!-- Background Decoration -->
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -mr-32 -mt-32 blur-3xl">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-64 h-64 bg-brand-purple opacity-10 rounded-full -ml-32 -mb-32 blur-3xl">
+                    </div>
+
+                    <h3
+                        class="text-2xl font-black mb-10 relative z-10 border-b-4 border-brand-orange pb-2 w-full text-center tracking-wider">
+                        INDUSTRY<br>FOCUS</h3>
+
+                    <div class="space-y-8 w-full relative z-10">
+                        <!-- Healthcare -->
+                        <div
+                            class="flex items-center group cursor-default transform hover:translate-x-2 transition-transform duration-300">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-teal-500/20 flex items-center justify-center mr-4 group-hover:bg-teal-500 transition-colors duration-300 shadow-lg border border-teal-500/30">
+                                <svg class="w-7 h-7 text-teal-400 group-hover:text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                </svg>
+                            </div>
+                            <span
+                                class="text-xl font-bold tracking-wide text-gray-200 group-hover:text-white">HEALTHCARE</span>
+                        </div>
+
+                        <!-- Pharma -->
+                        <div
+                            class="flex items-center group cursor-default transform hover:translate-x-2 transition-transform duration-300">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-yellow-500/20 flex items-center justify-center mr-4 group-hover:bg-yellow-500 transition-colors duration-300 shadow-lg border border-yellow-500/30">
+                                <svg class="w-7 h-7 text-yellow-400 group-hover:text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                                </svg>
+                            </div>
+                            <span
+                                class="text-xl font-bold tracking-wide text-gray-200 group-hover:text-white">PHARMA</span>
+                        </div>
+
+                        <!-- Logistics -->
+                        <div
+                            class="flex items-center group cursor-default transform hover:translate-x-2 transition-transform duration-300">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-green-500/20 flex items-center justify-center mr-4 group-hover:bg-green-500 transition-colors duration-300 shadow-lg border border-green-500/30">
+                                <svg class="w-7 h-7 text-green-400 group-hover:text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m2 2a2 2 0 104 0m-4 0a2 2 0 114 0" />
+                                </svg>
+                            </div>
+                            <span
+                                class="text-xl font-bold tracking-wide text-gray-200 group-hover:text-white">LOGISTICS</span>
+                        </div>
+
+                        <!-- Automotive -->
+                        <div
+                            class="flex items-center group cursor-default transform hover:translate-x-2 transition-transform duration-300">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-blue-500/20 flex items-center justify-center mr-4 group-hover:bg-blue-500 transition-colors duration-300 shadow-lg border border-blue-500/30">
+                                <svg class="w-7 h-7 text-blue-400 group-hover:text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <span
+                                class="text-xl font-bold tracking-wide text-gray-200 group-hover:text-white">AUTOMOTIVE</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Tab 2: Application Services -->
+        <div *ngIf="activeTab === 'Application Services'"
+            class="w-full h-full flex items-center justify-center animate-fade-in-up p-8">
+            <div class="w-full max-w-7xl">
+                <h2 class="text-3xl font-bold text-center text-brand-dark mb-12 uppercase tracking-wide">Application
+                    Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border-t-4 border-red-500 transform hover:-translate-y-2 group">
+                        <div
+                            class="h-14 w-14 bg-red-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-red-500 transition-colors duration-300">
+                            <svg class="w-7 h-7 text-red-500 group-hover:text-white transition-colors" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Digital Transformation</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                                <span class="mr-2 text-red-500 font-bold">→</span> Data Discovery
+                            </li>
+                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                                <span class="mr-2 text-red-500 font-bold">→</span> Build Master Data
+                            </li>
+                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                                <span class="mr-2 text-red-500 font-bold">→</span> Business Insights
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border-t-4 border-blue-500 transform hover:-translate-y-2 mt-0 lg:mt-8 group">
+                        <div
+                            class="h-14 w-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-500 transition-colors duration-300">
+                            <svg class="w-7 h-7 text-blue-500 group-hover:text-white transition-colors" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Cloud Strategy</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                                <span class="mr-2 text-blue-500 font-bold">→</span> Migration & Modernization
+                            </li>
+                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                                <span class="mr-2 text-blue-500 font-bold">→</span> Cloud Integration
+                            </li>
+                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                                <span class="mr-2 text-blue-500 font-bold">→</span> Cost Optimization
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border-t-4 border-indigo-500 transform hover:-translate-y-2 mt-0 lg:mt-16 group">
+                        <div
+                            class="h-14 w-14 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-500 transition-colors duration-300">
+                            <svg class="w-7 h-7 text-indigo-500 group-hover:text-white transition-colors" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Solution Integration</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                                <span class="mr-2 text-indigo-500 font-bold">→</span> Legacy Integration
+                            </li>
+                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                                <span class="mr-2 text-indigo-500 font-bold">→</span> 3rd Party Integration
+                            </li>
+                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                                <span class="mr-2 text-indigo-500 font-bold">→</span> Tool based Integration
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                        class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border-t-4 border-green-500 transform hover:-translate-y-2 mt-0 lg:mt-24 group">
+                        <div
+                            class="h-14 w-14 bg-green-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors duration-300">
+                            <svg class="w-7 h-7 text-green-500 group-hover:text-white transition-colors" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">App Modernization</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                                <span class="mr-2 text-green-500 font-bold">→</span> Custom Software
+                            </li>
+                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                                <span class="mr-2 text-green-500 font-bold">→</span> Agile Engineering
+                            </li>
+                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                                <span class="mr-2 text-green-500 font-bold">→</span> Ideas to Product
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 3: Data Analytics -->
+        <div *ngIf="activeTab === 'Data Analytics'"
+            class="w-full h-full flex items-center justify-center animate-fade-in-up p-8">
+            <div class="w-full max-w-7xl">
+                <h2 class="text-3xl font-bold text-center text-brand-dark mb-12 uppercase tracking-wide">Data Analytics
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                    <!-- Data Engineering -->
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-6 border-b-4 border-brand-orange hover:-translate-y-2 transition-transform duration-300 group">
+                        <div
+                            class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 text-brand-orange mx-auto group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4
+                            class="font-bold text-lg text-gray-800 mb-4 text-center group-hover:text-brand-orange transition-colors">
+                            Data Engineering</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span>
+                                Building Data Pipelines</li>
+                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span> Cloud
+                                Migration</li>
+                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span>
+                                Optimized Data Lakes</li>
+                        </ul>
+                    </div>
+
+                    <!-- Data Transformation -->
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-6 border-b-4 border-brand-orange hover:-translate-y-2 transition-transform duration-300 group">
+                        <div
+                            class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 text-brand-orange mx-auto group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4
+                            class="font-bold text-lg text-gray-800 mb-4 text-center group-hover:text-brand-orange transition-colors">
+                            Data Transformation</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span>
+                                Advanced Analytics</li>
+                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span> Data
+                                Cleansing & Processing</li>
+                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span>
+                                Governance & Management</li>
+                        </ul>
+                    </div>
+
+                    <!-- AI / ML Modelling -->
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-6 border-b-4 border-brand-orange hover:-translate-y-2 transition-transform duration-300 group">
+                        <div
+                            class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 text-brand-orange mx-auto group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4
+                            class="font-bold text-lg text-gray-800 mb-4 text-center group-hover:text-brand-orange transition-colors">
+                            AI / ML Modelling</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span>
+                                Predictive Analytics</li>
+                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span> Cutting
+                                Edge AI/ML Models</li>
+                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span> Data
+                                Driven Insights</li>
+                        </ul>
+                    </div>
+
+                    <!-- Data Visualization -->
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-6 border-b-4 border-brand-orange hover:-translate-y-2 transition-transform duration-300 group">
+                        <div
+                            class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 text-brand-orange mx-auto group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4
+                            class="font-bold text-lg text-gray-800 mb-4 text-center group-hover:text-brand-orange transition-colors">
+                            Data Visualization</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span>
+                                Real-time Dashboards</li>
+                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span> Best In
+                                Class Viz</li>
+                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span> Trend
+                                Analysis Views</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 4: Embedded-consultancy -->
+        <div *ngIf="activeTab === 'Embedded-consultancy'"
+            class="w-full h-full flex items-center justify-center animate-fade-in-up p-8">
+            <div class="w-full max-w-7xl">
+                <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center uppercase tracking-wide">Embedded
+                    Consultancy</h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+                    <!-- Left Column: Domains & Models (Span 7) -->
+                    <div class="lg:col-span-7 space-y-8">
+                        <!-- Domains -->
+                        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+                            <div class="bg-indigo-600 px-6 py-4 flex justify-between items-center">
+                                <h3 class="font-bold text-white text-xl flex items-center">
+                                    <svg class="w-6 h-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                                    </svg>
+                                    Industry Domains
+                                </h3>
+                                <div class="text-indigo-200 text-sm font-medium">Diverse Expertise</div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex flex-wrap gap-3">
+                                    <span
+                                        class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default">Auto
+                                        & IoT</span>
+                                    <span
+                                        class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default">Semiconductor</span>
+                                    <span
+                                        class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default">Platform
+                                        Services</span>
+                                    <span
+                                        class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default">Target
+                                        Integration</span>
+                                    <span
+                                        class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default">Connectivity</span>
+                                    <span
+                                        class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default">Testing/Automation</span>
+                                    <span
+                                        class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default">PLM
+                                        & PES</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Delivery Models -->
+                        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+                            <div class="bg-gray-800 px-6 py-4 flex justify-between items-center">
+                                <h3 class="font-bold text-white text-xl flex items-center">
+                                    <svg class="w-6 h-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                    </svg>
+                                    Delivery Models
+                                </h3>
+                                <div class="text-gray-400 text-sm font-medium">Flexible Engagement</div>
+                            </div>
+                            <div class="p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-green-100 flex-shrink-0 flex items-center justify-center text-green-600 mr-3 font-bold text-xs ring-4 ring-green-50">
+                                        01</div>
+                                    <span class="text-gray-700 text-sm font-bold">Dedicated Sourcing Team</span>
+                                </div>
+                                <div class="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-green-100 flex-shrink-0 flex items-center justify-center text-green-600 mr-3 font-bold text-xs ring-4 ring-green-50">
+                                        02</div>
+                                    <span class="text-gray-700 text-sm font-bold">Academic Partnerships</span>
+                                </div>
+                                <div class="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-green-100 flex-shrink-0 flex items-center justify-center text-green-600 mr-3 font-bold text-xs ring-4 ring-green-50">
+                                        03</div>
+                                    <span class="text-gray-700 text-sm font-bold">ODC Model (Offshore)</span>
+                                </div>
+                                <div class="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-green-100 flex-shrink-0 flex items-center justify-center text-green-600 mr-3 font-bold text-xs ring-4 ring-green-50">
+                                        04</div>
+                                    <span class="text-gray-700 text-sm font-bold">Cluster & Lead+ Models</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Technical Stack (Span 5) -->
+                    <div class="lg:col-span-5">
+                        <div
+                            class="bg-gray-900 rounded-2xl shadow-xl overflow-hidden text-white h-full border border-gray-700">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-bold mb-8 border-b border-gray-700 pb-4 tracking-wide">
+                                    Technical Stack</h3>
+
+                                <div class="space-y-8 relative">
+                                    <!-- Connecting Line -->
+                                    <div
+                                        class="absolute left-3 top-2 bottom-6 w-0.5 bg-gradient-to-b from-brand-purple to-transparent">
+                                    </div>
+
+                                    <!-- Stack Items -->
+                                    <div class="relative pl-10 group">
+                                        <div
+                                            class="absolute left-0 top-1 w-6 h-6 bg-brand-purple rounded-full border-4 border-gray-900 z-10 shadow-[0_0_10px_rgba(124,58,237,0.5)] group-hover:scale-110 transition-transform">
+                                        </div>
+                                        <h4
+                                            class="font-bold text-brand-purple mb-1 text-lg group-hover:text-white transition-colors">
+                                            Applications</h4>
+                                        <p class="text-sm text-gray-400">User Specific APP Module, VoIP, Frameworks</p>
+                                    </div>
+
+                                    <div class="relative pl-10 group">
+                                        <div
+                                            class="absolute left-0 top-1 w-6 h-6 bg-blue-500 rounded-full border-4 border-gray-900 z-10 shadow-[0_0_10px_rgba(59,130,246,0.5)] group-hover:scale-110 transition-transform">
+                                        </div>
+                                        <h4
+                                            class="font-bold text-blue-500 mb-1 text-lg group-hover:text-white transition-colors">
+                                            Connectivity & IoT</h4>
+                                        <p class="text-sm text-gray-400">MQTT, OTA, Diagnostics, Security, GSM, APN</p>
+                                    </div>
+
+                                    <div class="relative pl-10 group">
+                                        <div
+                                            class="absolute left-0 top-1 w-6 h-6 bg-green-500 rounded-full border-4 border-gray-900 z-10 shadow-[0_0_10px_rgba(34,197,94,0.5)] group-hover:scale-110 transition-transform">
+                                        </div>
+                                        <h4
+                                            class="font-bold text-green-500 mb-1 text-lg group-hover:text-white transition-colors">
+                                            Protocols & Interface</h4>
+                                        <p class="text-sm text-gray-400">CAN, OBD II, UDS, Ethernet, BLE, WiFi, USB</p>
+                                    </div>
+
+                                    <div class="relative pl-10 group">
+                                        <div
+                                            class="absolute left-0 top-1 w-6 h-6 bg-amber-500 rounded-full border-4 border-gray-900 z-10 shadow-[0_0_10px_rgba(245,158,11,0.5)] group-hover:scale-110 transition-transform">
+                                        </div>
+                                        <h4
+                                            class="font-bold text-amber-500 mb-1 text-lg group-hover:text-white transition-colors">
+                                            OS / RTOS</h4>
+                                        <p class="text-sm text-gray-400">Linux, Android, QNX, VxWorks, Custom</p>
+                                    </div>
+
+                                    <div class="relative pl-10 group">
+                                        <div
+                                            class="absolute left-0 top-1 w-6 h-6 bg-red-500 rounded-full border-4 border-gray-900 z-10 shadow-[0_0_10px_rgba(239,68,68,0.5)] group-hover:scale-110 transition-transform">
+                                        </div>
+                                        <h4
+                                            class="font-bold text-red-500 mb-1 text-lg group-hover:text-white transition-colors">
+                                            Hardware & Silicon</h4>
+                                        <p class="text-sm text-gray-400">BSP, Device Drivers, Patches, Controller Logic
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div
+                                class="bg-gray-800 p-4 text-center text-xs text-gray-500 font-medium tracking-widest uppercase">
+                                Comprehensive Embedded Solutions
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

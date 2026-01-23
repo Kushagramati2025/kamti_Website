@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=kmati_db
+      - POSTGRES_USER=kmati_user
+      - POSTGRES_PASSWORD=kmati_password
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: 
+      context: ./backend
+    command: sh -c "python manage.py migrate && python manage.py collectstatic --noinput --clear && gunicorn config.wsgi:application --bind 0.0.0.0:8000"
+    volumes:
+      - ./backend:/app
+      - static_volume:/app/static
+      - media_volume:/app/media
+    expose:
+      - 8000
+    environment:
+      - DEBUG=0
+      - SECRET_KEY=prod_secret_key_change_this
+      - DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1,[::1]
+      - DATABASE_ENGINE=django.db.backends.postgresql
+      - DATABASE_NAME=kmati_db
+      - DATABASE_USER=kmati_user
+      - DATABASE_PASSWORD=kmati_password
+      - DATABASE_HOST=db
+      - DATABASE_PORT=5432
+    depends_on:
+      - db
+
+  frontend:
+    build: 
+      context: ./frontend
+    ports:
+      - "8080:80"
+    volumes:
+      - media_volume:/media
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+  static_volume:
+  media_volume:

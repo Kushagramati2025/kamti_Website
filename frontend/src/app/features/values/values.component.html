@@ -1,0 +1,96 @@
+<div class="relative w-full min-h-screen bg-gray-50">
+    <!-- Top Banner Section -->
+    <div class="relative h-[300px] w-full bg-brand-purple overflow-hidden flex">
+        <!-- Left Sidebar Background (Deep Purple) -->
+        <div class="w-1/4 h-full bg-brand-purple z-20 relative hidden lg:block border-r border-white/10">
+            <!-- Menu Area -->
+            <div class="py-12 pl-12 pr-4 space-y-4">
+                <a routerLink="/leadership" routerLinkActive="font-bold underline"
+                    class="block text-white/80 hover:text-white uppercase text-sm tracking-wider border-b border-white/20 pb-2 transition-colors">Leadership</a>
+                <a routerLink="/partners" routerLinkActive="font-bold underline"
+                    class="block text-white/80 hover:text-white uppercase text-sm tracking-wider border-b border-white/20 pb-2 transition-colors">Partners</a>
+                <a routerLink="/values" routerLinkActive="font-bold underline"
+                    class="block text-white uppercase text-sm tracking-wider border-b border-white/20 pb-2">Values</a>
+                <a routerLink="/vision-mission" routerLinkActive="font-bold underline"
+                    class="block text-white/80 hover:text-white uppercase text-sm tracking-wider border-b border-white/20 pb-2 transition-colors">Vision
+                    and Mission</a>
+                <a routerLink="/blog" routerLinkActive="font-bold underline"
+                    class="block text-white/80 hover:text-white uppercase text-sm tracking-wider border-b border-white/20 pb-2 transition-colors">Blog</a>
+                <a routerLink="/contact" routerLinkActive="font-bold underline"
+                    class="block text-white/80 hover:text-white uppercase text-sm tracking-wider border-b border-white/20 pb-2 transition-colors">Contact</a>
+            </div>
+        </div>
+
+        <!-- Banner Image Area -->
+        <div class="flex-grow relative bg-gray-800">
+            <!-- Decorative overlay -->
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-purple to-transparent z-10 lg:w-1/3"></div>
+
+            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+                class="w-full h-full object-cover opacity-60" alt="Values Banner">
+
+            <!-- Overlay Title (Speech Bubble Style) -->
+            <div class="absolute right-10 top-1/2 -translate-y-1/2 z-20 hidden md:flex items-center">
+                <div
+                    class="bg-brand-purple/95 rounded-full h-56 w-56 flex items-center justify-center relative shadow-2xl backdrop-blur-sm border-2 border-white/10">
+                    <h1 class="text-white font-bold text-3xl uppercase tracking-widest">Values</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="flex flex-col lg:flex-row gap-12">
+            <!-- Mobile Sidebar -->
+            <div class="lg:hidden w-full mb-8 bg-brand-purple p-6 rounded-lg shadow-lg">
+                <div class="grid grid-cols-2 gap-4">
+                    <a routerLink="/leadership" routerLinkActive="text-brand-orange font-bold"
+                        class="text-white uppercase text-sm tracking-wider">Leadership</a>
+                    <a routerLink="/partners" routerLinkActive="text-brand-orange font-bold"
+                        class="text-white uppercase text-sm tracking-wider">Partners</a>
+                    <a routerLink="/values" routerLinkActive="text-brand-orange font-bold"
+                        class="text-white uppercase text-sm tracking-wider">Values</a>
+                    <a routerLink="/vision-mission" routerLinkActive="text-brand-orange font-bold"
+                        class="text-white uppercase text-sm tracking-wider">Vision and Mission</a>
+                    <a routerLink="/blog" routerLinkActive="text-brand-orange font-bold"
+                        class="text-white uppercase text-sm tracking-wider">Blog</a>
+                    <a routerLink="/contact" routerLinkActive="text-brand-orange font-bold"
+                        class="text-white uppercase text-sm tracking-wider">Contact</a>
+                </div>
+            </div>
+
+            <!-- Content Spacer -->
+            <div class="hidden lg:block w-1/4"></div>
+
+            <!-- Content -->
+            <div class="w-full lg:w-3/4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-brand-dark uppercase tracking-tight">Core Values</h2>
+                    <div class="w-24 h-1 bg-brand-orange mx-auto mt-4"></div>
+                    <p class="mt-4 text-xl text-gray-500">The principles that define who we are and act as our compass.
+                    </p>
+                </div>
+
+                <div *ngIf="loading" class="flex justify-center">
+                    <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-brand-purple"></div>
+                </div>
+
+                <div *ngIf="!loading" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div *ngFor="let value of values; let i = index"
+                        class="bg-white p-8 rounded-xl shadow-md border-t-4 hover:-translate-y-1 transition-transform duration-300"
+                        [ngClass]="{'border-brand-purple': i % 2 === 0, 'border-brand-orange': i % 2 !== 0}">
+                        <div class="flex items-center mb-4">
+                            <div class="h-12 w-12 rounded-full flex items-center justify-center text-white text-xl font-bold"
+                                [ngClass]="{'bg-brand-purple': i % 2 === 0, 'bg-brand-orange': i % 2 !== 0}">
+                                {{ i + 1 }}
+                            </div>
+                            <h3 class="ml-4 text-xl font-bold text-gray-800">{{ value.title }}</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">{{ value.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

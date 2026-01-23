@@ -1,0 +1,16 @@
+# Handle line endings automatically for files detected as text
+# and leave binary files untouched.
+* text=auto
+
+# Custom mappings for specific file types
+*.js text
+*.ts text
+*.html text
+*.css text
+*.scss text
+*.json text
+*.md text
+*.py text
+*.txt text
+*.bat text eol=crlf
+*.sh text eol=lf

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+html,
+body {
+    @apply bg-gray-50 text-brand-dark font-sans;
+    overflow: hidden !important;
+    /* Disable scrolling completely */
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    /* Prevent mobile scroll bounce */
+}
+
+/* Hide Visual Scrollbar (User Request) */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html,
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* Animations */
+.fade-in {
+    @apply animate-[fadeIn_0.5s_ease-in-out];
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

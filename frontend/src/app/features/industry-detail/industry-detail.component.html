@@ -1,0 +1,48 @@
+<div *ngIf="loading" class="min-h-screen flex justify-center items-center">
+    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+</div>
+
+<div *ngIf="!loading && industry" class="bg-white">
+    <!-- Banner -->
+    <div class="relative bg-brand-purple">
+        <div class="absolute inset-0">
+            <img class="w-full h-full object-cover opacity-50" [src]="industry.banner_image || 'assets/placeholder.jpg'"
+                alt="">
+        </div>
+        <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">{{ industry.name }}
+            </h1>
+            <p class="mt-6 text-xl text-gray-300 max-w-3xl">{{ industry.description }}</p>
+        </div>
+    </div>
+
+    <!-- Content Sections -->
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div *ngIf="industry.sections && industry.sections.length > 0; else noSections">
+            <div *ngFor="let section of industry.sections; let odd = odd"
+                class="mt-16 lg:grid lg:grid-cols-2 lg:gap-8 items-center" [class.bg-gray-50]="odd">
+                <!-- Optional alternating background if full width -->
+
+                <!-- Image ordering logic for alternating layout -->
+                <div class="relative lg:row-start-1 lg:col-start-1" [class.lg:col-start-2]="odd">
+                    <img *ngIf="section.image" class="rounded-lg shadow-lg mx-auto" [src]="section.image"
+                        [alt]="section.title">
+                    <div *ngIf="!section.image"
+                        class="h-64 bg-gray-200 rounded-lg flex items-center justify-center text-gray-400">No Image
+                    </div>
+                </div>
+
+                <div class="mt-8 lg:mt-0 lg:row-start-1 lg:col-start-2" [class.lg:col-start-1]="odd">
+                    <h3 class="text-2xl font-extrabold text-brand-dark tracking-tight sm:text-3xl">{{ section.title }}
+                    </h3>
+                    <div class="mt-4 text-lg text-gray-500" [innerHTML]="section.content"></div>
+                </div>
+            </div>
+        </div>
+        <ng-template #noSections>
+            <div class="text-center text-gray-500 py-10">
+                <p>Specific details for this industry are coming soon.</p>
+            </div>
+        </ng-template>
+    </div>
+</div>
