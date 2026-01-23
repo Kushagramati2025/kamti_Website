@@ -5,9 +5,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-center space-x-12 overflow-x-auto">
                 <button *ngFor="let tab of tabs" (click)="setActiveTab(tab)"
-                    [class.border-brand-purple]="activeTab === tab" [class.text-brand-dark]="activeTab === tab"
-                    [class.text-gray-500]="activeTab !== tab"
-                    class="group relative inline-flex items-center px-1 py-4 border-b-4 border-transparent hover:text-brand-purple hover:border-brand-purple/50 transition-all duration-200 text-lg font-bold cursor-pointer outline-none whitespace-nowrap">
+                    [class.border-brand-purple]="activeTab === tab" [class.text-shimmer-purple]="activeTab === tab"
+                    [class.font-black]="activeTab === tab" [class.text-gray-500]="activeTab !== tab"
+                    class="group relative inline-flex items-center px-6 py-4 border-b-4 border-transparent hover:text-brand-purple hover:border-brand-purple/50 transition-all duration-200 text-xl font-bold cursor-pointer outline-none whitespace-nowrap">
                     {{ tab }}
                 </button>
             </div>
@@ -40,8 +40,8 @@
 
                             <!-- Top Hemisphere: App Services -->
                             <div
-                                class="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-brand-purple/90 to-brand-purple/70 rounded-t-full flex items-end justify-center pb-8 text-white z-10 transition-all hover:scale-105 origin-bottom duration-300 cursor-pointer shadow-lg">
-                                <div class="text-center transform translate-y-2">
+                                class="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-brand-purple/90 to-brand-purple/70 rounded-t-full flex items-end justify-center pb-16 text-white z-10 transition-all hover:scale-105 origin-bottom duration-300 cursor-pointer shadow-lg animate-pulse-purple">
+                                <div class="text-center">
                                     <h3 class="font-bold text-lg leading-tight tracking-wider">APPLICATION<br>SERVICES
                                     </h3>
                                     <div class="text-[0.6rem] opacity-80 mt-1 uppercase tracking-widest font-semibold">
@@ -51,8 +51,8 @@
 
                             <!-- Bottom Hemisphere: Data Analytics -->
                             <div
-                                class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-b from-brand-orange/70 to-brand-orange/90 rounded-b-full flex items-start justify-center pt-8 text-white z-10 transition-all hover:scale-105 origin-top duration-300 cursor-pointer shadow-lg">
-                                <div class="text-center transform -translate-y-2">
+                                class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-b from-brand-orange/70 to-brand-orange/90 rounded-b-full flex items-start justify-center pt-16 text-white z-10 transition-all hover:scale-105 origin-top duration-300 cursor-pointer shadow-lg animate-pulse-orange">
+                                <div class="text-center">
                                     <h3 class="font-bold text-lg leading-tight tracking-wider">DATA<br>ANALYTICS</h3>
                                     <div class="text-[0.6rem] opacity-80 mt-1 uppercase tracking-widest font-semibold">
                                         Business Intelligence</div>
@@ -71,30 +71,30 @@
                         <div class="grid grid-cols-2 gap-x-12 gap-y-4 w-full max-w-2xl px-4">
                             <div class="flex flex-col space-y-3 items-end">
                                 <div
-                                    class="bg-purple-50 px-4 py-2 rounded-lg border-l-4 border-brand-purple text-sm font-bold text-gray-700 w-full text-right shadow-sm hover:shadow-md transition-all">
+                                    class="badge-float bg-purple-50 px-4 py-2 rounded-lg border-l-4 border-brand-purple text-sm font-bold text-gray-700 w-full text-right shadow-sm hover:shadow-[0_0_15px_rgba(139,92,246,0.4)] transition-all cursor-default">
                                     Digital Transformation</div>
                                 <div
-                                    class="bg-purple-50 px-4 py-2 rounded-lg border-l-4 border-brand-purple text-sm font-bold text-gray-700 w-full text-right shadow-sm hover:shadow-md transition-all">
+                                    class="badge-float bg-purple-50 px-4 py-2 rounded-lg border-l-4 border-brand-purple text-sm font-bold text-gray-700 w-full text-right shadow-sm hover:shadow-[0_0_15px_rgba(139,92,246,0.4)] transition-all cursor-default">
                                     Cloud Strategy</div>
                                 <div
-                                    class="bg-purple-50 px-4 py-2 rounded-lg border-l-4 border-brand-purple text-sm font-bold text-gray-700 w-full text-right shadow-sm hover:shadow-md transition-all">
+                                    class="badge-float bg-purple-50 px-4 py-2 rounded-lg border-l-4 border-brand-purple text-sm font-bold text-gray-700 w-full text-right shadow-sm hover:shadow-[0_0_15px_rgba(139,92,246,0.4)] transition-all cursor-default">
                                     Solution Integration</div>
                                 <div
-                                    class="bg-purple-50 px-4 py-2 rounded-lg border-l-4 border-brand-purple text-sm font-bold text-gray-700 w-full text-right shadow-sm hover:shadow-md transition-all">
+                                    class="badge-float bg-purple-50 px-4 py-2 rounded-lg border-l-4 border-brand-purple text-sm font-bold text-gray-700 w-full text-right shadow-sm hover:shadow-[0_0_15px_rgba(139,92,246,0.4)] transition-all cursor-default">
                                     App Modernization</div>
                             </div>
                             <div class="flex flex-col space-y-3 items-start">
                                 <div
-                                    class="bg-orange-50 px-4 py-2 rounded-lg border-r-4 border-brand-orange text-sm font-bold text-gray-700 w-full text-left shadow-sm hover:shadow-md transition-all">
+                                    class="badge-float bg-orange-50 px-4 py-2 rounded-lg border-r-4 border-brand-orange text-sm font-bold text-gray-700 w-full text-left shadow-sm hover:shadow-[0_0_15px_rgba(249,115,22,0.4)] transition-all cursor-default">
                                     Data Engineering</div>
                                 <div
-                                    class="bg-orange-50 px-4 py-2 rounded-lg border-r-4 border-brand-orange text-sm font-bold text-gray-700 w-full text-left shadow-sm hover:shadow-md transition-all">
+                                    class="badge-float bg-orange-50 px-4 py-2 rounded-lg border-r-4 border-brand-orange text-sm font-bold text-gray-700 w-full text-left shadow-sm hover:shadow-[0_0_15px_rgba(249,115,22,0.4)] transition-all cursor-default">
                                     Data Transformation</div>
                                 <div
-                                    class="bg-orange-50 px-4 py-2 rounded-lg border-r-4 border-brand-orange text-sm font-bold text-gray-700 w-full text-left shadow-sm hover:shadow-md transition-all">
+                                    class="badge-float bg-orange-50 px-4 py-2 rounded-lg border-r-4 border-brand-orange text-sm font-bold text-gray-700 w-full text-left shadow-sm hover:shadow-[0_0_15px_rgba(249,115,22,0.4)] transition-all cursor-default">
                                     AI / ML Modelling</div>
                                 <div
-                                    class="bg-orange-50 px-4 py-2 rounded-lg border-r-4 border-brand-orange text-sm font-bold text-gray-700 w-full text-left shadow-sm hover:shadow-md transition-all">
+                                    class="badge-float bg-orange-50 px-4 py-2 rounded-lg border-r-4 border-brand-orange text-sm font-bold text-gray-700 w-full text-left shadow-sm hover:shadow-[0_0_15px_rgba(249,115,22,0.4)] transition-all cursor-default">
                                     Data Visualization</div>
                             </div>
                         </div>
@@ -185,31 +185,38 @@
 
         <!-- Tab 2: Application Services -->
         <div *ngIf="activeTab === 'Application Services'"
-            class="w-full h-full flex items-center justify-center animate-fade-in-up p-8">
+            class="w-full h-full flex items-start justify-center animate-fade-in-up">
             <div class="w-full max-w-7xl">
-                <h2 class="text-3xl font-bold text-center text-brand-dark mb-12 uppercase tracking-wide">Application
-                    Services</h2>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Card 1 -->
                     <div
-                        class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border-t-4 border-red-500 transform hover:-translate-y-2 group">
+                        class="service-card animate-fade-in-up delay-100 bg-white rounded-2xl shadow-lg p-6 border-t-4 border-red-500 group relative">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <svg class="w-24 h-24 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
                         <div
-                            class="h-14 w-14 bg-red-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-red-500 transition-colors duration-300">
-                            <svg class="w-7 h-7 text-red-500 group-hover:text-white transition-colors" fill="none"
+                            class="service-icon-wrapper h-16 w-16 bg-red-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-red-500 transition-colors duration-300 shadow-sm group-hover:shadow-red-500/50">
+                            <svg class="w-8 h-8 text-red-500 group-hover:text-white transition-colors" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M13 10V3L4 14h7v7l9-11h-7z" />
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Digital Transformation</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                        <h3
+                            class="text-xl font-bold text-gray-800 mb-4 group-hover:text-shimmer-red transition-all cursor-default">
+                            Digital
+                            Transformation</h3>
+                        <ul class="space-y-3 relative z-10">
+                            <li class="service-list-item flex items-start text-sm text-gray-600 font-medium">
                                 <span class="mr-2 text-red-500 font-bold">→</span> Data Discovery
                             </li>
-                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                            <li class="service-list-item flex items-start text-sm text-gray-600 font-medium">
                                 <span class="mr-2 text-red-500 font-bold">→</span> Build Master Data
                             </li>
-                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                            <li class="service-list-item flex items-start text-sm text-gray-600 font-medium">
                                 <span class="mr-2 text-red-500 font-bold">→</span> Business Insights
                             </li>
                         </ul>
@@ -217,24 +224,33 @@
 
                     <!-- Card 2 -->
                     <div
-                        class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border-t-4 border-blue-500 transform hover:-translate-y-2 mt-0 lg:mt-8 group">
+                        class="service-card animate-fade-in-up delay-200 bg-white rounded-2xl shadow-lg p-6 border-t-4 border-blue-500 group relative">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <svg class="w-24 h-24 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                            </svg>
+                        </div>
                         <div
-                            class="h-14 w-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-500 transition-colors duration-300">
-                            <svg class="w-7 h-7 text-blue-500 group-hover:text-white transition-colors" fill="none"
+                            class="service-icon-wrapper h-16 w-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-500 transition-colors duration-300 shadow-sm group-hover:shadow-blue-500/50">
+                            <svg class="w-8 h-8 text-blue-500 group-hover:text-white transition-colors" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Cloud Strategy</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                        <h3
+                            class="text-xl font-bold text-gray-800 mb-4 group-hover:text-shimmer-blue transition-all cursor-default">
+                            Cloud
+                            Strategy</h3>
+                        <ul class="space-y-3 relative z-10">
+                            <li class="service-list-item flex items-start text-sm text-gray-600 font-medium">
                                 <span class="mr-2 text-blue-500 font-bold">→</span> Migration & Modernization
                             </li>
-                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                            <li class="service-list-item flex items-start text-sm text-gray-600 font-medium">
                                 <span class="mr-2 text-blue-500 font-bold">→</span> Cloud Integration
                             </li>
-                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                            <li class="service-list-item flex items-start text-sm text-gray-600 font-medium">
                                 <span class="mr-2 text-blue-500 font-bold">→</span> Cost Optimization
                             </li>
                         </ul>
@@ -242,24 +258,32 @@
 
                     <!-- Card 3 -->
                     <div
-                        class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border-t-4 border-indigo-500 transform hover:-translate-y-2 mt-0 lg:mt-16 group">
+                        class="service-card animate-fade-in-up delay-300 bg-white rounded-2xl shadow-lg p-6 border-t-4 border-indigo-500 group relative">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <svg class="w-24 h-24 text-indigo-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                            </svg>
+                        </div>
                         <div
-                            class="h-14 w-14 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-500 transition-colors duration-300">
-                            <svg class="w-7 h-7 text-indigo-500 group-hover:text-white transition-colors" fill="none"
+                            class="service-icon-wrapper h-16 w-16 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-500 transition-colors duration-300 shadow-sm group-hover:shadow-indigo-500/50">
+                            <svg class="w-8 h-8 text-indigo-500 group-hover:text-white transition-colors" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Solution Integration</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                        <h3
+                            class="text-xl font-bold text-gray-800 mb-4 group-hover:text-shimmer-indigo transition-all cursor-default">
+                            Solution Integration</h3>
+                        <ul class="space-y-3 relative z-10">
+                            <li class="service-list-item flex items-start text-sm text-gray-600 font-medium">
                                 <span class="mr-2 text-indigo-500 font-bold">→</span> Legacy Integration
                             </li>
-                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                            <li class="service-list-item flex items-start text-sm text-gray-600 font-medium">
                                 <span class="mr-2 text-indigo-500 font-bold">→</span> 3rd Party Integration
                             </li>
-                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                            <li class="service-list-item flex items-start text-sm text-gray-600 font-medium">
                                 <span class="mr-2 text-indigo-500 font-bold">→</span> Tool based Integration
                             </li>
                         </ul>
@@ -267,24 +291,33 @@
 
                     <!-- Card 4 -->
                     <div
-                        class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border-t-4 border-green-500 transform hover:-translate-y-2 mt-0 lg:mt-24 group">
+                        class="service-card animate-fade-in-up delay-400 bg-white rounded-2xl shadow-lg p-6 border-t-4 border-green-500 group relative">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <svg class="w-24 h-24 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                            </svg>
+                        </div>
                         <div
-                            class="h-14 w-14 bg-green-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors duration-300">
-                            <svg class="w-7 h-7 text-green-500 group-hover:text-white transition-colors" fill="none"
+                            class="service-icon-wrapper h-16 w-16 bg-green-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors duration-300 shadow-sm group-hover:shadow-green-500/50">
+                            <svg class="w-8 h-8 text-green-500 group-hover:text-white transition-colors" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">App Modernization</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                        <h3
+                            class="text-xl font-bold text-gray-800 mb-4 group-hover:text-shimmer-green transition-all cursor-default">
+                            App
+                            Modernization</h3>
+                        <ul class="space-y-3 relative z-10">
+                            <li class="service-list-item flex items-start text-sm text-gray-600 font-medium">
                                 <span class="mr-2 text-green-500 font-bold">→</span> Custom Software
                             </li>
-                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                            <li class="service-list-item flex items-start text-sm text-gray-600 font-medium">
                                 <span class="mr-2 text-green-500 font-bold">→</span> Agile Engineering
                             </li>
-                            <li class="flex items-start text-sm text-gray-600 font-medium">
+                            <li class="service-list-item flex items-start text-sm text-gray-600 font-medium">
                                 <span class="mr-2 text-green-500 font-bold">→</span> Ideas to Product
                             </li>
                         </ul>
@@ -295,17 +328,22 @@
 
         <!-- Tab 3: Data Analytics -->
         <div *ngIf="activeTab === 'Data Analytics'"
-            class="w-full h-full flex items-center justify-center animate-fade-in-up p-8">
+            class="w-full h-full flex items-start justify-center animate-fade-in-up">
             <div class="w-full max-w-7xl">
-                <h2 class="text-3xl font-bold text-center text-brand-dark mb-12 uppercase tracking-wide">Data Analytics
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Data Engineering -->
                     <div
-                        class="bg-white rounded-xl shadow-lg p-6 border-b-4 border-brand-orange hover:-translate-y-2 transition-transform duration-300 group">
+                        class="service-card animate-fade-in-up delay-100 bg-white rounded-2xl shadow-lg p-6 border-b-4 border-brand-orange group relative overflow-hidden">
+                        <div class="absolute -right-8 -bottom-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <svg class="w-40 h-40 text-brand-orange" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                                </path>
+                            </svg>
+                        </div>
                         <div
-                            class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 text-brand-orange mx-auto group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300">
+                            class="service-icon-wrapper w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 text-brand-orange mx-auto group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300 shadow-sm group-hover:shadow-orange-500/50">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
@@ -313,23 +351,31 @@
                             </svg>
                         </div>
                         <h4
-                            class="font-bold text-lg text-gray-800 mb-4 text-center group-hover:text-brand-orange transition-colors">
+                            class="font-bold text-lg text-gray-800 mb-4 text-center group-hover:text-shimmer-orange transition-all cursor-default">
                             Data Engineering</h4>
-                        <ul class="space-y-2 text-sm text-gray-600">
-                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span>
+                        <ul class="space-y-2 text-sm text-gray-600 relative z-10">
+                            <li class="service-list-item flex items-start justify-center"><span class="hidden">•</span>
                                 Building Data Pipelines</li>
-                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span> Cloud
+                            <li class="service-list-item flex items-start justify-center"><span class="hidden">•</span>
+                                Cloud
                                 Migration</li>
-                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span>
+                            <li class="service-list-item flex items-start justify-center"><span class="hidden">•</span>
                                 Optimized Data Lakes</li>
                         </ul>
                     </div>
 
                     <!-- Data Transformation -->
                     <div
-                        class="bg-white rounded-xl shadow-lg p-6 border-b-4 border-brand-orange hover:-translate-y-2 transition-transform duration-300 group">
+                        class="service-card animate-fade-in-up delay-200 bg-white rounded-2xl shadow-lg p-6 border-b-4 border-brand-orange group relative overflow-hidden">
+                        <div class="absolute -right-8 -bottom-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <svg class="w-40 h-40 text-brand-orange" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                                </path>
+                            </svg>
+                        </div>
                         <div
-                            class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 text-brand-orange mx-auto group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300">
+                            class="service-icon-wrapper w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 text-brand-orange mx-auto group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300 shadow-sm group-hover:shadow-orange-500/50">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
@@ -337,23 +383,31 @@
                             </svg>
                         </div>
                         <h4
-                            class="font-bold text-lg text-gray-800 mb-4 text-center group-hover:text-brand-orange transition-colors">
+                            class="font-bold text-lg text-gray-800 mb-4 text-center group-hover:text-shimmer-orange transition-all cursor-default">
                             Data Transformation</h4>
-                        <ul class="space-y-2 text-sm text-gray-600">
-                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span>
+                        <ul class="space-y-2 text-sm text-gray-600 relative z-10">
+                            <li class="service-list-item flex items-start justify-center"><span class="hidden">•</span>
                                 Advanced Analytics</li>
-                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span> Data
+                            <li class="service-list-item flex items-start justify-center"><span class="hidden">•</span>
+                                Data
                                 Cleansing & Processing</li>
-                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span>
+                            <li class="service-list-item flex items-start justify-center"><span class="hidden">•</span>
                                 Governance & Management</li>
                         </ul>
                     </div>
 
                     <!-- AI / ML Modelling -->
                     <div
-                        class="bg-white rounded-xl shadow-lg p-6 border-b-4 border-brand-orange hover:-translate-y-2 transition-transform duration-300 group">
+                        class="service-card animate-fade-in-up delay-300 bg-white rounded-2xl shadow-lg p-6 border-b-4 border-brand-orange group relative overflow-hidden">
+                        <div class="absolute -right-8 -bottom-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <svg class="w-40 h-40 text-brand-orange" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
                         <div
-                            class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 text-brand-orange mx-auto group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300">
+                            class="service-icon-wrapper w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 text-brand-orange mx-auto group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300 shadow-sm group-hover:shadow-orange-500/50">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
@@ -361,23 +415,32 @@
                             </svg>
                         </div>
                         <h4
-                            class="font-bold text-lg text-gray-800 mb-4 text-center group-hover:text-brand-orange transition-colors">
+                            class="font-bold text-lg text-gray-800 mb-4 text-center group-hover:text-shimmer-orange transition-all cursor-default">
                             AI / ML Modelling</h4>
-                        <ul class="space-y-2 text-sm text-gray-600">
-                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span>
+                        <ul class="space-y-2 text-sm text-gray-600 relative z-10">
+                            <li class="service-list-item flex items-start justify-center"><span class="hidden">•</span>
                                 Predictive Analytics</li>
-                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span> Cutting
+                            <li class="service-list-item flex items-start justify-center"><span class="hidden">•</span>
+                                Cutting
                                 Edge AI/ML Models</li>
-                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span> Data
+                            <li class="service-list-item flex items-start justify-center"><span class="hidden">•</span>
+                                Data
                                 Driven Insights</li>
                         </ul>
                     </div>
 
                     <!-- Data Visualization -->
                     <div
-                        class="bg-white rounded-xl shadow-lg p-6 border-b-4 border-brand-orange hover:-translate-y-2 transition-transform duration-300 group">
+                        class="service-card animate-fade-in-up delay-400 bg-white rounded-2xl shadow-lg p-6 border-b-4 border-brand-orange group relative overflow-hidden">
+                        <div class="absolute -right-8 -bottom-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <svg class="w-40 h-40 text-brand-orange" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z">
+                                </path>
+                            </svg>
+                        </div>
                         <div
-                            class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 text-brand-orange mx-auto group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300">
+                            class="service-icon-wrapper w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 text-brand-orange mx-auto group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300 shadow-sm group-hover:shadow-orange-500/50">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z">
@@ -385,14 +448,16 @@
                             </svg>
                         </div>
                         <h4
-                            class="font-bold text-lg text-gray-800 mb-4 text-center group-hover:text-brand-orange transition-colors">
+                            class="font-bold text-lg text-gray-800 mb-4 text-center group-hover:text-shimmer-orange transition-all cursor-default">
                             Data Visualization</h4>
-                        <ul class="space-y-2 text-sm text-gray-600">
-                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span>
+                        <ul class="space-y-2 text-sm text-gray-600 relative z-10">
+                            <li class="service-list-item flex items-start justify-center"><span class="hidden">•</span>
                                 Real-time Dashboards</li>
-                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span> Best In
+                            <li class="service-list-item flex items-start justify-center"><span class="hidden">•</span>
+                                Best In
                                 Class Viz</li>
-                            <li class="flex items-start"><span class="text-brand-orange mr-2 font-bold">•</span> Trend
+                            <li class="service-list-item flex items-start justify-center"><span class="hidden">•</span>
+                                Trend
                                 Analysis Views</li>
                         </ul>
                     </div>
@@ -402,10 +467,9 @@
 
         <!-- Tab 4: Embedded-consultancy -->
         <div *ngIf="activeTab === 'Embedded-consultancy'"
-            class="w-full h-full flex items-center justify-center animate-fade-in-up p-8">
+            class="w-full h-full flex items-start justify-center animate-fade-in-up p-8">
             <div class="w-full max-w-7xl">
-                <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center uppercase tracking-wide">Embedded
-                    Consultancy</h2>
+
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
@@ -415,33 +479,34 @@
                         <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
                             <div class="bg-indigo-600 px-6 py-4 flex justify-between items-center">
                                 <h3 class="font-bold text-white text-xl flex items-center">
-                                    <svg class="w-6 h-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg class="w-6 h-6 mr-3 text-white" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                                     </svg>
-                                    Industry Domains
+                                    <span class="text-white">Industry Domains</span>
                                 </h3>
                                 <div class="text-indigo-200 text-sm font-medium">Diverse Expertise</div>
                             </div>
                             <div class="p-6">
                                 <div class="flex flex-wrap gap-3">
                                     <span
-                                        class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default">Auto
+                                        class="badge-float px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default hover:text-shimmer-purple">Auto
                                         & IoT</span>
                                     <span
-                                        class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default">Semiconductor</span>
+                                        class="badge-float px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default hover:text-shimmer-purple">Semiconductor</span>
                                     <span
-                                        class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default">Platform
+                                        class="badge-float px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default hover:text-shimmer-purple">Platform
                                         Services</span>
                                     <span
-                                        class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default">Target
+                                        class="badge-float px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default hover:text-shimmer-purple">Target
                                         Integration</span>
                                     <span
-                                        class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default">Connectivity</span>
+                                        class="badge-float px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default hover:text-shimmer-purple">Connectivity</span>
                                     <span
-                                        class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default">Testing/Automation</span>
+                                        class="badge-float px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default hover:text-shimmer-purple">Testing/Automation</span>
                                     <span
-                                        class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default">PLM
+                                        class="badge-float px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-bold border border-indigo-100 hover:bg-indigo-100 transition-colors cursor-default hover:text-shimmer-purple">PLM
                                         & PES</span>
                                 </div>
                             </div>
@@ -492,11 +557,11 @@
                     <div class="lg:col-span-5">
                         <div
                             class="bg-gray-900 rounded-2xl shadow-xl overflow-hidden text-white h-full border border-gray-700">
-                            <div class="p-8">
-                                <h3 class="text-2xl font-bold mb-8 border-b border-gray-700 pb-4 tracking-wide">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold mb-6 border-b border-gray-700 pb-4 tracking-wide">
                                     Technical Stack</h3>
 
-                                <div class="space-y-8 relative">
+                                <div class="space-y-5 relative">
                                     <!-- Connecting Line -->
                                     <div
                                         class="absolute left-3 top-2 bottom-6 w-0.5 bg-gradient-to-b from-brand-purple to-transparent">

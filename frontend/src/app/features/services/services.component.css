@@ -3,6 +3,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -12,4 +13,190 @@
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
   opacity: 0;
+}
+
+/* Staggered Animation Delays */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+/* Enhanced Card Styling */
+.service-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: white;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* Icon Animation */
+.service-icon-wrapper {
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* List Item Hover */
+.service-list-item {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.service-list-item:hover {
+  transform: translateX(4px);
+}
+
+/* --- Pulse Glows --- */
+@keyframes pulse-purple-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 5px 0px rgba(139, 92, 246, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 20px 5px rgba(139, 92, 246, 0.6);
+  }
+}
+
+@keyframes pulse-orange-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 5px 0px rgba(249, 115, 22, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 20px 5px rgba(249, 115, 22, 0.6);
+  }
+}
+
+.animate-pulse-purple {
+  animation: pulse-purple-glow 3s infinite;
+}
+
+.animate-pulse-orange {
+  animation: pulse-orange-glow 3s infinite;
+}
+
+/* --- Gradient Text Shimmers --- */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.text-shimmer-purple {
+  background: linear-gradient(to right, #7c3aed 20%, #a78bfa 40%, #a78bfa 60%, #7c3aed 80%);
+  background-size: 200% auto;
+  color: #7c3aed;
+  background-clip: text;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+.text-shimmer-orange {
+  background: linear-gradient(to right, #ea580c 20%, #fb923c 40%, #fb923c 60%, #ea580c 80%);
+  background-size: 200% auto;
+  color: #ea580c;
+  background-clip: text;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+.text-shimmer-red {
+  background: linear-gradient(to right, #dc2626 20%, #f87171 40%, #f87171 60%, #dc2626 80%);
+  background-size: 200% auto;
+  color: #dc2626;
+  background-clip: text;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+.text-shimmer-blue {
+  background: linear-gradient(to right, #2563eb 20%, #60a5fa 40%, #60a5fa 60%, #2563eb 80%);
+  background-size: 200% auto;
+  color: #2563eb;
+  background-clip: text;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+.text-shimmer-green {
+  background: linear-gradient(to right, #16a34a 20%, #4ade80 40%, #4ade80 60%, #16a34a 80%);
+  background-size: 200% auto;
+  color: #16a34a;
+  background-clip: text;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+.text-shimmer-indigo {
+  background: linear-gradient(to right, #4f46e5 20%, #818cf8 40%, #818cf8 60%, #4f46e5 80%);
+  background-size: 200% auto;
+  color: #4f46e5;
+  background-clip: text;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Floating Badges */
+.badge-float {
+  transition: all 0.3s ease;
+}
+
+.badge-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }

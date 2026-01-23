@@ -5,7 +5,7 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 django.setup()
 
-from core.models import ServiceCategory, LeadershipMember, VisionMission, SiteSetting, Banner
+from core.models import ServiceCategory, LeadershipMember, VisionMission, SiteSetting, Banner, Industry, IndustrySection
 
 def populate():
     print("Populating COMPREHENSIVE real content...")
@@ -54,6 +54,82 @@ def populate():
     for svc in services_data:
         ServiceCategory.objects.create(name=svc['name'], description=svc['description'])
     print(f"Created {len(services_data)} services/industries.")
+
+    # 1.5 Real Industry Solutions (Detailed)
+    Industry.objects.all().delete()
+    
+    # Healthcare Data
+    healthcare = Industry.objects.create(
+        name="Healthcare",
+        description="Solutions for Healthcare sector.",
+        banner_image="industries/banners/healthcare_banner.jpg" 
+    )
+
+    # Healthcare Sections
+    healthcare_sections = [
+        {
+            "title": "Data insights drive increased efficiency cost savings",
+            "content": "Increased prevalence of lifestyle disorders creating a huge demand of accessible healthcare systems. The healthcare market is being propelled with technological advancements with rising in healthcare costs & transparency. The biggest obstacles today comes up with handling huge volume of meta data to extract the significant information & providing superior customer experience.",
+            "image": "industries/sections/data_insights.jpg"
+        },
+        {
+            "title": "Predictive disease analysis",
+            "content": "When it comes to predicting future health outcomes, big data analysis is critical. As a result, there is a lot of research being done on predictive analytics and machine learning approaches to reveal improved decision making. Big data analysis opens up new avenues for predicting future health state based on health metrics and delivering the best results.",
+            "image": "industries/sections/predictive_analysis.jpg"
+        },
+        {
+            "title": "Intelligent chatbot using AI/NLP",
+            "content": "In the field of healthcare, maintaining a healthy lifestyle is crucial. It might be difficult to locate a doctor's consultation for health difficulties in some less-socialized places. The fundamental aim is to create a healthcare chatbot based on Artificial Intelligence and Natural Language Processing (NLP) that can identify a problem and offer necessary facts about it before consulting or visiting a doctor.",
+            "image": "industries/sections/ai_chatbot.jpg"
+        },
+        {
+            "title": "Reduce Healthcare costs with benefits and recommendations",
+            "content": "Advanced machine learning models, suitable laboratory equipment, machine learning, and data science, which assist in creating medicines to improve patients' fast treatment at a lower cost, can help identify between cancers and healthy anatomy with 3D radiological images to enable medical experts in radiation therapy and surgical planning.",
+            "image": "industries/sections/cost_reduction.jpg"
+        },
+        {
+            "title": "Optima x-ray predictor",
+            "content": "Case Study: Identifying between cancers and healthy anatomy with 3D radiological images to enable medical experts.<br><br><a href='#' class='btn-primary'>Download Case Study</a>",
+            "image": "industries/sections/xray.jpg"
+        }
+    ]
+
+    for section in healthcare_sections:
+        IndustrySection.objects.create(industry=healthcare, **section)
+
+    # Automotive Data
+    automotive = Industry.objects.create(
+        name="Automotive",
+        description="Empowering Automakers with Next-Gen Technologies. The global automotive industry is undergoing a tremendous amount of change at an unprecedented pace. The experience of electric vehicles (EV) and autonomous vehicles (AV) is being enhanced by technological advancements, including multi-sensor, AI-enabled, over-the-air upgrades, and more. Especially with generative AI, the automotive sector has countless possibilities, from voice and virtual assistants to material and generative design.",
+        banner_image="industries/banners/automotive_banner.jpg"
+    )
+
+    automotive_sections = [
+        {
+            "title": "Predictive Maintenance & AI-Powered Solutions",
+            "content": "Predictive Modelling, leveraging historical and current data to extract crucial insights can significantly enhance strategic decision-making and help businesses maintain a competitive edge. Leveraging data analytics to monitor vehicle health, anticipate failures, and reduce unplanned downtime.",
+            "image": "industries/sections/auto_predictive.jpg"
+        },
+        {
+            "title": "Connectivity & Data-Driven Service",
+            "content": "Connectivity and data-driven services are transforming the automotive industry, enabling new capabilities and business models. Connected cars collect and transmit vehicle data, facilitating real-time monitoring, remote control, and the development of advanced features like over-the-air updates and predictive maintenance.",
+            "image": "industries/sections/auto_connectivity.jpg"
+        },
+        {
+            "title": "Supply Chain & Inventory Management",
+            "content": "Effective inventory and supply chain management are essential for productivity and profitability in the automobile sector. This entails organizing the movement of components, parts, and completed automobiles from suppliers to consumers. Optimizing inventory levels to reduce expenses and guarantee on-time delivery to satisfy client needs is a major priority.",
+            "image": "industries/sections/auto_supply_chain.jpg"
+        }
+    ]
+
+    for section in automotive_sections:
+        IndustrySection.objects.create(industry=automotive, **section)
+    other_industries = ["Logistics", "Pharma"]
+    for ind_name in other_industries:
+        ind = Industry.objects.create(name=ind_name, description=f"Solutions for {ind_name} sector.")
+        IndustrySection.objects.create(industry=ind, title="Coming Soon", content="Specific details for this industry are coming soon.")
+
+    print(f"Created and populated Healthcare industry + {len(other_industries)} placeholder industries.")
 
     # 2. Leadership
     leadership_data = [
