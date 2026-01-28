@@ -256,7 +256,7 @@ def populate():
     # Ensure page banners exist
     banner_configs = [
         ('HOME', 'Data-Driven Decisions', 'Helping clients build an insight-driven culture for better business.'),
-        ('ABOUT', 'About KMATI', 'A team of serial entrepreneurs and domain experts.'),
+        ('ABOUT', 'Kushagramati', 'A team of serial entrepreneurs and domain experts.'),
         ('SERVICES', 'Our Expertise', 'From Cloud Strategy to AI/ML Modelling and Industry Solutions.'),
         ('CONTACT', 'Get in Touch', 'Visit us in Vijayanagar, Bangalore.'),
         ('INDUSTRIES', 'Industry Solutions', 'Specialized solutions for Healthcare, Automotive, Logistics, and Pharma.'),
