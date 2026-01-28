@@ -97,3 +97,19 @@ Open a **new** terminal (keep the backend running) and navigate to the frontend 
 | **make migrations** | `python manage.py makemigrations` |
 | **apply migrations** | `python manage.py migrate` |
 | **frontend build** | `ng build` |
+
+## 📦 Data Management (Important)
+We use a **Code-First** approach for data to ensure all developers share the same content.
+
+### How to update website content?
+❌ **DO NOT** just change text in the Django Admin panel. Those changes stay on your computer and won't be shared.
+✅ **DO** edit the `backend/populate_real_content.py` file.
+
+1.  Open `backend/populate_real_content.py`.
+2.  Find the text you want to change (e.g., Service descriptions, Banners).
+3.  Edit the code and save.
+4.  Run the script to verify:
+    ```bash
+    python backend/populate_real_content.py
+    ```
+5.  Commit the file to Git. Your team will get the updates when they pull and run the script.
