@@ -336,7 +336,7 @@
   "pk": 94,
   "fields": {
     "industry": 34,
-    "title": "Warehouse surveillance â€“ Video Analytics",
+    "title": "Warehouse surveillance – Video Analytics",
     "content": "Securing warehouses from both external and Internal threats/thefts has been a critical challenge with the increase in the trading of goods. It is a critical decision to make sure the valuables are well protected from break-Ins in a commercial space which can now be enabled using smart video analytics application.",
     "image": "industries/sections/logistics_warehouse.jpg",
     "order": 0
@@ -409,14 +409,61 @@
   }
 },
 {
+  "model": "core.pagesection",
+  "pk": 2,
+  "fields": {
+    "page": "CAREERS",
+    "section_key": "OPEN_POSITIONS",
+    "title": "Open Positions",
+    "subtitle": "Ready to make an impact? Check out our current openings.",
+    "active": true
+  }
+},
+{
+  "model": "core.department",
+  "pk": 6,
+  "fields": {
+    "name": "Engineering",
+    "slug": "engineering"
+  }
+},
+{
+  "model": "core.department",
+  "pk": 7,
+  "fields": {
+    "name": "Sales & Marketing",
+    "slug": "sales-marketing"
+  }
+},
+{
+  "model": "core.department",
+  "pk": 8,
+  "fields": {
+    "name": "Product Management",
+    "slug": "product-management"
+  }
+},
+{
+  "model": "core.department",
+  "pk": 9,
+  "fields": {
+    "name": "Consulting",
+    "slug": "consulting"
+  }
+},
+{
   "model": "core.careerjob",
   "pk": 24,
   "fields": {
     "title": "Senior Data Engineer",
+    "department": null,
     "location": "Bangalore / Hybrid",
     "job_type": "Full-time",
+    "is_remote": false,
+    "salary_range": "",
     "description": "We are looking for an experienced Data Engineer to join our team. You will be responsible for expanding and optimizing our data and data pipeline architecture, as well as optimizing data flow and collection for cross functional teams.",
     "requirements": "5+ years of Python/SQL experience. Experience with Databricks and Spark.",
+    "application_link": "",
     "posted_date": "2026-01-29",
     "active": true
   }
@@ -426,23 +473,31 @@
   "pk": 25,
   "fields": {
     "title": "AI/ML Solutions Architect",
+    "department": null,
     "location": "Bangalore",
     "job_type": "Full-time",
+    "is_remote": false,
+    "salary_range": "",
     "description": "Design and implement machine learning applications and systems. You will be selecting the appropriate algorithms and tools, allowing us to generate accurate predictions and insights.",
     "requirements": "Strong background in Deep Learning, NLP, and Cloud AI services.",
+    "application_link": "",
     "posted_date": "2026-01-29",
     "active": true
   }
 },
 {
   "model": "core.careerjob",
-  "pk": 26,
+  "pk": 27,
   "fields": {
     "title": "Business Analyst - Healthcare",
+    "department": 9,
     "location": "Remote",
     "job_type": "Contract",
+    "is_remote": true,
+    "salary_range": "$20k - $40k",
     "description": "Bridge the gap between IT and the business using data analytics to assess processes, determine requirements and deliver data-driven recommendations.",
     "requirements": "Experience in Healthcare domain and commercially aware.",
+    "application_link": "",
     "posted_date": "2026-01-29",
     "active": true
   }
@@ -632,7 +687,7 @@
     "site_name": "KMATI",
     "contact_email": "sales@kmati.in",
     "contact_phone": "9148544466",
-    "address": "#2nd Floor, No.16, 17th Cross, M C Road, Near Maruthi Mandir, Vijayanagar, Bangalore â€“ 560040",
+    "address": "#2nd Floor, No.16, 17th Cross, M C Road, Near Maruthi Mandir, Vijayanagar, Bangalore – 560040",
     "facebook_url": "",
     "twitter_url": "",
     "instagram_url": "",
