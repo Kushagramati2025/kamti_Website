@@ -2,13 +2,13 @@ from rest_framework import viewsets, mixins, permissions
 from .models import (
     Banner, ServiceCategory, Industry, CareerJob, 
     BlogPost, LeadershipMember, Partner, CompanyValue, 
-    VisionMission, ContactMessage, SiteSetting
+    VisionMission, ContactMessage, SiteSetting, Tool, CaseStudy
 )
 from .serializers import (
     BannerSerializer, ServiceCategorySerializer, IndustrySerializer, 
     CareerJobSerializer, BlogPostSerializer, LeadershipMemberSerializer, 
     PartnerSerializer, CompanyValueSerializer, VisionMissionSerializer, 
-    ContactMessageSerializer, SiteSettingSerializer
+    ContactMessageSerializer, SiteSettingSerializer, ToolSerializer, CaseStudySerializer
 )
 
 class BannerViewSet(viewsets.ModelViewSet):
@@ -88,3 +88,14 @@ class ContactMessageViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
     def perform_create(self, serializer):
         # Here we can add email sending logic later
         serializer.save()
+
+class ToolViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Tool.objects.all()
+    serializer_class = ToolSerializer
+    permission_classes = [permissions.AllowAny]
+
+class CaseStudyViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = CaseStudy.objects.all()
+    serializer_class = CaseStudySerializer
+    permission_classes = [permissions.AllowAny]
+

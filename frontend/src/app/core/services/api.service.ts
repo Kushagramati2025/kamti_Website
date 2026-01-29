@@ -57,6 +57,14 @@ export class ApiService {
         return this.http.get<any[]>(`${this.apiUrl}/vision-mission/`);
     }
 
+    getTools(): Observable<any[]> {
+        return this.http.get<any[]>(`${this.apiUrl}/tools/`);
+    }
+
+    getCaseStudies(): Observable<any[]> {
+        return this.http.get<any[]>(`${this.apiUrl}/case-studies/`);
+    }
+
     contact(data: any): Observable<any> {
         return this.http.post(`${this.apiUrl}/contact/`, data);
     }

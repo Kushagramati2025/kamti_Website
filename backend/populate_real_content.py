@@ -89,7 +89,7 @@ def populate():
         },
         {
             "title": "Optima x-ray predictor",
-            "content": "Case Study: Identifying between cancers and healthy anatomy with 3D radiological images to enable medical experts.<br><br><a href='#' class='btn-primary'>Download Case Study</a>",
+            "content": "Case Study: Identifying between cancers and healthy anatomy with 3D radiological images to enable medical experts.<br><br><a href='http://127.0.0.1:8000/media/casestudies/pdfs/Optima_XRay_Predictor.pdf' target='_blank' class='btn-primary inline-flex items-center px-6 py-3 border border-transparent text-base font-bold rounded-lg text-white bg-brand-orange hover:bg-brand-orange-dark shadow-md transition-all duration-300'>Download Case Study</a>",
             "image": "industries/sections/xray.jpg"
         }
     ]
@@ -150,7 +150,7 @@ def populate():
         },
         {
             "title": "Sentiment analysis",
-            "content": "Classification of text based on keywords.<br><br><a href='#' class='btn-primary'>Download Case Study</a>",
+            "content": "Classification of text based on keywords.<br><br><a href='http://127.0.0.1:8000/media/casestudies/pdfs/Sentiment_Analysis.pdf' target='_blank' class='btn-primary inline-flex items-center px-6 py-3 border border-transparent text-base font-bold rounded-lg text-white bg-brand-orange hover:bg-brand-orange-dark shadow-md transition-all duration-300'>Download Case Study</a>",
             "image": "industries/sections/logistics_sentiment.jpg"
         }
     ]

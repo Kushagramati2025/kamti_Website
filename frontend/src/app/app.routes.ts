@@ -23,6 +23,7 @@ export const routes: Routes = [
         children: [
             { path: '', component: HomeComponent },
             { path: 'services', component: ServicesComponent },
+            { path: 'tools-resources', loadComponent: () => import('./features/tools-resources/tools-resources.component').then(m => m.ToolsResourcesComponent) },
             { path: 'industries', component: IndustryListComponent },
             { path: 'industries/:slug', component: IndustryDetailComponent },
             { path: 'careers', component: CareerListComponent },

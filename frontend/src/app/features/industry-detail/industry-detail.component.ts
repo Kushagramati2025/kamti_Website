@@ -33,4 +33,10 @@ export class IndustryDetailComponent implements OnInit {
     if (path.startsWith('http')) return path;
     return `http://127.0.0.1:8000${path}`;
   }
+
+  getMailToLink(title: string): string {
+    const subject = `Inquiry about Case Study: ${title}`;
+    const body = `Hello,\n\nI am interested in learning more about the Case Study "${title}".\n\nPlease provide more information.\n\nBest regards,`;
+    return `mailto:Careers@kmati.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
 }

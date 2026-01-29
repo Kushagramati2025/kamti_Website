@@ -1,0 +1,118 @@
+<div class="bg-gray-50 min-h-screen pt-24 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl">
+                Tools & Resources
+            </h1>
+            <p class="mt-4 text-xl text-gray-500 max-w-2xl mx-auto">
+                Discover our accelerators, white papers, and case studies designed to fast-track your data journey.
+            </p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="flex justify-center mb-12">
+            <div class="bg-white p-1 rounded-xl shadow-sm inline-flex">
+                <button (click)="setActiveTab('tools')" [class.bg-brand-orange]="activeTab() === 'tools'"
+                    [class.text-white]="activeTab() === 'tools'" [class.text-gray-500]="activeTab() !== 'tools'"
+                    class="px-8 py-3 rounded-lg text-sm font-bold uppercase tracking-wide transition-all duration-200">
+                    Tools & Accelerators
+                </button>
+                <button (click)="setActiveTab('casestudies')" [class.bg-brand-orange]="activeTab() === 'casestudies'"
+                    [class.text-white]="activeTab() === 'casestudies'"
+                    [class.text-gray-500]="activeTab() !== 'casestudies'"
+                    class="px-8 py-3 rounded-lg text-sm font-bold uppercase tracking-wide transition-all duration-200 ml-2">
+                    Case Studies
+                </button>
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="animate-fadeIn">
+
+            <!-- Tools Section -->
+            <div *ngIf="activeTab() === 'tools'" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div *ngFor="let tool of tools()"
+                    class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-gray-100">
+                    <div class="h-2 bg-brand-orange w-full"></div>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-6 h-6 text-brand-orange" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3
+                            class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-orange transition-colors">
+                            {{ tool.title }}
+                        </h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            {{ tool.description }}
+                        </p>
+                        <a [href]="getMailToLink(tool, 'Tool')"
+                            class="inline-flex items-center text-brand-orange font-bold hover:text-brand-orange-dark transition-colors group/link">
+                            Request Info
+                            <svg class="ml-2 w-4 h-4 transform group-hover/link:translate-x-1 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Empty State for Tools -->
+                <div *ngIf="tools().length === 0" class="col-span-full text-center py-12">
+                    <p class="text-gray-500 text-lg">No tools currently available.</p>
+                </div>
+            </div>
+
+            <!-- Case Studies Section -->
+            <div *ngIf="activeTab() === 'casestudies'" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div *ngFor="let study of caseStudies()"
+                    class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-gray-100">
+                    <div class="h-2 bg-brand-purple w-full"></div>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-6 h-6 text-brand-purple" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3
+                            class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-purple transition-colors">
+                            {{ study.title }}
+                        </h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            {{ study.description }}
+                        </p>
+                        <a [href]="getMailToLink(study, 'Case Study')"
+                            class="inline-flex items-center text-brand-purple font-bold hover:text-brand-purple-dark transition-colors group/link">
+                            Request Case Study
+                            <svg class="ml-2 w-4 h-4 transform group-hover/link:translate-x-1 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Empty State for Case Studies -->
+                <div *ngIf="caseStudies().length === 0" class="col-span-full text-center py-12">
+                    <p class="text-gray-500 text-lg">No case studies currently available.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

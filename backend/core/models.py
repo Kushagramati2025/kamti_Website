@@ -50,6 +50,7 @@ class Industry(models.Model):
     description = models.TextField()
     icon = models.ImageField(upload_to='industries/icons/', blank=True, null=True)
     banner_image = models.ImageField(upload_to='industries/banners/', blank=True, null=True)
+    case_study = models.ForeignKey('CaseStudy', on_delete=models.SET_NULL, blank=True, null=True, related_name='industries')
     order = models.IntegerField(default=0)
 
     class Meta:
@@ -199,3 +200,30 @@ class SiteSetting(models.Model):
 
     def __str__(self):
         return "Site Configuration"
+
+class Tool(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    image = models.ImageField(upload_to='tools/images/', blank=True, null=True)
+    pdf_file = models.FileField(upload_to='tools/pdfs/')
+    order = models.IntegerField(default=0)
+
+    class Meta:
+        ordering = ['order']
+
+    def __str__(self):
+        return self.title
+
+class CaseStudy(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    image = models.ImageField(upload_to='casestudies/images/', blank=True, null=True)
+    pdf_file = models.FileField(upload_to='casestudies/pdfs/')
+    order = models.IntegerField(default=0)
+
+    class Meta:
+        verbose_name_plural = "Case Studies"
+        ordering = ['order']
+
+    def __str__(self):
+        return self.title

@@ -2,8 +2,18 @@ from rest_framework import serializers
 from .models import (
     Banner, ServiceCategory, Industry, IndustrySection, CareerJob, 
     BlogPost, LeadershipMember, Partner, CompanyValue, 
-    VisionMission, ContactMessage, SiteSetting
+    VisionMission, ContactMessage, SiteSetting, Tool, CaseStudy
 )
+
+class ToolSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tool
+        fields = '__all__'
+
+class CaseStudySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CaseStudy
+        fields = '__all__'
 
 class BannerSerializer(serializers.ModelSerializer):
     class Meta:
@@ -22,6 +32,7 @@ class IndustrySectionSerializer(serializers.ModelSerializer):
 
 class IndustrySerializer(serializers.ModelSerializer):
     sections = IndustrySectionSerializer(many=True, read_only=True)
+    case_study = CaseStudySerializer(read_only=True)
     
     class Meta:
         model = Industry
@@ -66,3 +77,6 @@ class SiteSettingSerializer(serializers.ModelSerializer):
     class Meta:
         model = SiteSetting
         fields = '__all__'
+
+
+
