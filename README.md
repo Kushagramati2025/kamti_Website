@@ -98,18 +98,26 @@ Open a **new** terminal (keep the backend running) and navigate to the frontend 
 | **apply migrations** | `python manage.py migrate` |
 | **frontend build** | `ng build` |
 
-## 📦 Data Management (Important)
-We use a **Code-First** approach for data to ensure all developers share the same content.
+## 📦 Data Management (Database Syncing)
 
-### How to update website content?
-❌ **DO NOT** just change text in the Django Admin panel. Those changes stay on your computer and won't be shared.
-✅ **DO** edit the `backend/populate_real_content.py` file.
+Since the SQLite database (`db.sqlite3`) is **not** shared in Git (to avoid conflicts), we use **Fixtures** to share website content (Industries, Services, Banners, etc.) between developers.
 
-1.  Open `backend/populate_real_content.py`.
-2.  Find the text you want to change (e.g., Service descriptions, Banners).
-3.  Edit the code and save.
-4.  Run the script to verify:
-    ```bash
-    python backend/populate_real_content.py
-    ```
-5.  Commit the file to Git. Your team will get the updates when they pull and run the script.
+### **Option 1: Setting up / Syncing (After `git pull`)**
+Run this script to update your database with the latest changes from the team:
+```powershell
+.\backend\scripts\load_data.bat
+```
+
+### **Option 2: Saving Your Changes (Before `git push`)**
+If you have changed any website content (Services, Text, etc.), run this script before you commit:
+```powershell
+.\backend\scripts\save_data.bat
+git add .
+git commit -m "Update content"
+git push
+```
+
+### **Summary of Files**
+*   `db.sqlite3`: **Local only**. Contains your personal test data. Do not commit.
+*   `backend/core/fixtures/core_data.json`: **Shared**. The source of truth for website content.
+*   `media/`: **Shared**. Contains images which are currently tracked in Git.
