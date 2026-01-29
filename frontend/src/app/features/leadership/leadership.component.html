@@ -1,102 +1,92 @@
-<div class="relative w-full min-h-screen bg-gray-50">
-    <!-- Top Banner Section -->
-    <div class="relative h-[450px] w-full bg-brand-purple overflow-hidden flex">
-        <!-- Left Sidebar Background (Deep Purple) -->
-        <div class="w-1/4 h-full bg-brand-purple z-20 relative hidden lg:block border-r border-white/10">
-            <!-- Menu Area -->
-            <div class="py-12 pl-12 pr-4 space-y-4">
-                <a routerLink="/leadership" routerLinkActive="font-bold underline"
-                    class="block text-white uppercase text-sm tracking-wider border-b border-white/20 pb-2">Leadership</a>
-                <a routerLink="/partners" routerLinkActive="font-bold underline"
-                    class="block text-white/80 hover:text-white uppercase text-sm tracking-wider border-b border-white/20 pb-2 transition-colors">Partners</a>
-                <a routerLink="/values" routerLinkActive="font-bold underline"
-                    class="block text-white/80 hover:text-white uppercase text-sm tracking-wider border-b border-white/20 pb-2 transition-colors">Values</a>
-                <a routerLink="/vision-mission" routerLinkActive="font-bold underline"
-                    class="block text-white/80 hover:text-white uppercase text-sm tracking-wider border-b border-white/20 pb-2 transition-colors">Vision
-                    and Mission</a>
-                <a routerLink="/blog" routerLinkActive="font-bold underline"
-                    class="block text-white/80 hover:text-white uppercase text-sm tracking-wider border-b border-white/20 pb-2 transition-colors">Blog</a>
-                <a routerLink="/contact" routerLinkActive="font-bold underline"
-                    class="block text-white/80 hover:text-white uppercase text-sm tracking-wider border-b border-white/20 pb-2 transition-colors">Contact</a>
-            </div>
+<div class="min-h-screen bg-gray-50 font-sans">
+    <!-- Compact Hero Banner -->
+    <div class="relative w-full h-[220px] bg-gray-900 overflow-hidden group">
+        <!-- Background Image -->
+        <img src="assets/images/leadership/banner_new.png"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-80 transition-transform duration-700 group-hover:scale-105"
+            alt="Leadership Banner">
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-purple/60 via-brand-purple/40 to-brand-purple/90">
         </div>
 
-        <!-- Banner Image Area -->
-        <div class="flex-grow relative bg-gray-800">
-            <!-- Decorative overlay -->
-            <div class="absolute inset-0 bg-gradient-to-r from-brand-purple to-transparent z-10 lg:w-1/3"></div>
+        <!-- Content -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center z-10 pb-8">
+            <h1
+                class="text-4xl md:text-5xl font-bold text-white tracking-[0.2em] uppercase drop-shadow-2xl mb-4 animate-fade-in-up">
+                Leadership
+            </h1>
+            <div class="w-16 h-1 bg-brand-orange rounded-full shadow-lg"></div>
+        </div>
 
-            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
-                class="w-full h-full object-cover opacity-60" alt="Leadership Banner">
-
-            <!-- Overlay Title (Speech Bubble Style) -->
-            <div class="absolute right-10 top-1/2 -translate-y-1/2 z-20 hidden md:flex items-center">
-                <div
-                    class="bg-brand-purple/95 rounded-full h-56 w-56 flex items-center justify-center relative shadow-2xl backdrop-blur-sm border-8 border-white/10">
-                    <h1 class="text-white font-bold text-3xl uppercase tracking-widest">Leadership</h1>
-                    <!-- Decorative Dots -->
-                    <div class="absolute -right-4 top-10 h-3 w-3 rounded-full bg-brand-orange"></div>
-                    <div class="absolute -left-2 bottom-12 h-4 w-4 rounded-full bg-white/50"></div>
-                </div>
+        <!-- Integrated Navigation -->
+        <div class="absolute bottom-0 left-0 right-0 z-20 border-t border-white/10 bg-white/5 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto px-4">
+                <nav class="flex flex-wrap justify-center md:justify-between items-center h-auto md:h-12 py-1">
+                    <div class="flex flex-wrap justify-center gap-1 md:gap-2">
+                        <a routerLink="/leadership" routerLinkActive="bg-brand-orange text-white"
+                            class="px-3 py-1.5 rounded-full text-white/90 text-xs md:text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-300 uppercase tracking-wide">Leadership</a>
+                        <a routerLink="/partners" routerLinkActive="bg-brand-orange text-white"
+                            class="px-3 py-1.5 rounded-full text-white/90 text-xs md:text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-300 uppercase tracking-wide">Partners</a>
+                        <a routerLink="/values" routerLinkActive="bg-brand-orange text-white"
+                            class="px-3 py-1.5 rounded-full text-white/90 text-xs md:text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-300 uppercase tracking-wide">Values</a>
+                        <a routerLink="/vision-mission" routerLinkActive="bg-brand-orange text-white"
+                            class="px-3 py-1.5 rounded-full text-white/90 text-xs md:text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-300 uppercase tracking-wide">Visionary</a>
+                        <a routerLink="/blog" routerLinkActive="bg-brand-orange text-white"
+                            class="px-3 py-1.5 rounded-full text-white/90 text-xs md:text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-300 uppercase tracking-wide">Blog</a>
+                        <a routerLink="/contact" routerLinkActive="bg-brand-orange text-white"
+                            class="px-3 py-1.5 rounded-full text-white/90 text-xs md:text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-300 uppercase tracking-wide">Contact</a>
+                    </div>
+                </nav>
             </div>
         </div>
     </div>
 
-    <!-- Main Content Area -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div class="flex flex-col lg:flex-row gap-12">
-            <!-- Mobile Sidebar (Visible only on small screens) -->
-            <div class="lg:hidden w-full mb-8 bg-brand-purple p-6 rounded-lg shadow-lg">
-                <div class="grid grid-cols-2 gap-4">
-                    <a routerLink="/leadership" routerLinkActive="text-brand-orange font-bold"
-                        class="text-white uppercase text-sm tracking-wider">Leadership</a>
-                    <a routerLink="/partners" routerLinkActive="text-brand-orange font-bold"
-                        class="text-white/80 uppercase text-sm tracking-wider">Partners</a>
-                    <a routerLink="/values" routerLinkActive="text-brand-orange font-bold"
-                        class="text-white/80 uppercase text-sm tracking-wider">Values</a>
-                    <a routerLink="/vision-mission" routerLinkActive="text-brand-orange font-bold"
-                        class="text-white/80 uppercase text-sm tracking-wider">Vision and Mission</a>
-                    <a routerLink="/blog" routerLinkActive="text-brand-orange font-bold"
-                        class="text-white/80 uppercase text-sm tracking-wider">Blog</a>
-                    <a routerLink="/contact" routerLinkActive="text-brand-orange font-bold"
-                        class="text-white/80 uppercase text-sm tracking-wider">Contact</a>
-                </div>
-            </div>
+    <!-- Main Content: Alternating Layout -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
 
-            <!-- Content Left Spacer (to align with sidebar logic if needed, or just center content) -->
-            <div class="hidden lg:block w-1/4"></div>
-
-            <!-- Content Right -->
-            <div class="w-full lg:w-3/4">
-
-                <div *ngIf="loading" class="flex justify-center py-12">
-                    <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-brand-purple"></div>
-                </div>
-
-                <div *ngFor="let leader of leaders"
-                    class="mb-16 bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                    <!-- Name Badge -->
-                    <div
-                        class="inline-block bg-gradient-to-r from-brand-orange to-[#ff8c42] text-white px-8 py-3 rounded-tr-3xl rounded-bl-3xl mb-6 shadow-md transform -translate-x-4">
-                        <h2 class="text-2xl font-bold tracking-wide">{{ leader.name }}</h2>
-                    </div>
-
-                    <h3
-                        class="text-lg font-bold text-gray-800 mb-6 uppercase tracking-wider border-l-4 border-brand-purple pl-4">
-                        {{ leader.position }}</h3>
-
-                    <div class="flex flex-col md:flex-row gap-8">
-                        <div class="md:w-1/3 flex-shrink-0" *ngIf="leader.image">
-                            <img [src]="leader.image"
-                                class="w-full h-auto rounded-lg shadow-md object-cover hover:scale-105 transition-transform duration-300"
-                                alt="{{leader.name}}">
-                        </div>
-                        <div class="md:w-2/3 prose prose-lg text-gray-600 leading-relaxed text-justify">
-                            <p>{{ leader.bio }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div *ngIf="loading" class="flex justify-center py-12">
+            <div class="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-brand-purple"></div>
         </div>
+
+        <ng-container *ngIf="!loading">
+            <div *ngFor="let leader of leaders; let i = index; let isOdd = odd"
+                class="flex flex-col lg:flex-row items-start gap-8 lg:gap-12 group" [class.lg:flex-row-reverse]="isOdd">
+
+                <!-- Image Side -->
+                <div class="w-full lg:w-5/12 relative flex-shrink-0">
+                    <div
+                        class="relative rounded-xl overflow-hidden shadow-lg aspect-[16/10] transform transition-transform duration-500 group-hover:scale-[1.01]">
+                        <!-- Decorative bg blob -->
+                        <div
+                            class="absolute -inset-4 bg-brand-purple/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+
+                        <img [src]="leader.image || 'assets/images/leadership/dr_anant_upload.png'"
+                            class="w-full h-full object-cover object-top relative z-10" alt="{{leader.name}}"
+                            onerror="this.src='assets/images/leadership/dr_anant_upload.png'">
+                    </div>
+                </div>
+
+                <!-- Content Side -->
+                <div class="w-full lg:w-7/12 space-y-4 pt-2 text-center" [class.lg:text-left]="!isOdd"
+                    [class.lg:text-right]="isOdd">
+                    <div
+                        class="inline-block px-3 py-1 bg-brand-orange/10 text-brand-orange font-bold text-xs uppercase tracking-wider rounded-full mb-1">
+                        {{ leader.position }}
+                    </div>
+
+                    <h2
+                        class="text-2xl md:text-3xl font-bold text-gray-900 group-hover:text-brand-purple transition-colors">
+                        {{ leader.name }}
+                    </h2>
+
+                    <div class="w-16 h-1 bg-brand-purple rounded-full opacity-30 mx-auto" [class.lg:mx-0]="!isOdd"
+                        [class.lg:ml-auto]="isOdd"></div>
+
+                    <p class="text-gray-600 text-base leading-relaxed text-justify">
+                        {{ leader.bio }}
+                    </p>
+                </div>
+            </div>
+        </ng-container>
     </div>
 </div>

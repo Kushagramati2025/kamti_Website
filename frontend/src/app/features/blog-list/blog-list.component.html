@@ -1,113 +1,110 @@
-<div class="relative w-full min-h-screen bg-gray-50">
-    <!-- Top Banner Section -->
-    <div class="relative h-[300px] w-full bg-brand-purple overflow-hidden flex">
-        <!-- Left Sidebar Background (Deep Purple) -->
-        <div class="w-1/4 h-full bg-brand-purple z-20 relative hidden lg:block border-r border-white/10">
-            <!-- Menu Area -->
-            <div class="py-12 pl-12 pr-4 space-y-4">
-                <a routerLink="/leadership" routerLinkActive="font-bold underline"
-                    class="block text-white/80 hover:text-white uppercase text-sm tracking-wider border-b border-white/20 pb-2 transition-colors">Leadership</a>
-                <a routerLink="/partners" routerLinkActive="font-bold underline"
-                    class="block text-white/80 hover:text-white uppercase text-sm tracking-wider border-b border-white/20 pb-2 transition-colors">Partners</a>
-                <a routerLink="/values" routerLinkActive="font-bold underline"
-                    class="block text-white/80 hover:text-white uppercase text-sm tracking-wider border-b border-white/20 pb-2 transition-colors">Values</a>
-                <a routerLink="/vision-mission" routerLinkActive="font-bold underline"
-                    class="block text-white/80 hover:text-white uppercase text-sm tracking-wider border-b border-white/20 pb-2 transition-colors">Vision
-                    and Mission</a>
-                <a routerLink="/blog" routerLinkActive="font-bold underline"
-                    class="block text-white uppercase text-sm tracking-wider border-b border-white/20 pb-2">Blog</a>
-                <a routerLink="/contact" routerLinkActive="font-bold underline"
-                    class="block text-white/80 hover:text-white uppercase text-sm tracking-wider border-b border-white/20 pb-2 transition-colors">Contact</a>
-            </div>
+<div class="min-h-screen bg-gray-50 font-sans">
+    <!-- Compact Hero Banner -->
+    <div class="relative w-full h-[220px] bg-gray-900 overflow-hidden group">
+        <!-- Background Image -->
+        <img src="assets/images/leadership/banner_new.png"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-80 transition-transform duration-700 group-hover:scale-105"
+            alt="Blog Banner">
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-purple/60 via-brand-purple/40 to-brand-purple/90">
         </div>
 
-        <!-- Banner Image Area -->
-        <div class="flex-grow relative bg-gray-800">
-            <!-- Decorative overlay -->
-            <div class="absolute inset-0 bg-gradient-to-r from-brand-purple to-transparent z-10 lg:w-1/3"></div>
+        <!-- Content -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center z-10 pb-8">
+            <h1
+                class="text-4xl md:text-5xl font-bold text-white tracking-[0.2em] uppercase drop-shadow-2xl mb-4 animate-fade-in-up">
+                Blog
+            </h1>
+            <div class="w-16 h-1 bg-brand-orange rounded-full shadow-lg"></div>
+        </div>
 
-            <img src="https://images.unsplash.com/photo-1499750310159-529800cf2c5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
-                class="w-full h-full object-cover opacity-60" alt="Blog Banner">
-
-            <!-- Overlay Title (Speech Bubble Style) -->
-            <div class="absolute right-10 top-1/2 -translate-y-1/2 z-20 hidden md:flex items-center">
-                <div
-                    class="bg-brand-purple/95 rounded-full h-56 w-56 flex items-center justify-center relative shadow-2xl backdrop-blur-sm border-2 border-white/10">
-                    <h1 class="text-white font-bold text-3xl uppercase tracking-widest text-center">Blog</h1>
-                </div>
+        <!-- Integrated Navigation -->
+        <div class="absolute bottom-0 left-0 right-0 z-20 border-t border-white/10 bg-white/5 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto px-4">
+                <nav class="flex flex-wrap justify-center md:justify-between items-center h-auto md:h-12 py-1">
+                    <div class="flex flex-wrap justify-center gap-1 md:gap-2">
+                        <a routerLink="/leadership" routerLinkActive="bg-brand-orange text-white"
+                            class="px-3 py-1.5 rounded-full text-white/90 text-xs md:text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-300 uppercase tracking-wide">Leadership</a>
+                        <a routerLink="/partners" routerLinkActive="bg-brand-orange text-white"
+                            class="px-3 py-1.5 rounded-full text-white/90 text-xs md:text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-300 uppercase tracking-wide">Partners</a>
+                        <a routerLink="/values" routerLinkActive="bg-brand-orange text-white"
+                            class="px-3 py-1.5 rounded-full text-white/90 text-xs md:text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-300 uppercase tracking-wide">Values</a>
+                        <a routerLink="/vision-mission" routerLinkActive="bg-brand-orange text-white"
+                            class="px-3 py-1.5 rounded-full text-white/90 text-xs md:text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-300 uppercase tracking-wide">Visionary</a>
+                        <a routerLink="/blog" routerLinkActive="bg-brand-orange text-white"
+                            class="px-3 py-1.5 rounded-full text-white/90 text-xs md:text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-300 uppercase tracking-wide">Blog</a>
+                        <a routerLink="/contact" routerLinkActive="bg-brand-orange text-white"
+                            class="px-3 py-1.5 rounded-full text-white/90 text-xs md:text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-300 uppercase tracking-wide">Contact</a>
+                    </div>
+                </nav>
             </div>
         </div>
     </div>
 
     <!-- Main Content Area -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div class="flex flex-col lg:flex-row gap-12">
-            <!-- Mobile Sidebar -->
-            <div class="lg:hidden w-full mb-8 bg-brand-purple p-6 rounded-lg shadow-lg">
-                <div class="grid grid-cols-2 gap-4">
-                    <a routerLink="/leadership" routerLinkActive="text-brand-orange font-bold"
-                        class="text-white uppercase text-sm tracking-wider">Leadership</a>
-                    <a routerLink="/partners" routerLinkActive="text-brand-orange font-bold"
-                        class="text-white uppercase text-sm tracking-wider">Partners</a>
-                    <a routerLink="/values" routerLinkActive="text-brand-orange font-bold"
-                        class="text-white uppercase text-sm tracking-wider">Values</a>
-                    <a routerLink="/vision-mission" routerLinkActive="text-brand-orange font-bold"
-                        class="text-white uppercase text-sm tracking-wider">Vision and Mission</a>
-                    <a routerLink="/blog" routerLinkActive="text-brand-orange font-bold"
-                        class="text-white uppercase text-sm tracking-wider">Blog</a>
-                    <a routerLink="/contact" routerLinkActive="text-brand-orange font-bold"
-                        class="text-white uppercase text-sm tracking-wider">Contact</a>
-                </div>
+        <div class="w-full">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 uppercase tracking-tight">Latest Insights</h2>
+                <div class="w-24 h-1 bg-brand-orange mx-auto mt-4 rounded-full"></div>
+                <p class="mt-4 text-xl text-gray-500">News, updates, and thought leadership from our experts.</p>
             </div>
 
-            <!-- Content Spacer -->
-            <div class="hidden lg:block w-1/4"></div>
+            <div *ngIf="loading" class="flex justify-center py-12">
+                <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-brand-purple"></div>
+            </div>
 
-            <!-- Content -->
-            <div class="w-full lg:w-3/4">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-brand-dark uppercase tracking-tight">Latest Insights</h2>
-                    <div class="w-24 h-1 bg-brand-orange mx-auto mt-4"></div>
-                    <p class="mt-4 text-xl text-gray-500">News, updates, and thought leadership from our experts.</p>
-                </div>
+            <div *ngIf="!loading" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div *ngFor="let post of posts"
+                    class="flex flex-col rounded-2xl shadow-sm border border-gray-100 bg-white overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group">
 
-                <div *ngIf="loading" class="flex justify-center">
-                    <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-brand-purple"></div>
-                </div>
-
-                <div *ngIf="!loading" class="grid gap-8 lg:grid-cols-2">
-                    <div *ngFor="let post of posts"
-                        class="flex flex-col rounded-lg shadow-lg overflow-hidden border border-gray-100 bg-white hover:shadow-2xl transition-shadow duration-300">
-                        <div class="flex-shrink-0 relative">
-                            <img class="h-48 w-full object-cover transition-transform duration-500 hover:scale-105"
-                                [src]="post.image || 'assets/placeholder.jpg'" alt="">
-                            <div
-                                class="absolute top-0 right-0 bg-brand-orange text-white text-xs font-bold px-3 py-1 m-2 rounded uppercase tracking-wider">
-                                {{ post.created_at | date:'mediumDate' }}
-                            </div>
+                    <!-- Image -->
+                    <div class="flex-shrink-0 relative h-56 overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-brand-purple/0 group-hover:bg-brand-purple/20 z-10 transition-colors duration-300">
                         </div>
-                        <div class="flex-1 p-6 flex flex-col justify-between">
-                            <div class="flex-1">
-                                <a [routerLink]="['/blog', post.slug]" class="block mt-2 group">
-                                    <p
-                                        class="text-xl font-bold text-brand-purple group-hover:text-brand-orange transition-colors">
-                                        {{ post.title }}</p>
-                                    <p class="mt-3 text-base text-gray-500 line-clamp-3 leading-relaxed">{{ post.content
-                                        }}</p>
-                                </a>
+                        <img class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            [src]="post.image || 'assets/placeholder.jpg'" alt="">
+                        <div
+                            class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-brand-purple text-xs font-bold px-3 py-1.5 rounded-full shadow-sm uppercase tracking-wider z-20">
+                            {{ post.created_at | date:'mediumDate' }}
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="flex-1 p-8 flex flex-col justify-between">
+                        <div class="flex-1">
+                            <a [routerLink]="['/blog', post.slug]" class="block group/title">
+                                <h3
+                                    class="text-xl font-bold text-gray-900 group-hover/title:text-brand-purple transition-colors line-clamp-2">
+                                    {{ post.title }}
+                                </h3>
+                                <p class="mt-4 text-base text-gray-500 line-clamp-3 leading-relaxed">{{ post.content }}
+                                </p>
+                            </a>
+                        </div>
+
+                        <!-- Author -->
+                        <div class="mt-8 pt-6 border-t border-gray-100 flex items-center">
+                            <div class="flex-shrink-0">
+                                <div
+                                    class="h-10 w-10 rounded-full bg-brand-purple/10 flex items-center justify-center text-brand-purple font-bold border border-brand-purple/20">
+                                    {{ post.author.charAt(0) }}
+                                </div>
                             </div>
-                            <div class="mt-6 flex items-center">
-                                <div class="flex-shrink-0">
-                                    <div
-                                        class="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 font-bold border border-gray-300">
-                                        {{ post.author.charAt(0) }}
-                                    </div>
-                                </div>
-                                <div class="ml-3">
-                                    <p class="text-sm font-medium text-brand-dark uppercase tracking-wide">
-                                        {{ post.author }}
-                                    </p>
-                                </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-bold text-gray-900 uppercase tracking-wide">
+                                    {{ post.author }}
+                                </p>
+                            </div>
+                            <div class="ml-auto">
+                                <a [routerLink]="['/blog', post.slug]"
+                                    class="text-brand-orange hover:text-brand-purple font-semibold text-sm transition-colors flex items-center">
+                                    Read more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                     </div>
