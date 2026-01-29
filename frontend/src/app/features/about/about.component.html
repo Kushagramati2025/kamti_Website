@@ -2,13 +2,13 @@
     <!-- Dynamic Banner Carousel -->
     <app-banner-carousel pageContext="ABOUT" fallbackTitle="About Kushagramati"
         fallbackSubtitle="Serial Entrepreneurs, top notch technocrats and domain experts."
-        heightClass="h-[40vh] min-h-[300px] lg:h-[400px]"
+        heightClass="h-[35vh] min-h-[250px] lg:h-[40vh]"
         gradientClass="bg-gradient-to-r from-brand-purple/90 via-brand-purple/80 to-brand-orange/70 mix-blend-multiply">
     </app-banner-carousel>
 
     <!-- Main Content Section: Who We Are -->
-    <div class="relative py-16 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
+    <div class="relative py-8 px-4 sm:px-6 lg:px-8">
+        <div class="w-[90%] 2xl:w-[85%] mx-auto">
             <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
                 <!-- Image Side -->
                 <div class="relative opacity-0 animate-slide-in-right" style="animation-fill-mode: forwards;">
@@ -40,11 +40,22 @@
                     </p>
 
                     <div class="grid grid-cols-2 gap-6">
-                        <div
-                            class="p-4 bg-white rounded-xl shadow-md border-l-4 border-brand-orange hover:-translate-y-1 transition-transform">
-                            <span class="block text-3xl font-bold text-brand-dark mb-1">ISO</span>
-                            <span class="text-sm text-gray-500 font-medium uppercase">9001:2015 Certified</span>
-                        </div>
+                        <a href="https://www.kmati.in/_files/ugd/ef2530_bc8533eab9704a318a91c804380d8943.pdf"
+                            target="_blank"
+                            class="block p-4 bg-white rounded-xl shadow-md border-l-4 border-brand-orange hover:-translate-y-1 transition-transform cursor-pointer group">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span
+                                        class="block text-3xl font-bold text-brand-dark mb-1 group-hover:text-brand-orange transition-colors">ISO</span>
+                                    <span class="text-sm text-gray-500 font-medium uppercase">9001:2015 Certified</span>
+                                </div>
+                                <svg class="w-6 h-6 text-gray-400 group-hover:text-brand-orange" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </div>
+                        </a>
                         <div
                             class="p-4 bg-white rounded-xl shadow-md border-l-4 border-brand-purple hover:-translate-y-1 transition-transform">
                             <span class="block text-3xl font-bold text-brand-dark mb-1">Global</span>
@@ -56,53 +67,94 @@
         </div>
     </div>
 
-    <!-- Leadership Section -->
-    <div class="bg-gray-100 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-extrabold text-brand-dark mb-12 text-center">Leadership</h2>
 
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden lg:grid lg:grid-cols-2">
-                <div class="relative h-64 lg:h-auto">
-                    <img src="http://127.0.0.1:8000/media/industries/about/ceo_placeholder.jpg"
-                        alt="Dr. Anant R. Koppar" class="absolute inset-0 w-full h-full object-cover object-top">
-                </div>
-                <div class="p-8 lg:p-12 flex flex-col justify-center">
-                    <div class="uppercase tracking-wide text-sm text-brand-purple font-semibold">CEO & Founder</div>
-                    <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                        Dr. Anant R. Koppar
-                    </h3>
-                    <p class="mt-4 text-xl text-gray-500">
-                        A Technocrat and Visionary Entrepreneur Harnessing The Power Of AI.
-                    </p>
-                    <p class="mt-4 text-gray-600 leading-relaxed">
-                        In the ever-evolving landscape of artificial intelligence (AI) and data analytics, visionary
-                        leaders play a pivotal role in shaping the future. These trailblazers drive innovation, pushing
-                        boundaries to harness the full potential of AI. One such luminary in this realm is Anant R
-                        Koppar.
-                    </p>
-                    <p class="mt-4 text-gray-500 text-sm italic">
-                        Recognized as one of the "Top 10 Leaders Innovating The World Of AI And Data Analytics To Know
-                        In 2024".
-                    </p>
-                    <div class="mt-8">
-                        <a href="https://scholar.google.com/citations?user=qiOHkc4AAAAJ&hl=en&citsig=AE3b8UDpFKF-t8G3T_0xLg8kEBPF"
-                            target="_blank"
-                            class="text-brand-orange font-semibold hover:text-brand-orange-dark inline-flex items-center">
-                            View Publications on Google Scholar
-                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                        </a>
+
+
+
+    <!-- Leadership Section -->
+    <div class="bg-gray-50 py-16">
+        <div class="w-[90%] 2xl:w-[85%] mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-brand-dark mb-12 text-center">Leadership</h2>
+            <div>
+
+
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden lg:grid lg:grid-cols-2">
+                    <div class="relative h-64 lg:h-auto">
+                        <img src="http://127.0.0.1:8000/media/industries/about/ceo_placeholder.png"
+                            alt="Dr. Anant R. Koppar" class="absolute inset-0 w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-8 lg:p-12 flex flex-col justify-center">
+                        <div class="uppercase tracking-wide text-sm text-brand-purple font-semibold">CEO & Founder</div>
+                        <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                            Dr. Anant R. Koppar
+                        </h3>
+                        <p class="mt-4 text-xl text-gray-500">
+                            A Technocrat and Visionary Entrepreneur Harnessing The Power Of AI.
+                        </p>
+                        <p class="mt-4 text-gray-600 leading-relaxed">
+                            In the ever-evolving landscape of artificial intelligence (AI) and data analytics, visionary
+                            leaders play a pivotal role in shaping the future. These trailblazers drive innovation,
+                            pushing
+                            boundaries to harness the full potential of AI. One such luminary in this realm is Anant R
+                            Koppar.
+                        </p>
+                        <p class="mt-4 text-gray-500 text-sm italic">
+                            Recognized as one of the "Top 10 Leaders Innovating The World Of AI And Data Analytics To
+                            Know
+                            In 2024".
+                        </p>
+                        <div class="mt-8">
+                            <a href="https://scholar.google.com/citations?user=qiOHkc4AAAAJ&hl=en&citsig=AE3b8UDpFKF-t8G3T_0xLg8kEBPF"
+                                target="_blank"
+                                class="text-brand-orange font-semibold hover:text-brand-orange-dark inline-flex items-center">
+                                View Publications on Google Scholar
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="mt-8 border-t border-gray-200 pt-6">
+                            <h4 class="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">Featured In &
+                                Recognitions</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <a routerLink="/leaders-innovating"
+                                    class="text-sm text-gray-600 hover:text-brand-purple flex items-center transition-colors cursor-pointer">
+                                    <span class="mr-2">🏆</span> Top 10 Leaders Innovating AI 2024
+                                </a>
+                                <a href="https://inspirezones.flowpaper.com/InspirezonesTop10LeadersInnovatingTheWorldOfAIAndDataAnalytpdf/#page=1"
+                                    target="_blank"
+                                    class="text-sm text-gray-600 hover:text-brand-purple flex items-center transition-colors">
+                                    <span class="mr-2">📄</span> Digital Magazine Feature
+                                </a>
+                                <a href="https://www.ceoinsightsindia.com/leader/anant-r-koppar-guiding-innovation-shaping-the-future-of-tech-cid-7665.html"
+                                    target="_blank"
+                                    class="text-sm text-gray-600 hover:text-brand-purple flex items-center transition-colors">
+                                    <span class="mr-2">📰</span> CEO Insights India
+                                </a>
+                                <a href="https://www.cioinsiderindia.com/magazine/digital-transformation-and-unified-communication-december-2021/"
+                                    target="_blank"
+                                    class="text-sm text-gray-600 hover:text-brand-purple flex items-center transition-colors">
+                                    <span class="mr-2">🗞️</span> CIO Insider India
+                                </a>
+                                <a href="https://www.linkedin.com/feed/update/urn:li:activity:6965906807458328577"
+                                    target="_blank"
+                                    class="text-sm text-gray-600 hover:text-brand-purple flex items-center transition-colors">
+                                    <span class="mr-2">🔗</span> LinkedIn Feature
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+
     <!-- Values Section -->
     <div class="bg-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="w-[90%] 2xl:w-[85%] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-extrabold text-brand-dark mb-12">Our Core Values</h2>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <!-- Value 1 -->

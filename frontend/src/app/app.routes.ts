@@ -14,6 +14,7 @@ import { LeadershipComponent } from './features/leadership/leadership.component'
 import { PartnersComponent } from './features/partners/partners.component';
 import { ValuesComponent } from './features/values/values.component';
 import { VisionMissionComponent } from './features/vision-mission/vision-mission.component';
+import { LeadersInnovatingComponent } from './features/leaders-innovating/leaders-innovating.component';
 
 export const routes: Routes = [
     {
@@ -34,6 +35,7 @@ export const routes: Routes = [
             { path: 'partners', component: PartnersComponent },
             { path: 'values', component: ValuesComponent },
             { path: 'vision-mission', component: VisionMissionComponent },
+            { path: 'leaders-innovating', component: LeadersInnovatingComponent },
         ]
     },
     { path: '**', redirectTo: '' }

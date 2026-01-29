@@ -1,116 +1,97 @@
-<div class="bg-gray-50 min-h-screen">
-    <!-- Dynamic Banner -->
-    <app-banner-carousel pageContext="CAREERS" fallbackTitle="Join KMATI"
-        fallbackSubtitle="Shape the future with data, innovation, and passion." heightClass="h-[50vh] min-h-[400px]"
-        gradientClass="bg-gradient-to-r from-brand-orange/80 via-brand-purple/70 to-brand-dark/90 mix-blend-multiply">
-    </app-banner-carousel>
+<div class="relative h-screen w-full bg-gray-50 overflow-hidden">
 
-    <!-- Why Join Us Section -->
-    <div class="relative py-16 bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 opacity-0 animate-fade-in-up"
-                style="animation-fill-mode: forwards; animation-delay: 200ms;">
-                <h2 class="text-base text-brand-orange font-semibold tracking-wide uppercase">Why KMATI?</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-brand-dark sm:text-4xl">
-                    More than just a job
-                </p>
-                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
-                    We believe in empowering our people to do their best work. Here is what you can expect.
-                </p>
-            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <!-- Benefit 1 -->
-                <div class="relative rounded-2xl bg-gray-50 p-6 hover:shadow-xl transition-shadow duration-300 opacity-0 animate-fade-in-up"
-                    style="animation-fill-mode: forwards; animation-delay: 400ms;">
-                    <div class="h-40 w-full mb-6 rounded-xl overflow-hidden">
-                        <img src="http://127.0.0.1:8000/media/industries/careers/career_culture.jpg"
-                            class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
-                            alt="Culture">
-                    </div>
-                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-purple text-white mb-4">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-medium text-brand-dark">Vibrant Culture</h3>
-                    <p class="mt-2 text-base text-gray-500">
-                        Work with a diverse team of serial entrepreneurs and tech experts in a fun, inclusive
-                        environment.
-                    </p>
-                </div>
 
-                <!-- Benefit 2 -->
-                <div class="relative rounded-2xl bg-gray-50 p-6 hover:shadow-xl transition-shadow duration-300 opacity-0 animate-fade-in-up"
-                    style="animation-fill-mode: forwards; animation-delay: 600ms;">
-                    <div class="h-40 w-full mb-6 rounded-xl overflow-hidden">
-                        <img src="http://127.0.0.1:8000/media/industries/careers/career_growth.jpg"
-                            class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
-                            alt="Growth">
-                    </div>
-                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-orange text-white mb-4">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-medium text-brand-dark">Rapid Growth</h3>
-                    <p class="mt-2 text-base text-gray-500">
-                        Accelerate your career with challenging projects, mentorship, and continuous learning
-                        opportunities.
-                    </p>
-                </div>
+    <!-- MAIN SCROLLING CONTENT (The "Sliding Window") -->
+    <div class="h-full w-full overflow-y-auto relative no-scrollbar bg-white scroll-smooth p-0 m-0">
 
-                <!-- Benefit 3 -->
-                <div class="relative rounded-2xl bg-gray-50 p-6 hover:shadow-xl transition-shadow duration-300 opacity-0 animate-fade-in-up"
-                    style="animation-fill-mode: forwards; animation-delay: 800ms;">
-                    <div class="h-40 w-full mb-6 rounded-xl overflow-hidden">
-                        <img src="http://127.0.0.1:8000/media/industries/about/about_innovation.jpg"
-                            class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
-                            alt="Innovation">
-                    </div>
-                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-dark text-white mb-4">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-medium text-brand-dark">Innovation First</h3>
-                    <p class="mt-2 text-base text-gray-500">
-                        Work on cutting-edge technologies like Generative AI, Cloud Computing, and Big Data Analytics.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Active Openings -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div class="text-center mb-12 opacity-0 animate-slide-in-up"
-            style="animation-fill-mode: forwards; animation-delay: 200ms;">
-            <h2 class="text-3xl font-extrabold text-brand-dark sm:text-4xl">Open Positions</h2>
-            <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
-                Ready to make an impact? Check out our current openings.
-            </p>
+        <!-- Banner Carousel -->
+        <div class="relative w-full">
+            <app-banner-carousel pageContext="CAREERS" fallbackTitle="Join KMATI"
+                fallbackSubtitle="Shape the future with data, innovation, and passion."
+                heightClass="h-[25vh] min-h-[200px]"
+                gradientClass="bg-gradient-to-r from-brand-orange/80 via-brand-purple/70 to-brand-dark/90 mix-blend-multiply">
+            </app-banner-carousel>
         </div>
 
-        <div *ngIf="loading" class="flex justify-center py-12">
-            <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-brand-orange"></div>
-        </div>
+        <!-- Overlapping "Why Join Us" Section with Navigation -->
+        <div class="relative w-full z-30 -mt-12 md:-mt-16 pb-4">
+            <div class="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
 
-        <div *ngIf="!loading" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div *ngFor="let job of jobs; let i = index"
-                class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-brand-purple overflow-hidden cursor-pointer opacity-0 animate-fade-in-up"
-                [style.animation-delay]="(i * 100) + 'ms'" style="animation-fill-mode: forwards;">
+                <!-- Benefits Grid (Overlapping) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                <a [routerLink]="['/careers', job.id]" class="block p-8 h-full flex flex-col relative">
-                    <!-- Hover Effect Gradient on Card -->
+                    <!-- Benefit 1 -->
                     <div
-                        class="absolute inset-0 bg-gradient-to-br from-brand-purple/5 to-brand-orange/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        class="group bg-white rounded-xl shadow-xl p-4 flex flex-col items-center text-center transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-brand-purple hover:shadow-2xl hover:shadow-brand-purple/20 h-full animate-fade-in-up">
+                        <div class="h-24 w-full mb-4 rounded-xl overflow-hidden relative">
+                            <div
+                                class="absolute inset-0 bg-brand-purple/10 group-hover:bg-transparent transition-colors">
+                            </div>
+                            <img src="http://127.0.0.1:8000/media/industries/careers/career_culture.jpg"
+                                class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                                alt="Culture">
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Vibrant Culture</h3>
+                        <p class="text-sm text-gray-500">Diverse team, inclusive environment, and constant innovation.
+                        </p>
                     </div>
 
-                    <div class="relative z-10 flex-1">
+                    <!-- Benefit 2 -->
+                    <div class="group bg-white rounded-xl shadow-xl p-4 flex flex-col items-center text-center transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-brand-orange hover:shadow-2xl hover:shadow-brand-orange/20 h-full animate-fade-in-up"
+                        style="animation-delay: 100ms;">
+                        <div class="h-24 w-full mb-4 rounded-xl overflow-hidden relative">
+                            <div
+                                class="absolute inset-0 bg-brand-orange/10 group-hover:bg-transparent transition-colors">
+                            </div>
+                            <img src="http://127.0.0.1:8000/media/industries/careers/career_growth.jpg"
+                                class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                                alt="Growth">
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Rapid Growth</h3>
+                        <p class="text-sm text-gray-500">Accelerate your career with mentorship and challenging
+                            projects.</p>
+                    </div>
+
+                    <!-- Benefit 3 -->
+                    <div class="group bg-white rounded-xl shadow-xl p-4 flex flex-col items-center text-center transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-brand-dark hover:shadow-2xl hover:shadow-brand-dark/20 h-full animate-fade-in-up"
+                        style="animation-delay: 200ms;">
+                        <div class="h-24 w-full mb-4 rounded-xl overflow-hidden relative">
+                            <div class="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors">
+                            </div>
+                            <img src="http://127.0.0.1:8000/media/industries/about/about_innovation.jpg"
+                                class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                                alt="Innovation">
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Innovation First</h3>
+                        <p class="text-sm text-gray-500">Work on Generative AI, Cloud, and Big Data technologies.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Active Openings Section -->
+        <div class="relative bg-white pt-4 pb-4 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center mb-4">
+                <h2 class="text-3xl font-extrabold text-brand-dark sm:text-4xl">Open Positions</h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Ready to make an impact? Check out our current openings.
+                </p>
+            </div>
+
+            <div *ngIf="loading" class="flex justify-center py-12">
+                <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-brand-orange"></div>
+            </div>
+
+            <div *ngIf="!loading" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Job Cards -->
+                <div *ngFor="let job of jobs; let i = index"
+                    class="group bg-gray-50 rounded-2xl shadow hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-brand-purple overflow-hidden cursor-pointer"
+                    [routerLink]="['/careers', job.id]">
+
+                    <div class="p-6 h-full flex flex-col">
                         <div class="flex justify-between items-start mb-4">
                             <div
                                 class="p-3 bg-brand-purple/10 rounded-lg group-hover:bg-brand-purple group-hover:text-white transition-colors duration-300">
@@ -126,12 +107,9 @@
                             </span>
                         </div>
 
-                        <h3
-                            class="text-xl font-bold text-brand-dark group-hover:text-brand-purple transition-colors mb-2">
-                            {{ job.title }}</h3>
-
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">{{ job.title }}</h3>
                         <div class="flex items-center text-sm text-gray-500 mb-4">
-                            <svg class="flex-shrink-0 mr-1.5 h-4 w-4 text-brand-orange" fill="none" viewBox="0 0 24 24"
+                            <svg class="h-4 w-4 mr-1 text-brand-orange" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -141,25 +119,26 @@
                             {{ job.location }}
                         </div>
 
-                        <p class="text-gray-600 text-sm line-clamp-3 mb-6">
+                        <p class="text-gray-600 text-sm line-clamp-3 mb-4 flex-grow">
                             {{ job.description }}
                         </p>
-                    </div>
 
-                    <div
-                        class="relative z-10 pt-4 border-t border-gray-100 flex justify-between items-center group-hover:border-gray-200">
-                        <span class="text-xs text-gray-400">Posted {{ job.posted_date }}</span>
-                        <span
-                            class="text-sm font-semibold text-brand-orange group-hover:translate-x-1 transition-transform flex items-center">
-                            Apply Now
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </span>
+                        <div class="pt-4 border-t border-gray-200 flex justify-between items-center mt-auto">
+                            <span class="text-xs text-gray-400">Posted {{ job.posted_date }}</span>
+                            <span
+                                class="text-sm font-bold text-brand-orange group-hover:translate-x-1 transition-transform flex items-center">
+                                Apply Now
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </span>
+                        </div>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
+
+
     </div>
 </div>

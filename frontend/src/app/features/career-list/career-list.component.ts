@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { ApiService } from '../../core/services/api.service';
 import { BannerCarouselComponent } from '../../shared/components/banner-carousel/banner-carousel.component';
 
+
 @Component({
   selector: 'app-career-list',
   standalone: true,
