@@ -20,45 +20,45 @@ def populate_tools():
         },
         {
             "title": "Platform Optimization Solution",
-            "description": "Comprehensive solution for optimizing your data platform performance and costs.",
+            "description": "A holistic solution to analyze and enhance your data ecosystem. We identify bottlenecks, optimize cloud usage, and implement cost-saving strategies to ensure maximum value.",
             "pdf_name": "Kushagramati Platform Optimization Solution Flyer New V1.0.pdf"
         },
         {
             "title": "Platform Tuning Services",
-            "description": "Expert services to tune and refine your platform for maximum efficiency.",
+            "description": "Specialized deep-dive performance tuning. From query optimization to cluster configuration, we fine-tune every layer of your platform to achieve high throughput and low latency.",
             "pdf_name": "Platform Tuning Services Summary-New.pdf"
         }
     ]
 
     print("Populating Tools...")
     
+    # clear existing tools to ensure updates are applied
+    Tool.objects.all().delete()
+    print("Cleared existing tools.")
+
     # Ensure target directory exists
     target_dir = os.path.join(media_root, 'tools', 'pdfs')
     os.makedirs(target_dir, exist_ok=True)
 
     for item in tools_data:
-        # Check if already exists
-        if Tool.objects.filter(title=item['title']).exists():
-            print(f"Tool '{item['title']}' already exists. Skipping.")
-            continue
-            
         pdf_source = os.path.join(media_root, item['pdf_name'])
         
         # Check if source file exists
         if not os.path.exists(pdf_source):
             print(f"Warning: Source PDF '{item['pdf_name']}' not found in media root. Skipping.")
-            continue
-            
-        # Copy file to formatted specific location if we want, or just link it.
-        # Ideally, FileField expects file relative to MEDIA_ROOT.
-        # Since the files are already in MEDIA_ROOT, we can just point to them, 
-        # OR move them to tools/pdfs/ for better organization.
-        # Let's move/copy them.
-        
-        pdf_dest_name = item['pdf_name'].replace(" ", "_")
-        pdf_dest_path = os.path.join(target_dir, pdf_dest_name)
-        
-        shutil.copy2(pdf_source, pdf_dest_path)
+            # Fallback: try to find it in tools/pdfs if it was already moved
+            existing_dest = os.path.join(target_dir, item['pdf_name'].replace(" ", "_"))
+            if os.path.exists(existing_dest):
+                print(f"Found existing file at {existing_dest}, using it.")
+                pdf_dest_path = existing_dest
+                pdf_dest_name = item['pdf_name'].replace(" ", "_")
+            else:
+                continue
+        else:
+             # Copy file
+            pdf_dest_name = item['pdf_name'].replace(" ", "_")
+            pdf_dest_path = os.path.join(target_dir, pdf_dest_name)
+            shutil.copy2(pdf_source, pdf_dest_path)
         
         # Relative path for Django DB
         db_path = f"tools/pdfs/{pdf_dest_name}"
