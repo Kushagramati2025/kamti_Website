@@ -25,8 +25,29 @@ export class ApiService {
         return this.http.get<any>(`${this.apiUrl}/industries/${slug}/`);
     }
 
-    getCareers(): Observable<any[]> {
-        return this.http.get<any[]>(`${this.apiUrl}/careers/`);
+    getPageSections(page?: string, key?: string): Observable<any[]> {
+        let url = `${this.apiUrl}/page-sections/`;
+        // Basic query param handling (could be more robust)
+        if (page || key) {
+            url += '?';
+            const params = [];
+            if (page) params.push(`page=${page}`);
+            if (key) params.push(`key=${key}`);
+            url += params.join('&');
+        }
+        return this.http.get<any[]>(url);
+    }
+
+    getDepartments(): Observable<any[]> {
+        return this.http.get<any[]>(`${this.apiUrl}/departments/`);
+    }
+
+    getCareers(departmentId?: number): Observable<any[]> {
+        let url = `${this.apiUrl}/careers/`;
+        if (departmentId) {
+            url += `?department=${departmentId}`;
+        }
+        return this.http.get<any[]>(url);
     }
 
     getCareer(id: string): Observable<any> {

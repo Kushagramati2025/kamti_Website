@@ -290,26 +290,56 @@ def populate():
         Partner.objects.create(name=p['name'], website=p['website'])
     print(f"Created {len(partners_data)} partners.")
 
-    # 7. Careers
+    # 7. Departments & Careers
+    from core.models import Department, PageSection
+    
+    # Create Departments
+    Department.objects.all().delete()
+    eng_dept = Department.objects.create(name="Engineering")
+    sales_dept = Department.objects.create(name="Sales & Marketing")
+    product_dept = Department.objects.create(name="Product Management")
+    consulting_dept = Department.objects.create(name="Consulting")
+    
+    print("Created Departments.")
+
+    # Create Page Section Config
+    PageSection.objects.all().delete()
+    PageSection.objects.create(
+        page="CAREERS",
+        section_key="OPEN_POSITIONS",
+        title="Open Positions",
+        subtitle="Ready to make an impact? Check out our current openings."
+    )
+    print("Created Page Section configs.")
+
     jobs_data = [
         {
             "title": "Senior Data Engineer",
+            "department": eng_dept,
             "location": "Bangalore / Hybrid",
             "job_type": "Full-time",
+            "is_remote": True,
+            "salary_range": "$30k - $50k",
             "description": "We are looking for an experienced Data Engineer to join our team. You will be responsible for expanding and optimizing our data and data pipeline architecture, as well as optimizing data flow and collection for cross functional teams.",
             "requirements": "5+ years of Python/SQL experience. Experience with Databricks and Spark."
         },
         {
             "title": "AI/ML Solutions Architect",
+            "department": eng_dept,
             "location": "Bangalore",
             "job_type": "Full-time",
+            "is_remote": False,
+            "salary_range": "$40k - $70k",
             "description": "Design and implement machine learning applications and systems. You will be selecting the appropriate algorithms and tools, allowing us to generate accurate predictions and insights.",
             "requirements": "Strong background in Deep Learning, NLP, and Cloud AI services."
         },
         {
             "title": "Business Analyst - Healthcare",
+            "department": consulting_dept,
             "location": "Remote",
             "job_type": "Contract",
+            "is_remote": True,
+            "salary_range": "$20k - $40k",
             "description": "Bridge the gap between IT and the business using data analytics to assess processes, determine requirements and deliver data-driven recommendations.",
             "requirements": "Experience in Healthcare domain and commercially aware."
         }

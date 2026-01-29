@@ -78,6 +78,41 @@ class IndustrySection(models.Model):
     def __str__(self):
         return f"{self.industry.name} - {self.title}"
 
+class PageSection(models.Model):
+    PAGE_CHOICES = (
+        ('HOME', 'Home Page'),
+        ('ABOUT', 'About Page'),
+        ('CAREERS', 'Careers Page'),
+        # Add others as needed
+    )
+    SECTION_CHOICES = (
+        ('OPEN_POSITIONS', 'Open Positions'),
+        # Add others as needed
+    )
+    page = models.CharField(max_length=20, choices=PAGE_CHOICES)
+    section_key = models.CharField(max_length=50, choices=SECTION_CHOICES)
+    title = models.CharField(max_length=200)
+    subtitle = models.TextField(blank=True)
+    active = models.BooleanField(default=True)
+
+    class Meta:
+        unique_together = ('page', 'section_key')
+
+    def __str__(self):
+        return f"{self.get_page_display()} - {self.get_section_key_display()}"
+
+class Department(models.Model):
+    name = models.CharField(max_length=100)
+    slug = models.SlugField(unique=True, blank=True)
+    
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.name
+
 class CareerJob(models.Model):
     JOB_TYPES = (
         ('Full-time', 'Full-time'),
@@ -86,10 +121,14 @@ class CareerJob(models.Model):
         ('Internship', 'Internship'),
     )
     title = models.CharField(max_length=200)
+    department = models.ForeignKey(Department, on_delete=models.SET_NULL, null=True, blank=True, related_name='jobs')
     location = models.CharField(max_length=200)
     job_type = models.CharField(max_length=20, choices=JOB_TYPES, default='Full-time')
+    is_remote = models.BooleanField(default=False, verbose_name="Remote Available")
+    salary_range = models.CharField(max_length=100, blank=True, help_text="e.g. $80k - $100k")
     description = models.TextField()
     requirements = models.TextField()
+    application_link = models.URLField(blank=True, help_text="Link to external application form if applicable")
     posted_date = models.DateField(auto_now_add=True)
     active = models.BooleanField(default=True)
 

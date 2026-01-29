@@ -2,13 +2,15 @@ from rest_framework import viewsets, mixins, permissions
 from .models import (
     Banner, ServiceCategory, Industry, CareerJob, 
     BlogPost, LeadershipMember, Partner, CompanyValue, 
-    VisionMission, ContactMessage, SiteSetting, Tool, CaseStudy
+    VisionMission, ContactMessage, SiteSetting, Tool, CaseStudy,
+    PageSection, Department
 )
 from .serializers import (
     BannerSerializer, ServiceCategorySerializer, IndustrySerializer, 
     CareerJobSerializer, BlogPostSerializer, LeadershipMemberSerializer, 
     PartnerSerializer, CompanyValueSerializer, VisionMissionSerializer, 
-    ContactMessageSerializer, SiteSettingSerializer, ToolSerializer, CaseStudySerializer
+    ContactMessageSerializer, SiteSettingSerializer, ToolSerializer, CaseStudySerializer,
+    PageSectionSerializer, DepartmentSerializer
 )
 
 class BannerViewSet(viewsets.ModelViewSet):
@@ -23,6 +25,21 @@ class BannerViewSet(viewsets.ModelViewSet):
         return queryset
     permission_classes = [permissions.AllowAny]
 
+class PageSectionViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = PageSection.objects.filter(active=True)
+    serializer_class = PageSectionSerializer
+    permission_classes = [permissions.AllowAny]
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        page = self.request.query_params.get('page')
+        key = self.request.query_params.get('key')
+        if page:
+            queryset = queryset.filter(page=page)
+        if key:
+            queryset = queryset.filter(section_key=key)
+        return queryset
+
 class ServiceCategoryViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = ServiceCategory.objects.all()
     serializer_class = ServiceCategorySerializer
@@ -34,10 +51,22 @@ class IndustryViewSet(viewsets.ReadOnlyModelViewSet):
     permission_classes = [permissions.AllowAny]
     lookup_field = 'slug'
 
+class DepartmentViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Department.objects.all()
+    serializer_class = DepartmentSerializer
+    permission_classes = [permissions.AllowAny]
+
 class CareerJobViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = CareerJob.objects.filter(active=True)
     serializer_class = CareerJobSerializer
     permission_classes = [permissions.AllowAny]
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        department = self.request.query_params.get('department')
+        if department:
+            queryset = queryset.filter(department__id=department)
+        return queryset
 
 class BlogPostViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = BlogPost.objects.filter(active=True)

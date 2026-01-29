@@ -4,7 +4,8 @@ from .views import (
     BannerViewSet, ServiceCategoryViewSet, IndustryViewSet, 
     CareerJobViewSet, BlogPostViewSet, LeadershipMemberViewSet, 
     PartnerViewSet, CompanyValueViewSet, VisionMissionViewSet, 
-    ContactMessageViewSet, SiteSettingViewSet, ToolViewSet, CaseStudyViewSet
+    ContactMessageViewSet, SiteSettingViewSet, ToolViewSet, CaseStudyViewSet,
+    PageSectionViewSet, DepartmentViewSet
 )
 
 router = DefaultRouter()
@@ -12,6 +13,8 @@ router.register(r'banners', BannerViewSet)
 router.register(r'services', ServiceCategoryViewSet)
 router.register(r'industries', IndustryViewSet)
 router.register(r'careers', CareerJobViewSet)
+router.register(r'departments', DepartmentViewSet)
+router.register(r'page-sections', PageSectionViewSet)
 router.register(r'blog', BlogPostViewSet)
 router.register(r'leadership', LeadershipMemberViewSet)
 router.register(r'partners', PartnerViewSet)
