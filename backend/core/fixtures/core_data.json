@@ -105,7 +105,7 @@
 },
 {
   "model": "core.servicecategory",
-  "pk": 51,
+  "pk": 65,
   "fields": {
     "name": "Application Services",
     "slug": "application-services",
@@ -116,7 +116,7 @@
 },
 {
   "model": "core.servicecategory",
-  "pk": 52,
+  "pk": 66,
   "fields": {
     "name": "Data Analytics",
     "slug": "data-analytics",
@@ -127,7 +127,7 @@
 },
 {
   "model": "core.servicecategory",
-  "pk": 53,
+  "pk": 67,
   "fields": {
     "name": "Embedded Consultancy",
     "slug": "embedded-consultancy",
@@ -138,7 +138,7 @@
 },
 {
   "model": "core.servicecategory",
-  "pk": 54,
+  "pk": 68,
   "fields": {
     "name": "Healthcare Solutions",
     "slug": "healthcare-solutions",
@@ -149,7 +149,7 @@
 },
 {
   "model": "core.servicecategory",
-  "pk": 55,
+  "pk": 69,
   "fields": {
     "name": "Automotive Solutions",
     "slug": "automotive-solutions",
@@ -160,7 +160,7 @@
 },
 {
   "model": "core.servicecategory",
-  "pk": 56,
+  "pk": 70,
   "fields": {
     "name": "Logistics Solutions",
     "slug": "logistics-solutions",
@@ -171,7 +171,7 @@
 },
 {
   "model": "core.servicecategory",
-  "pk": 57,
+  "pk": 71,
   "fields": {
     "name": "Pharma Solutions",
     "slug": "pharma-solutions",
@@ -182,57 +182,61 @@
 },
 {
   "model": "core.industry",
-  "pk": 24,
+  "pk": 32,
   "fields": {
     "name": "Healthcare",
     "slug": "healthcare",
     "description": "Solutions for Healthcare sector.",
     "icon": "",
     "banner_image": "industries/banners/healthcare_banner.jpg",
+    "case_study": null,
     "order": 0
   }
 },
 {
   "model": "core.industry",
-  "pk": 25,
+  "pk": 33,
   "fields": {
     "name": "Automotive",
     "slug": "automotive",
     "description": "Empowering Automakers with Next-Gen Technologies. The global automotive industry is undergoing a tremendous amount of change at an unprecedented pace. The experience of electric vehicles (EV) and autonomous vehicles (AV) is being enhanced by technological advancements, including multi-sensor, AI-enabled, over-the-air upgrades, and more. Especially with generative AI, the automotive sector has countless possibilities, from voice and virtual assistants to material and generative design.",
     "icon": "",
     "banner_image": "industries/banners/automotive_banner.jpg",
+    "case_study": null,
     "order": 0
   }
 },
 {
   "model": "core.industry",
-  "pk": 26,
+  "pk": 34,
   "fields": {
     "name": "Logistics",
     "slug": "logistics",
     "description": "Helping clients build an insight-driven culture for better business. The rapid evolution in the logistics sector has streamlined Operations & Efficiency, but at the same time, the digital age has impacted majorly on the industry. The effects can be seen in Customer Experience, Digitalization of Transactions, and Technology Adaption with respect to the transaction volume and the Evermore demanding consumers. Thereby enormous flow of goods will generate a huge amount of data that can be harnessed using Intelligent Analytics.",
     "icon": "",
     "banner_image": "industries/banners/logistics_banner.jpg",
+    "case_study": null,
     "order": 0
   }
 },
 {
   "model": "core.industry",
-  "pk": 27,
+  "pk": 35,
   "fields": {
     "name": "Pharma",
     "slug": "pharma",
     "description": "Technology for enabling better client experience. The pharmaceutical landscape has made a progress in the field of precision medicines has opened up numerous possibilities to target different health maladies out of which major focus for precision health, rare genetic disorders, mutation spectrum of genetic and complex diseases which makes an array of opportunities for personalized medicine. The current challenges of having semi-structured data to develop breakthrough therapies is still stagnant.",
     "icon": "",
     "banner_image": "industries/banners/pharma_banner.jpg",
+    "case_study": null,
     "order": 0
   }
 },
 {
   "model": "core.industrysection",
-  "pk": 53,
+  "pk": 85,
   "fields": {
-    "industry": 24,
+    "industry": 32,
     "title": "Data insights drive increased efficiency cost savings",
     "content": "Increased prevalence of lifestyle disorders creating a huge demand of accessible healthcare systems. The healthcare market is being propelled with technological advancements with rising in healthcare costs & transparency. The biggest obstacles today comes up with handling huge volume of meta data to extract the significant information & providing superior customer experience.",
     "image": "industries/sections/data_insights.jpg",
@@ -241,9 +245,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 54,
+  "pk": 86,
   "fields": {
-    "industry": 24,
+    "industry": 32,
     "title": "Predictive disease analysis",
     "content": "When it comes to predicting future health outcomes, big data analysis is critical. As a result, there is a lot of research being done on predictive analytics and machine learning approaches to reveal improved decision making. Big data analysis opens up new avenues for predicting future health state based on health metrics and delivering the best results.",
     "image": "industries/sections/predictive_analysis.jpg",
@@ -252,9 +256,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 55,
+  "pk": 87,
   "fields": {
-    "industry": 24,
+    "industry": 32,
     "title": "Intelligent chatbot using AI/NLP",
     "content": "In the field of healthcare, maintaining a healthy lifestyle is crucial. It might be difficult to locate a doctor's consultation for health difficulties in some less-socialized places. The fundamental aim is to create a healthcare chatbot based on Artificial Intelligence and Natural Language Processing (NLP) that can identify a problem and offer necessary facts about it before consulting or visiting a doctor.",
     "image": "industries/sections/ai_chatbot.jpg",
@@ -263,9 +267,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 56,
+  "pk": 88,
   "fields": {
-    "industry": 24,
+    "industry": 32,
     "title": "Reduce Healthcare costs with benefits and recommendations",
     "content": "Advanced machine learning models, suitable laboratory equipment, machine learning, and data science, which assist in creating medicines to improve patients' fast treatment at a lower cost, can help identify between cancers and healthy anatomy with 3D radiological images to enable medical experts in radiation therapy and surgical planning.",
     "image": "industries/sections/cost_reduction.jpg",
@@ -274,20 +278,20 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 57,
+  "pk": 89,
   "fields": {
-    "industry": 24,
+    "industry": 32,
     "title": "Optima x-ray predictor",
-    "content": "Case Study: Identifying between cancers and healthy anatomy with 3D radiological images to enable medical experts.<br><br><a href='#' class='btn-primary'>Download Case Study</a>",
+    "content": "Case Study: Identifying between cancers and healthy anatomy with 3D radiological images to enable medical experts.<br><br><a href='http://127.0.0.1:8000/media/casestudies/pdfs/Optima_XRay_Predictor.pdf' target='_blank' class='btn-primary inline-flex items-center px-6 py-3 border border-transparent text-base font-bold rounded-lg text-white bg-brand-orange hover:bg-brand-orange-dark shadow-md transition-all duration-300'>Download Case Study</a>",
     "image": "industries/sections/xray.jpg",
     "order": 0
   }
 },
 {
   "model": "core.industrysection",
-  "pk": 58,
+  "pk": 90,
   "fields": {
-    "industry": 25,
+    "industry": 33,
     "title": "Predictive Maintenance & AI-Powered Solutions",
     "content": "Predictive Modelling, leveraging historical and current data to extract crucial insights can significantly enhance strategic decision-making and help businesses maintain a competitive edge. Leveraging data analytics to monitor vehicle health, anticipate failures, and reduce unplanned downtime.",
     "image": "industries/sections/auto_predictive.jpg",
@@ -296,9 +300,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 59,
+  "pk": 91,
   "fields": {
-    "industry": 25,
+    "industry": 33,
     "title": "Connectivity & Data-Driven Service",
     "content": "Connectivity and data-driven services are transforming the automotive industry, enabling new capabilities and business models. Connected cars collect and transmit vehicle data, facilitating real-time monitoring, remote control, and the development of advanced features like over-the-air updates and predictive maintenance.",
     "image": "industries/sections/auto_connectivity.jpg",
@@ -307,9 +311,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 60,
+  "pk": 92,
   "fields": {
-    "industry": 25,
+    "industry": 33,
     "title": "Supply Chain & Inventory Management",
     "content": "Effective inventory and supply chain management are essential for productivity and profitability in the automobile sector. This entails organizing the movement of components, parts, and completed automobiles from suppliers to consumers. Optimizing inventory levels to reduce expenses and guarantee on-time delivery to satisfy client needs is a major priority.",
     "image": "industries/sections/auto_supply_chain.jpg",
@@ -318,9 +322,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 61,
+  "pk": 93,
   "fields": {
-    "industry": 26,
+    "industry": 34,
     "title": "Last Mile Delivery",
     "content": "Last-mile delivery is one of the most challenging components of the whole shipping process, despite being one of the most important variables in customer satisfaction. Processing of data collected from GPS helps build a system at its core. Optimizing the route with telematics databases can be tapped to automatically adjust the routes based on real-time data of the latest order, Routing, Address identification for ease of delivery.",
     "image": "industries/sections/logistics_last_mile.jpg",
@@ -329,10 +333,10 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 62,
+  "pk": 94,
   "fields": {
-    "industry": 26,
-    "title": "Warehouse surveillance â€“ Video Analytics",
+    "industry": 34,
+    "title": "Warehouse surveillance – Video Analytics",
     "content": "Securing warehouses from both external and Internal threats/thefts has been a critical challenge with the increase in the trading of goods. It is a critical decision to make sure the valuables are well protected from break-Ins in a commercial space which can now be enabled using smart video analytics application.",
     "image": "industries/sections/logistics_warehouse.jpg",
     "order": 0
@@ -340,9 +344,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 63,
+  "pk": 95,
   "fields": {
-    "industry": 26,
+    "industry": 34,
     "title": "Demand Forecasting",
     "content": "To anticipate future events using data analytics, the data sources and datasets are used with the combination of machine learning algorithms to discover patterns, demand signals, and spot intricate relationships. AI-powered forecasting models can cut errors by 30 to 50 percent with the increased accuracy resulting in a 65 percent reduction in missed sales.",
     "image": "industries/sections/logistics_forecasting.jpg",
@@ -351,20 +355,20 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 64,
+  "pk": 96,
   "fields": {
-    "industry": 26,
+    "industry": 34,
     "title": "Sentiment analysis",
-    "content": "Classification of text based on keywords.<br><br><a href='#' class='btn-primary'>Download Case Study</a>",
+    "content": "Classification of text based on keywords.<br><br><a href='http://127.0.0.1:8000/media/casestudies/pdfs/Sentiment_Analysis.pdf' target='_blank' class='btn-primary inline-flex items-center px-6 py-3 border border-transparent text-base font-bold rounded-lg text-white bg-brand-orange hover:bg-brand-orange-dark shadow-md transition-all duration-300'>Download Case Study</a>",
     "image": "industries/sections/logistics_sentiment.jpg",
     "order": 0
   }
 },
 {
   "model": "core.industrysection",
-  "pk": 65,
+  "pk": 97,
   "fields": {
-    "industry": 27,
+    "industry": 35,
     "title": "Data Lake Preparation for Genomic Data",
     "content": "Practical challenges with genomic datasets containing semi-structured records layering with respect to its size & complexity while uncertainty in the interpretation of regulatory requirements for return of results. Data from Medical Devices, Medical Records, Images and Insurance claims (Stage-1).",
     "image": "industries/sections/pharma_data_lake.jpg",
@@ -373,9 +377,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 66,
+  "pk": 98,
   "fields": {
-    "industry": 27,
+    "industry": 35,
     "title": "Developing models to show correlation between Genomic data",
     "content": "The variation being less than 1% while comparing a healthy person Genome with a person having Genetic disorder as its needs a huge computation/processing to find the sequence of records to discover the variation patterns. Developing models to show correlation between Genomic data and other set of data to provide greater insights into research findings (Stage-2).",
     "image": "industries/sections/pharma_models.jpg",
@@ -384,9 +388,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 67,
+  "pk": 99,
   "fields": {
-    "industry": 27,
+    "industry": 35,
     "title": "Genomic Data Analysis for faster Drug Discovery",
     "content": "Genomic sequence can be Patient data analysis which can be performed combining the stage 1 records and stage 2 insights which helps for a drug discovery, Advance Personalization in healthcare & predict the hereditary diseases.",
     "image": "industries/sections/pharma_drug_discovery.jpg",
@@ -395,9 +399,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 68,
+  "pk": 100,
   "fields": {
-    "industry": 27,
+    "industry": 35,
     "title": "Recommend next best steps for sales",
     "content": "The competitive landscape market for the Genomic insights & bioinformatics progression will boost the companies to excel their Diagnostics & Research Advancements resulting the spike in growth trajectory to Novel Pharma discoveries & Genetic solutions.",
     "image": "industries/sections/pharma_sales.jpg",
@@ -406,100 +410,100 @@
 },
 {
   "model": "core.careerjob",
-  "pk": 18,
+  "pk": 24,
   "fields": {
     "title": "Senior Data Engineer",
     "location": "Bangalore / Hybrid",
     "job_type": "Full-time",
     "description": "We are looking for an experienced Data Engineer to join our team. You will be responsible for expanding and optimizing our data and data pipeline architecture, as well as optimizing data flow and collection for cross functional teams.",
     "requirements": "5+ years of Python/SQL experience. Experience with Databricks and Spark.",
-    "posted_date": "2026-01-23",
+    "posted_date": "2026-01-29",
     "active": true
   }
 },
 {
   "model": "core.careerjob",
-  "pk": 19,
+  "pk": 25,
   "fields": {
     "title": "AI/ML Solutions Architect",
     "location": "Bangalore",
     "job_type": "Full-time",
     "description": "Design and implement machine learning applications and systems. You will be selecting the appropriate algorithms and tools, allowing us to generate accurate predictions and insights.",
     "requirements": "Strong background in Deep Learning, NLP, and Cloud AI services.",
-    "posted_date": "2026-01-23",
+    "posted_date": "2026-01-29",
     "active": true
   }
 },
 {
   "model": "core.careerjob",
-  "pk": 20,
+  "pk": 26,
   "fields": {
     "title": "Business Analyst - Healthcare",
     "location": "Remote",
     "job_type": "Contract",
     "description": "Bridge the gap between IT and the business using data analytics to assess processes, determine requirements and deliver data-driven recommendations.",
     "requirements": "Experience in Healthcare domain and commercially aware.",
-    "posted_date": "2026-01-23",
+    "posted_date": "2026-01-29",
     "active": true
   }
 },
 {
   "model": "core.blogpost",
-  "pk": 17,
+  "pk": 23,
   "fields": {
     "title": "The Future of AI in Healthcare",
     "slug": "the-future-of-ai-in-healthcare",
     "content": "Artificial Intelligence is revolutionizing the healthcare industry. From predictive analytics to personalized medicine, AI is enabling doctors to make better decisions...",
     "image": "",
     "author": "Dr. Anant R. Koppar",
-    "created_at": "2026-01-23T10:31:28.615Z",
-    "updated_at": "2026-01-23T10:31:28.615Z",
+    "created_at": "2026-01-29T06:56:36.205Z",
+    "updated_at": "2026-01-29T06:56:36.205Z",
     "active": true
   }
 },
 {
   "model": "core.blogpost",
-  "pk": 18,
+  "pk": 24,
   "fields": {
     "title": "Optimizing Supply Chains with Big Data",
     "slug": "optimizing-supply-chains-with-big-data",
     "content": "In today's volatile market, supply chain visibility is key. Big Data analytics allows companies to predict disruptions and optimize routes in real-time...",
     "image": "",
     "author": "Vishwanath Honnungar",
-    "created_at": "2026-01-23T10:31:28.615Z",
-    "updated_at": "2026-01-23T10:31:28.615Z",
+    "created_at": "2026-01-29T06:56:36.211Z",
+    "updated_at": "2026-01-29T06:56:36.211Z",
     "active": true
   }
 },
 {
   "model": "core.blogpost",
-  "pk": 19,
+  "pk": 25,
   "fields": {
     "title": "Why Databricks for your Lakehouse?",
     "slug": "why-databricks-for-your-lakehouse",
     "content": "The Lakehouse architecture combines the best elements of data lakes and data warehouses. Databricks provides a unified platform for data engineering, science, and analytics...",
     "image": "",
     "author": "Pradeep N",
-    "created_at": "2026-01-23T10:31:28.627Z",
-    "updated_at": "2026-01-23T10:31:28.627Z",
+    "created_at": "2026-01-29T06:56:36.215Z",
+    "updated_at": "2026-01-29T06:56:36.215Z",
     "active": true
   }
 },
 {
   "model": "core.leadershipmember",
-  "pk": 35,
+  "pk": 45,
   "fields": {
     "name": "Dr. Anant R. Koppar",
     "position": "CEO & Founder",
-    "bio": "A Technocrat and Visionary Entrepreneur Harnessing The Power Of AI. In the ever-evolving landscape of artificial intelligence (AI) and data analytics, visionary leaders play a pivotal role in shaping the future. One such luminary in this realm is Anant R Koppar. Recognized as one of the 'Top 10 Leaders Innovating The World Of AI And Data Analytics To Know In 2024'.",
-    "image": "industries/about/ceo_placeholder.jpg",
-    "linkedin_url": "https://www.linkedin.com/in/anantkoppar/",
+    "bio": "A visionary technocrat and serial entrepreneur with over 3 decades of experience in the IT industry. Founder of Kshema Technologies and KTwo Technologies. He was the first CEO in India to receive PMP certification. Recipient of the Karnataka Rajyotsava Award for his contributions to the IT sector.",
+    "image": "",
+    "linkedin_url": "",
     "order": 0
   }
 },
 {
   "model": "core.leadershipmember",
-  "pk": 36,
+  "pk": 46,
   "fields": {
     "name": "Vishwanath Honnungar",
     "position": "CTO",
@@ -511,7 +515,7 @@
 },
 {
   "model": "core.leadershipmember",
-  "pk": 37,
+  "pk": 47,
   "fields": {
     "name": "Pradeep N",
     "position": "Industry Expert and Operations",
@@ -523,7 +527,7 @@
 },
 {
   "model": "core.leadershipmember",
-  "pk": 38,
+  "pk": 48,
   "fields": {
     "name": "Dayanand Yardi",
     "position": "Finance and Administration",
@@ -535,7 +539,7 @@
 },
 {
   "model": "core.leadershipmember",
-  "pk": 39,
+  "pk": 49,
   "fields": {
     "name": "Shruthi Malagi",
     "position": "Business Development",
@@ -547,7 +551,7 @@
 },
 {
   "model": "core.partner",
-  "pk": 22,
+  "pk": 30,
   "fields": {
     "name": "Databricks",
     "logo": "",
@@ -557,7 +561,7 @@
 },
 {
   "model": "core.partner",
-  "pk": 23,
+  "pk": 31,
   "fields": {
     "name": "Microsoft Azure",
     "logo": "",
@@ -567,7 +571,7 @@
 },
 {
   "model": "core.partner",
-  "pk": 24,
+  "pk": 32,
   "fields": {
     "name": "AWS",
     "logo": "",
@@ -577,7 +581,7 @@
 },
 {
   "model": "core.partner",
-  "pk": 25,
+  "pk": 33,
   "fields": {
     "name": "Google Cloud",
     "logo": "",
@@ -607,7 +611,7 @@
 },
 {
   "model": "core.visionmission",
-  "pk": 17,
+  "pk": 21,
   "fields": {
     "type": "Mission",
     "content": "To be a globally dominant platform-based services company in chosen industry segments by 2025. We strive to enhance the quality of life by building world-class products and solutions through the innovative application of technology. To become the most treasured business partner."
@@ -615,7 +619,7 @@
 },
 {
   "model": "core.visionmission",
-  "pk": 18,
+  "pk": 22,
   "fields": {
     "type": "Vision",
     "content": "To help companies make data-driven decisions. To be a dream destination for innovators. To be a predominantly employee-owned organization."
@@ -623,16 +627,71 @@
 },
 {
   "model": "core.sitesetting",
-  "pk": 9,
+  "pk": 11,
   "fields": {
     "site_name": "KMATI",
     "contact_email": "sales@kmati.in",
     "contact_phone": "9148544466",
-    "address": "#2nd Floor, No.16, 17th Cross, M C Road, Near Maruthi Mandir, Vijayanagar, Bangalore â€“ 560040",
+    "address": "#2nd Floor, No.16, 17th Cross, M C Road, Near Maruthi Mandir, Vijayanagar, Bangalore – 560040",
     "facebook_url": "",
     "twitter_url": "",
     "instagram_url": "",
     "linkedin_url": ""
+  }
+},
+{
+  "model": "core.tool",
+  "pk": 1,
+  "fields": {
+    "title": "Kushagramati Migration Accelerator",
+    "description": "An accelerator for efficient migration to Databricks, featuring unified configuration, AI-driven script modification, and automated notebook generation.",
+    "image": "",
+    "pdf_file": "tools/pdfs/Kushagramati_Migration_Accelerator__GHBW_16_September_2025_1.pdf",
+    "order": 0
+  }
+},
+{
+  "model": "core.tool",
+  "pk": 2,
+  "fields": {
+    "title": "Platform Optimization Solution",
+    "description": "Comprehensive solution for optimizing your data platform performance and costs.",
+    "image": "",
+    "pdf_file": "tools/pdfs/Kushagramati_Platform_Optimization_Solution_Flyer_New_V1.0.pdf",
+    "order": 0
+  }
+},
+{
+  "model": "core.tool",
+  "pk": 3,
+  "fields": {
+    "title": "Platform Tuning Services",
+    "description": "Expert services to tune and refine your platform for maximum efficiency.",
+    "image": "",
+    "pdf_file": "tools/pdfs/Platform_Tuning_Services_Summary-New.pdf",
+    "order": 0
+  }
+},
+{
+  "model": "core.casestudy",
+  "pk": 1,
+  "fields": {
+    "title": "Optima X-Ray Predictor",
+    "description": "An advanced AI solution for predictive X-ray analysis in healthcare contexts.",
+    "image": "",
+    "pdf_file": "casestudies/pdfs/Optima_XRay_Predictor.pdf",
+    "order": 0
+  }
+},
+{
+  "model": "core.casestudy",
+  "pk": 2,
+  "fields": {
+    "title": "Sentiment Analysis Classification",
+    "description": "Classification of text based on keywords for enhanced customer insight and data processing.",
+    "image": "",
+    "pdf_file": "casestudies/pdfs/Sentiment_Analysis.pdf",
+    "order": 0
   }
 }
 ]
