@@ -9,30 +9,30 @@
             <img class="w-full h-full object-cover opacity-50"
                 [src]="getImageUrl(industry.banner_image) || 'assets/placeholder.jpg'" alt="">
         </div>
-        <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+        <div class="relative max-w-7xl mx-auto py-4 px-4 sm:py-6 sm:px-6 lg:px-8">
             <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">{{ industry.name }}
             </h1>
-            <p class="mt-6 text-xl text-gray-300 max-w-3xl">{{ industry.description }}</p>
+            <p class="mt-4 text-xl text-gray-300 max-w-3xl">{{ industry.description }}</p>
         </div>
     </div>
 
     <!-- Content Sections -->
-    <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
 
         <!-- Our Services Header -->
-        <div class="mb-16 border-b border-gray-100 pb-6">
+        <div class="mb-4 border-b border-gray-100 pb-4">
             <h2 class="text-3xl font-bold text-gray-900 border-l-4 border-brand-purple pl-4">Our Services</h2>
         </div>
 
         <div *ngIf="industry.sections && industry.sections.length > 0; else noSections">
             <div *ngFor="let section of industry.sections; let i = index"
-                class="flex flex-col lg:flex-row gap-16 mb-20 group animate-fade-in-up"
+                class="flex flex-col lg:flex-row gap-6 mb-8 group animate-fade-in-up"
                 [style.animation-delay]="(i * 150) + 'ms'">
 
                 <!-- Image Container -->
-                <div class="w-full lg:w-1/2 flex-shrink-0 relative max-w-xl mx-auto lg:mx-0"
+                <div class="w-full lg:w-2/5 flex-shrink-0 relative max-w-md mx-auto lg:mx-0"
                     [class.lg:order-last]="i % 2 !== 0">
-                    <div class="relative overflow-hidden rounded-2xl shadow-2xl h-64 sm:h-72 lg:h-80">
+                    <div class="relative overflow-hidden rounded-2xl shadow-2xl h-48 sm:h-56 lg:h-64">
                         <img *ngIf="section.image"
                             class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
                             [src]="getImageUrl(section.image)" [alt]="section.title">
@@ -48,7 +48,7 @@
                 </div>
 
                 <!-- Content Container -->
-                <div class="w-full lg:w-1/2 flex flex-col justify-center">
+                <div class="w-full lg:w-3/5 flex flex-col justify-center">
                     <h3
                         class="text-3xl font-bold text-brand-dark mb-6 group-hover:text-brand-purple transition-colors duration-300">
                         {{ section.title }}
@@ -59,11 +59,11 @@
         </div>
 
         <!-- Case Study Section (Restored & Updated to MailTo) -->
-        <div *ngIf="industry.case_study" class="mt-20 border-t border-gray-100 pt-16">
+        <div *ngIf="industry.case_study" class="mt-6 border-t border-gray-100 pt-4">
             <div
                 class="bg-gray-50 rounded-3xl p-8 lg:p-12 shadow-sm border border-gray-100 flex flex-col lg:flex-row gap-12 items-center">
                 <!-- Case Study Image -->
-                <div class="w-full lg:w-1/2">
+                <div class="w-full lg:w-2/5">
                     <div class="relative rounded-2xl overflow-hidden shadow-lg group">
                         <img *ngIf="industry.case_study.image" [src]="industry.case_study.image"
                             class="w-full h-auto transform transition-transform duration-500 group-hover:scale-105"
@@ -81,7 +81,7 @@
                 </div>
 
                 <!-- Case Study Content -->
-                <div class="w-full lg:w-1/2">
+                <div class="w-full lg:w-3/5">
                     <div
                         class="inline-block px-4 py-1 rounded-full bg-brand-orange/10 text-brand-orange text-sm font-bold uppercase tracking-wide mb-6">
                         Case Study

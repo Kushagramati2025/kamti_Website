@@ -1,20 +1,12 @@
 <div class="min-h-screen bg-gray-50 font-sans">
     <!-- Compact Hero Banner -->
-    <div class="relative w-full h-[220px] bg-gray-900 overflow-hidden group">
+    <!-- Compact Hero Banner -->
+    <div class="relative w-full h-[180px] bg-gray-900 overflow-hidden group">
         <!-- Background Image -->
-        <img src="assets/images/leadership/banner_new.png"
-            class="absolute inset-0 w-full h-full object-cover object-center opacity-80 transition-transform duration-700 group-hover:scale-105"
+        <img src="assets/images/values/banner.png"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-90 transition-transform duration-700 group-hover:scale-105"
             alt="Values Banner">
-        <div class="absolute inset-0 bg-gradient-to-b from-brand-purple/60 via-brand-purple/40 to-brand-purple/90">
-        </div>
-
-        <!-- Content -->
-        <div class="absolute inset-0 flex flex-col items-center justify-center z-10 pb-8">
-            <h1
-                class="text-4xl md:text-5xl font-bold text-white tracking-[0.2em] uppercase drop-shadow-2xl mb-4 animate-fade-in-up">
-                Values
-            </h1>
-            <div class="w-16 h-1 bg-brand-orange rounded-full shadow-lg"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-purple/40 to-brand-purple/70">
         </div>
 
         <!-- Integrated Navigation -->
@@ -29,7 +21,8 @@
                         <a routerLink="/values" routerLinkActive="bg-brand-orange text-white"
                             class="px-3 py-1.5 rounded-full text-white/90 text-xs md:text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-300 uppercase tracking-wide">Values</a>
                         <a routerLink="/vision-mission" routerLinkActive="bg-brand-orange text-white"
-                            class="px-3 py-1.5 rounded-full text-white/90 text-xs md:text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-300 uppercase tracking-wide">Visionary</a>
+                            class="px-3 py-1.5 rounded-full text-white/90 text-xs md:text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-300 uppercase tracking-wide">Vision
+                            & Mission</a>
                         <a routerLink="/blog" routerLinkActive="bg-brand-orange text-white"
                             class="px-3 py-1.5 rounded-full text-white/90 text-xs md:text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-300 uppercase tracking-wide">Blog</a>
                         <a routerLink="/contact" routerLinkActive="bg-brand-orange text-white"
@@ -41,18 +34,104 @@
     </div>
 
     <!-- Main Content Area -->
-    <div class="max-w-7xl mx-auto px-4 py-12">
-        <div class="w-full">
-            <!-- Values Infographic (Compact Size) -->
-            <div class="flex justify-center">
-                <div
-                    class="w-full max-w-3xl rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-white p-4 transition-transform duration-500 hover:scale-[1.01]">
-                    <img src="assets/images/values/infographic.avif" alt="Our Values Infographic"
-                        class="w-full h-auto rounded-xl">
+    <div class="max-w-7xl mx-auto px-4 py-16">
+
+        <div *ngIf="loading" class="flex justify-center py-12">
+            <div class="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-brand-purple"></div>
+        </div>
+
+        <div *ngIf="!loading" class="relative">
+            <!-- Diagram Container -->
+            <div class="hidden md:block relative h-[600px] w-full max-w-4xl mx-auto">
+                <!-- Center Hub -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+                    <div
+                        class="w-40 h-40 rounded-full bg-gradient-to-br from-brand-purple to-brand-orange p-1 shadow-2xl animate-pulse-slow">
+                        <div
+                            class="w-full h-full bg-white rounded-full flex items-center justify-center text-center p-4">
+                            <h3 class="text-xl font-bold text-gray-800 uppercase tracking-widest leading-tight">
+                                Our<br><span class="text-brand-purple">Core</span><br>Values</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Connecting Lines (SVG) -->
+                <svg class="absolute inset-0 w-full h-full z-0 pointer-events-none stroke-brand-purple/20"
+                    style="stroke-width: 2;">
+                    <!-- Top -->
+                    <line x1="50%" y1="50%" x2="50%" y2="15%" />
+                    <!-- Top Right -->
+                    <line x1="50%" y1="50%" x2="85%" y2="35%" />
+                    <!-- Bottom Right -->
+                    <line x1="50%" y1="50%" x2="75%" y2="75%" />
+                    <!-- Bottom Left -->
+                    <line x1="50%" y1="50%" x2="25%" y2="75%" />
+                    <!-- Top Left -->
+                    <line x1="50%" y1="50%" x2="15%" y2="35%" />
+                </svg>
+
+                <!-- Value Nodes (Absolute Positioning for 5 items) -->
+                <!-- 1. Top -->
+                <div class="absolute top-[5%] left-1/2 transform -translate-x-1/2 w-64 group">
+                    <div
+                        class="bg-white p-6 rounded-2xl shadow-xl border-l-4 border-brand-orange hover:-translate-y-2 transition-transform duration-300">
+                        <h4 class="font-bold text-brand-purple mb-2 text-lg">{{ values[0]?.title }}</h4>
+                        <p class="text-sm text-gray-600">{{ values[0]?.description }}</p>
+                    </div>
+                </div>
+
+                <!-- 2. Top Right -->
+                <div class="absolute top-[25%] right-[5%] w-64 group">
+                    <div
+                        class="bg-white p-6 rounded-2xl shadow-xl border-l-4 border-brand-purple hover:-translate-y-2 transition-transform duration-300">
+                        <h4 class="font-bold text-brand-purple mb-2 text-lg">{{ values[1]?.title }}</h4>
+                        <p class="text-sm text-gray-600">{{ values[1]?.description }}</p>
+                    </div>
+                </div>
+
+                <!-- 3. Bottom Right -->
+                <div class="absolute bottom-[15%] right-[15%] w-64 group">
+                    <div
+                        class="bg-white p-6 rounded-2xl shadow-xl border-l-4 border-brand-orange hover:-translate-y-2 transition-transform duration-300">
+                        <h4 class="font-bold text-brand-purple mb-2 text-lg">{{ values[2]?.title }}</h4>
+                        <p class="text-sm text-gray-600">{{ values[2]?.description }}</p>
+                    </div>
+                </div>
+
+                <!-- 4. Bottom Left -->
+                <div class="absolute bottom-[15%] left-[15%] w-64 group">
+                    <div
+                        class="bg-white p-6 rounded-2xl shadow-xl border-l-4 border-brand-purple hover:-translate-y-2 transition-transform duration-300">
+                        <h4 class="font-bold text-brand-purple mb-2 text-lg">{{ values[3]?.title }}</h4>
+                        <p class="text-sm text-gray-600">{{ values[3]?.description }}</p>
+                    </div>
+                </div>
+
+                <!-- 5. Top Left -->
+                <div class="absolute top-[25%] left-[5%] w-64 group">
+                    <div
+                        class="bg-white p-6 rounded-2xl shadow-xl border-l-4 border-brand-orange hover:-translate-y-2 transition-transform duration-300">
+                        <h4 class="font-bold text-brand-purple mb-2 text-lg">{{ values[4]?.title }}</h4>
+                        <p class="text-sm text-gray-600">{{ values[4]?.description }}</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Detailed Values Grid hidden to maintain the focal frame -->
+            <!-- Mobile View (Stack) -->
+            <div class="md:hidden grid grid-cols-1 gap-6">
+                <div *ngFor="let val of values; let i = index" class="bg-white p-6 rounded-xl shadow-md border-t-4"
+                    [class.border-brand-orange]="i % 2 === 0" [class.border-brand-purple]="i % 2 !== 0">
+                    <h3 class="font-bold text-gray-900 text-lg mb-2 flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold"
+                            [class.bg-brand-orange]="i % 2 === 0" [class.bg-brand-purple]="i % 2 !== 0">
+                            {{ i + 1 }}
+                        </span>
+                        {{ val.title }}
+                    </h3>
+                    <p class="text-gray-600 pl-10">{{ val.description }}</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

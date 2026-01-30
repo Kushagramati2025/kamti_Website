@@ -22,6 +22,7 @@ module.exports = {
         'bounce-slow': 'bounce 3s infinite',
         'slide-in-right': 'slideInRight 0.8s ease-out forwards',
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'blob': 'blob 7s infinite',
       },
       keyframes: {
         fadeInUp: {
@@ -35,6 +36,12 @@ module.exports = {
         slideInRight: {
           '0%': { opacity: '0', transform: 'translateX(50px)' },
           '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        blob: {
+          '0%': { transform: 'translate(0px, 0px) scale(1)' },
+          '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+          '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+          '100%': { transform: 'translate(0px, 0px) scale(1)' },
         }
       }
     }

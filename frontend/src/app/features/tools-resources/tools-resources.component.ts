@@ -1,11 +1,12 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { ApiService } from '../../core/services/api.service';
 
 @Component({
   selector: 'app-tools-resources',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './tools-resources.component.html',
   styleUrl: './tools-resources.component.css'
 })
@@ -37,11 +38,5 @@ export class ToolsResourcesComponent implements OnInit {
 
   setActiveTab(tab: 'tools' | 'casestudies') {
     this.activeTab.set(tab);
-  }
-
-  getMailToLink(item: any, type: 'Tool' | 'Case Study'): string {
-    const subject = `Inquiry about ${type}: ${item.title}`;
-    const body = `Hello,\n\nI am interested in learning more about the ${type} "${item.title}".\n\nPlease provide more information.\n\nBest regards,`;
-    return `mailto:Careers@kmati.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 }

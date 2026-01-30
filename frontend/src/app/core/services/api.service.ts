@@ -82,8 +82,16 @@ export class ApiService {
         return this.http.get<any[]>(`${this.apiUrl}/tools/`);
     }
 
+    getTool(id: string): Observable<any> {
+        return this.http.get<any>(`${this.apiUrl}/tools/${id}/`);
+    }
+
     getCaseStudies(): Observable<any[]> {
         return this.http.get<any[]>(`${this.apiUrl}/case-studies/`);
+    }
+
+    getCaseStudy(id: string): Observable<any> {
+        return this.http.get<any>(`${this.apiUrl}/case-studies/${id}/`);
     }
 
     contact(data: any): Observable<any> {

@@ -61,7 +61,7 @@ def populate():
     # Healthcare Data
     healthcare = Industry.objects.create(
         name="Healthcare",
-        description="Solutions for Healthcare sector.",
+        description="Increased prevalence of lifestyle disorders creating a huge demand of accessible healthcare systems. The healthcare market is being propelled with technological advancements with rising in healthcare costs & transparency. The biggest obstacles today comes up with handling huge volume of meta data to extract the significant information & providing superior customer experience",
         banner_image="industries/banners/healthcare_banner.jpg" 
     )
 
@@ -197,28 +197,33 @@ def populate():
     leadership_data = [
         {
             "name": "Dr. Anant R. Koppar",
-            "position": "CEO & Founder",
-            "bio": "A visionary technocrat and serial entrepreneur with over 3 decades of experience in the IT industry. Founder of Kshema Technologies and KTwo Technologies. He was the first CEO in India to receive PMP certification. Recipient of the Karnataka Rajyotsava Award for his contributions to the IT sector.",
+            "position": "Chief Executive Officer and Managing Director",
+            "bio": "Dr. Anant R Koppar drives business strategy and relationships in Kushagramati Analytics. He was the Founder President of Kshema Technologies, one of India's first venture capital-funded software services companies. He worked as the President of the Technologies Division of MphasiS BFL Limited post the acquisition of Kshema by MphasiS. A certified 'Project Management Professional' by PMI, Anant Koppar was the first CEO in India to get this certification. His last venture was KTwo Technology Solutions. He is a recognized leader in the software industry and has been awarded the highest civilian award “Karnataka Rajyotsava“ by the Karnataka Government for outstanding contributions to the growth of the IT Industry in Karnataka, India.",
+            "image": "leadership/dr_anant.png"
         },
         {
             "name": "Vishwanath Honnungar",
-            "position": "CTO",
-            "bio": "Expert in Cloud Computing, AI, and Big Data with over 24 years of experience. He has been the lead architect for large-scale digital transformation projects and focuses on driving technical innovation to help clients build an insight-driven culture.",
+            "position": "Chief Technology Officer",
+            "bio": "With 30 years of experience in the IT services industry, Vishwanath brings strategic insight to Kushagramati’s leadership team, and deep operational knowledge of driving business growth, furthering partnerships, and leading cross-cultural teams. In his role he will be responsible for focus on strategy, business development, account management and digital transformation solutions, with a special focus on Data Analytics services, to leverage the company’s strengths in cognitive solutions. He has in-depth global experience in the services industry with an outstanding track record in leading and growing small and large business units. Vishwanth brings in extensive knowledge and experience in architecture, design, development methodologies, testing, and quality processes.",
+            "image": "leadership/vishwanath.jpg"
         },
         {
             "name": "Pradeep N",
             "position": "Industry Expert and Operations",
-            "bio": "Focuses on business operations, industry-specific solution design, and operational excellence. He brings deep domain expertise to ensure that our solutions meet the specific needs of our clients in various sectors.",
+            "bio": "With 6 years in Manufacturing and 30 years in IT services industry, Pradeep brings in a rich domain experience in the process automation of Manufacturing, Healthcare, Financial Services and Logistics. In his previous organizations, he has brought about improvement in operational efficiency, closer integration of various departments and businesses, risk management and operational cost effectiveness. His specialization is in Digital Transformation, Program Management, Delivery Management and Process re-engineering. In his role, he is responsible for scoping, delivering, and successfully closing projects, managing and accelerating account growth, augment revenue with existing & prospective clients. On the technology front, he is exposed to Big Data Analytics, Master Data Management for Business 360 view and on using Automation Tools in all stages of Software Design, Development and Testing.",
+            "image": "leadership/pradeep.jpg"
         },
         {
              "name": "Dayanand Yardi",
              "position": "Finance and Administration",
-             "bio": "Leads the Finance and Administration functions, ensuring robust financial health and operational smoothness for the organization.",
+             "bio": "As an established finance leader for 30 plus years’, Dayanand has extensive global leadership experience including shareholder value creation, mergers and acquisitions, financial and strategic planning, and budgeting. He has vast experience in managing finance and account functions in corporate as well as public sector companies. In his role at Kushagramti, Dayanand is responsible for the finance function which includes Corporate Finance, Business Finance, Business Planning, Treasury, Taxation, and Investor relations.",
+             "image": "leadership/dayanand.png"
         },
         {
              "name": "Shruthi Malagi",
              "position": "Business Development",
-             "bio": "Leads Business Development initiatives, fostering strategic partnerships and driving growth by identifying new market opportunities and client needs.",
+             "bio": "Shruthi Malagi is an astute & result oriented Bid management professional with more than a decade of experience working in a leading IT services company. Her career growth has been in IT & ITES in strategic Business Development, Pre-sales and complex Bid Management across industries and geographies. With strong passion towards business development, she drives company operations, human resources and manages vendor relations.",
+             "image": "leadership/shruthi.png"
         }
     ]
 
@@ -241,6 +246,45 @@ def populate():
         content="To help companies make data-driven decisions. To be a dream destination for innovators. To be a predominantly employee-owned organization."
     )
     print("Updated Vision and Mission.")
+
+    # 3.5. Company Values
+    from core.models import CompanyValue
+    values_data = [
+        {
+            "title": "Freedom to Innovate",
+            "description": "We believe in giving our team the freedom to explore new ideas and innovate without boundaries.",
+            "icon": "lightbulb" 
+        },
+        {
+            "title": "Tolerance for Failure",
+            "description": "Adopting the concept of 'fast fail' - we see failure as a stepping stone to success and learning.",
+            "icon": "refresh"
+        },
+        {
+            "title": "Individual Brilliance in Team Play",
+            "description": "We recognize and celebrate individual brilliance, but always within the context of supportive team play.",
+            "icon": "users"
+        },
+        {
+            "title": "Mutually Beneficial Relationships",
+            "description": "Building value-based, mutually beneficial relationships with all our stakeholders is at our core.",
+            "icon": "handshake"
+        },
+        {
+            "title": "Ethical Business Practices",
+            "description": "We uphold the highest order of ethical business practices in everything we do.",
+            "icon": "scale"
+        }
+    ]
+
+    CompanyValue.objects.all().delete()
+    for val in values_data:
+        # Note: Icon field expects an image, but we might want to store a class name or use a default.
+        # For now, we will create the object. If icon is ImageField, we might skip it or use a placeholder if required.
+        # The model definition: icon = models.ImageField(upload_to='values/', blank=True, null=True)
+        # So we can skip it.
+        CompanyValue.objects.create(title=val['title'], description=val['description'])
+    print(f"Created {len(values_data)} company values.")
 
     # 4. Site Settings (Contact Info)
     SiteSetting.objects.all().delete()
@@ -276,10 +320,15 @@ def populate():
     # 6. Partners
     # Databricks is a known partner
     partners_data = [
-        {"name": "Databricks", "website": "https://databricks.com"},
-        {"name": "Microsoft Azure", "website": "https://azure.microsoft.com"},
-        {"name": "AWS", "website": "https://aws.amazon.com"},
-        {"name": "Google Cloud", "website": "https://cloud.google.com"},
+        {"name": "Databricks", "website": "https://databricks.com", "logo": "partners/databricks_Logo.avif"},
+        {"name": "Databricks Consulting Partner", "website": "https://databricks.com/partners", "logo": "partners/databricks_badge_v2.avif"},
+        {"name": "Vue.ai", "website": "https://vue.ai", "logo": "partners/Picture3.avif"},
+        {"name": "Boomi", "website": "https://boomi.com", "logo": "partners/boomi_v2.avif"},
+        {"name": "Computomic", "website": "https://computomic.com", "logo": "partners/Computomic-Logo.avif"},
+        {"name": "Snowflake", "website": "https://www.snowflake.com", "logo": "partners/snowflake.avif"},
+        {"name": "Microsoft Azure", "website": "https://azure.microsoft.com", "logo": "partners/Microsoft.avif"},
+        {"name": "AWS", "website": "https://aws.amazon.com", "logo": "partners/aws.avif"},
+        {"name": "MSME", "website": "https://msme.gov.in", "logo": "partners/msme.avif"},
     ]
     
     # Check if Partner model exists imported (it wasn't in top import, adding it)
@@ -287,7 +336,7 @@ def populate():
 
     Partner.objects.all().delete()
     for p in partners_data:
-        Partner.objects.create(name=p['name'], website=p['website'])
+        Partner.objects.create(name=p['name'], website=p['website'], logo=p['logo'])
     print(f"Created {len(partners_data)} partners.")
 
     # 7. Departments & Careers
@@ -353,19 +402,34 @@ def populate():
     # 8. Blog Posts
     posts_data = [
         {
-            "title": "The Future of AI in Healthcare",
-            "content": "Artificial Intelligence is revolutionizing the healthcare industry. From predictive analytics to personalized medicine, AI is enabling doctors to make better decisions...",
-            "author": "Dr. Anant R. Koppar"
+            "title": "Role of OpenCV in Image Preprocessing",
+            "content": "Open CV is a huge open-source library for Computer Vision, Machine Learning and Image Processing. It focuses on image processing, video capture and analysis including face-detection and object detection. It can identify faces, objects or even the hand-writing of a human.",
+            "author": "Neha V S",
+            "image": "blog/opencv.jpg"
         },
         {
-            "title": "Optimizing Supply Chains with Big Data",
-            "content": "In today's volatile market, supply chain visibility is key. Big Data analytics allows companies to predict disruptions and optimize routes in real-time...",
-            "author": "Vishwanath Honnungar"
+            "title": "Time Series Forecasting on COVID 19 using ARIMA",
+            "content": "Time Series data is experimental data that has been observed at different points in time (usually evenly spaced, like once a day). For example, the data of airline ticket sales per day is a time series. However, just because a series of events has a time element does not automatically make it a time series, such as the dates of major airline disasters, which are randomly spaced and are not time series. These types of random processes are known as point process.",
+            "author": "Mohan Baabu",
+            "image": "blog/timeseries.jpg"
         },
         {
-            "title": "Why Databricks for your Lakehouse?",
-            "content": "The Lakehouse architecture combines the best elements of data lakes and data warehouses. Databricks provides a unified platform for data engineering, science, and analytics...",
-            "author": "Pradeep N"
+            "title": "Social Media Analytics for National Security",
+            "content": "Social media has evolved into an extremely powerful tool, not only for its users, but also for the public data it provides. In our digital age, social media intelligence is a critical component for keeping people and nations safe.",
+            "author": "Genevive g",
+            "image": "blog/socialmedia.jpg"
+        },
+        {
+            "title": "Graph Database: Wave of the future in documenting Data",
+            "content": "In Today’s world, Customers' demand for immediate access to services and money transfers creates chances for criminals. For instance, payment service apps work to send money as soon as possible to legitimate users while simultaneously ensuring that it isn't transmitted for illegal purposes or used to conceal the genuine recipient by taking devious ways. This necessitates real-time fraud detection. Graphs increase access to data and allow for lightning-fast response times to queries, graphs have gained popularity as a solution for real-time fraud detection.",
+            "author": "Panchami V T",
+            "image": "blog/graphdb.jpg"
+        },
+        {
+            "title": "Let’s Discover the EC2 Service from Amazon Web Services (AWS)",
+            "content": "Kushagramati Analytics was where I started in the vast world of data. The training opportunities provided by this job have been extraordinary to say the least, and the freedom to learn has been extremely encouraging. I began by learning Python, Pandas and NumPy, followed by numerous courses in Databricks and Boomi Integration, and then moved on to the Cloud platform.",
+            "author": "Syeda Arfa",
+            "image": "blog/aws_ec2.jpg"
         }
     ]
 

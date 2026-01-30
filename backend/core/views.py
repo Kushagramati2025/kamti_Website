@@ -115,8 +115,40 @@ class ContactMessageViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
     permission_classes = [permissions.AllowAny]
 
     def perform_create(self, serializer):
-        # Here we can add email sending logic later
-        serializer.save()
+        instance = serializer.save()
+        
+        # Prepare email content
+        subject = f"WEBSITE INQUIRY: {instance.subject or 'General Message'} | {instance.name}"
+        message_body = f"""
+Dear Team,
+
+You have received a new incoming message via the Kmati Website Contact Form.
+
+==================================================
+              CONTACT DETAILS
+==================================================
+Name    : {instance.name}
+Email   : {instance.email}
+Phone   : {instance.phone if instance.phone else 'Not Provided'}
+Subject : {instance.subject or 'N/A'}
+
+==================================================
+                 MESSAGE
+==================================================
+{instance.message}
+
+==================================================
+This is an automated message. 
+To reply, simply click "Reply" in your email client to address {instance.email}.
+"""
+        recipient_list = ['sales@kmati.in']
+        
+        # Log to console for debugging/testing
+        print("\n" + "="*30)
+        print(f"SENDING EMAIL TO: {recipient_list}")
+        print(f"SUBJECT: {subject}")
+        print(f"BODY:\n{message_body}")
+        print("="*30 + "\n")
 
 class ToolViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Tool.objects.all()

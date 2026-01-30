@@ -7,7 +7,7 @@
                 <button *ngFor="let tab of tabs" (click)="setActiveTab(tab)"
                     [class.border-brand-purple]="activeTab === tab" [class.text-shimmer-purple]="activeTab === tab"
                     [class.font-black]="activeTab === tab" [class.text-gray-500]="activeTab !== tab"
-                    class="group relative inline-flex items-center px-6 py-4 border-b-4 border-transparent hover:text-brand-purple hover:border-brand-purple/50 transition-all duration-200 text-xl font-bold cursor-pointer outline-none whitespace-nowrap">
+                    class="group relative inline-flex items-center px-6 py-2 border-b-4 border-transparent hover:text-brand-purple hover:border-brand-purple/50 transition-all duration-200 text-xl font-bold cursor-pointer outline-none whitespace-nowrap">
                     {{ tab }}
                 </button>
             </div>
@@ -15,12 +15,11 @@
     </div>
 
     <!-- Content Area -->
-    <div
-        class="flex-grow relative w-full bg-white overflow-y-auto flex items-start justify-center min-h-[600px] p-8 md:p-12">
+    <div class="flex-grow relative w-full bg-white overflow-y-auto flex items-start justify-center p-2">
 
         <!-- Tab 1: Kusha at glance -->
         <div *ngIf="activeTab === 'Kusha at glance'"
-            class="w-full max-w-7xl animate-fade-in-up flex justify-center perspective-1000">
+            class="w-[90%] max-w-6xl animate-fade-in-up flex justify-center perspective-1000">
             <div class="relative group transition-all duration-500 transform hover:-translate-y-2">
                 <img src="http://localhost:8000/media/service/Kusha at glance.avif" alt="Kusha at Glance"
                     class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.01]">
@@ -29,7 +28,7 @@
 
         <!-- Tab 2: Application Services -->
         <div *ngIf="activeTab === 'Application Services'"
-            class="w-full max-w-7xl animate-fade-in-up flex justify-center perspective-1000">
+            class="w-[90%] max-w-6xl animate-fade-in-up flex justify-center perspective-1000">
             <div class="relative group transition-all duration-500 transform hover:-translate-y-2">
                 <img src="http://localhost:8000/media/service/Application Services.avif" alt="Application Services"
                     class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.01]">
@@ -38,7 +37,7 @@
 
         <!-- Tab 3: Data Analytics -->
         <div *ngIf="activeTab === 'Data Analytics'"
-            class="w-full max-w-7xl animate-fade-in-up flex justify-center perspective-1000">
+            class="w-[80%] max-w-5xl animate-fade-in-up flex justify-center perspective-1000">
             <div class="relative group transition-all duration-500 transform hover:-translate-y-2">
                 <img src="http://localhost:8000/media/service/data analytics info.avif" alt="Data Analytics"
                     class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.01]">
@@ -47,7 +46,7 @@
 
         <!-- Tab 4: Embedded-consultancy -->
         <div *ngIf="activeTab === 'Embedded-consultancy'"
-            class="w-full max-w-7xl animate-fade-in-up flex justify-center perspective-1000">
+            class="w-[80%] max-w-5xl animate-fade-in-up flex justify-center perspective-1000">
             <div class="relative group transition-all duration-500 transform hover:-translate-y-2">
                 <img src="http://localhost:8000/media/service/Embedded-consultancy.avif" alt="Embedded Consultancy"
                     class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.01]">

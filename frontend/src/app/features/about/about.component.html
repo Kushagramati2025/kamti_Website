@@ -2,28 +2,97 @@
     <!-- Dynamic Banner Carousel -->
     <app-banner-carousel pageContext="ABOUT" fallbackTitle="About Kushagramati"
         fallbackSubtitle="Serial Entrepreneurs, top notch technocrats and domain experts."
-        heightClass="h-[25vh] min-h-[200px] lg:h-[30vh]"
+        heightClass="h-[20vh] min-h-[160px]"
         gradientClass="bg-gradient-to-r from-brand-purple/90 via-brand-purple/80 to-brand-orange/70 mix-blend-multiply">
     </app-banner-carousel>
 
+    <!-- Overlapping Values Section (Matching Careers Page Design) -->
+    <div class="relative w-full z-30 -mt-8 md:-mt-12 pb-4">
+        <div class="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Value 1 -->
+                <div
+                    class="group bg-white rounded-xl shadow-xl p-6 flex flex-col items-center text-center transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-brand-purple hover:shadow-2xl hover:shadow-brand-purple/20 h-full animate-fade-in-up">
+                    <div
+                        class="w-16 h-16 bg-brand-purple/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-purple transition-colors">
+                        <svg class="w-8 h-8 text-brand-purple group-hover:text-white" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2">Freedom to Innovate</h3>
+                    <p class="text-sm text-gray-500">We encourage creativity and new ideas.</p>
+                </div>
+
+                <!-- Value 2 -->
+                <div class="group bg-white rounded-xl shadow-xl p-6 flex flex-col items-center text-center transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-brand-orange hover:shadow-2xl hover:shadow-brand-orange/20 h-full animate-fade-in-up"
+                    style="animation-delay: 100ms;">
+                    <div
+                        class="w-16 h-16 bg-brand-orange/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-orange transition-colors">
+                        <svg class="w-8 h-8 text-brand-orange group-hover:text-white" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2">Tolerance for Failure</h3>
+                    <p class="text-sm text-gray-500">Embracing "fast fail" to accelerate learning.</p>
+                </div>
+
+                <!-- Value 3 -->
+                <div class="group bg-white rounded-xl shadow-xl p-6 flex flex-col items-center text-center transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-green-600 hover:shadow-2xl hover:shadow-green-600/20 h-full animate-fade-in-up"
+                    style="animation-delay: 200ms;">
+                    <div
+                        class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500 transition-colors">
+                        <svg class="w-8 h-8 text-green-600 group-hover:text-white" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2">Individual Brilliance</h3>
+                    <p class="text-sm text-gray-500">Recognizing talent within the context of team play.</p>
+                </div>
+
+                <!-- Value 4 -->
+                <div class="group bg-white rounded-xl shadow-xl p-6 flex flex-col items-center text-center transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-600/20 h-full animate-fade-in-up"
+                    style="animation-delay: 300ms;">
+                    <div
+                        class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500 transition-colors">
+                        <svg class="w-8 h-8 text-blue-600 group-hover:text-white" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2">Value-based Relationships</h3>
+                    <p class="text-sm text-gray-500">Mutually beneficial relationships with all stakeholders.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <!-- Main Content Section: Who We Are -->
-    <div class="relative py-4 px-4 sm:px-6 lg:px-8">
+    <div class="relative pt-0 pb-12 px-4 sm:px-6 lg:px-8 bg-white">
         <div class="w-[90%] 2xl:w-[85%] mx-auto">
             <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
                 <!-- Image Side -->
                 <div class="relative opacity-0 animate-slide-in-right" style="animation-fill-mode: forwards;">
                     <div
-                        class="w-full h-full object-cover rounded-2xl shadow-2xl overflow-hidden transform hover:rotate-1 transition-transform duration-500">
+                        class="max-w-md mx-auto w-full h-64 sm:h-80 object-cover rounded-2xl shadow-2xl overflow-hidden transform hover:rotate-1 transition-transform duration-500">
                         <img src="http://127.0.0.1:8000/media/industries/about/about_team.jpg" alt="Team collaboration"
                             class="w-full h-full object-cover">
                     </div>
                 </div>
 
                 <!-- Text Side -->
-                <div class="mt-12 lg:mt-0 opacity-0 animate-fade-in-up"
+                <div class="mt-8 lg:mt-0 opacity-0 animate-fade-in-up"
                     style="animation-delay: 400ms; animation-fill-mode: forwards;">
-                    <h2 class="text-3xl font-extrabold text-brand-dark sm:text-4xl mb-6">About Us</h2>
-                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                    <h2 class="text-3xl font-extrabold text-brand-dark sm:text-4xl mb-4">About Us</h2>
+                    <p class="text-base text-gray-600 mb-4 leading-relaxed">
                         Serial Entrepreneurs, top notch technocrats and domain experts come together to drive the
                         objectives of Kushagramati. This team of next gen leaders are high-potential professionals with
                         rich experience in Data Analytics, Cloud computing, Artificial Intelligence & Machine Learning.
@@ -31,25 +100,25 @@
                         new solutions.
                     </p>
 
-                    <h3 class="text-2xl font-bold text-brand-dark mb-4">Our Specialization</h3>
-                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Our Specialization</h3>
+                    <p class="text-base text-gray-600 mb-6 leading-relaxed">
                         We bring together a strong combination of Industry knowledge, Technical skills and Project
                         Management expertise. Our mature and highly differentiated methodology helps modernize
                         applications, accelerating transition to cloud. Our expertise is focused on delivering
                         measurable and quantifiable business value.
                     </p>
 
-                    <div class="grid grid-cols-2 gap-6">
+                    <div class="grid grid-cols-2 gap-4">
                         <a href="https://www.kmati.in/_files/ugd/ef2530_bc8533eab9704a318a91c804380d8943.pdf"
                             target="_blank"
-                            class="block p-4 bg-white rounded-xl shadow-md border-l-4 border-brand-orange hover:-translate-y-1 transition-transform cursor-pointer group">
+                            class="block p-3 bg-white rounded-xl shadow-md border-l-4 border-brand-orange hover:-translate-y-1 transition-transform cursor-pointer group">
                             <div class="flex items-center justify-between">
                                 <div>
                                     <span
-                                        class="block text-3xl font-bold text-brand-dark mb-1 group-hover:text-brand-orange transition-colors">ISO</span>
-                                    <span class="text-sm text-gray-500 font-medium uppercase">9001:2015 Certified</span>
+                                        class="block text-2xl font-bold text-brand-dark mb-0.5 group-hover:text-brand-orange transition-colors">ISO</span>
+                                    <span class="text-xs text-gray-500 font-medium uppercase">9001:2015 Certified</span>
                                 </div>
-                                <svg class="w-6 h-6 text-gray-400 group-hover:text-brand-orange" fill="none"
+                                <svg class="w-5 h-5 text-gray-400 group-hover:text-brand-orange" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -57,18 +126,15 @@
                             </div>
                         </a>
                         <div
-                            class="p-4 bg-white rounded-xl shadow-md border-l-4 border-brand-purple hover:-translate-y-1 transition-transform">
-                            <span class="block text-3xl font-bold text-brand-dark mb-1">Global</span>
-                            <span class="text-sm text-gray-500 font-medium uppercase">Platform Services</span>
+                            class="p-3 bg-white rounded-xl shadow-md border-l-4 border-brand-purple hover:-translate-y-1 transition-transform">
+                            <span class="block text-2xl font-bold text-brand-dark mb-0.5">Global</span>
+                            <span class="text-xs text-gray-500 font-medium uppercase">Platform Services</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
 
 
     <!-- Leadership Section -->
@@ -148,73 +214,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-
-    <!-- Values Section -->
-    <div class="bg-white py-16">
-        <div class="w-[90%] 2xl:w-[85%] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-extrabold text-brand-dark mb-12">Our Core Values</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Value 1 -->
-                <div
-                    class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2 group">
-                    <div
-                        class="w-16 h-16 bg-brand-purple/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-purple transition-colors">
-                        <svg class="w-8 h-8 text-brand-purple group-hover:text-white" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-brand-dark mb-2">Freedom to Innovate</h3>
-                    <p class="text-sm text-gray-500">We encourage creativity and new ideas.</p>
-                </div>
-                <!-- Value 2 -->
-                <div
-                    class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2 group">
-                    <div
-                        class="w-16 h-16 bg-brand-orange/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-orange transition-colors">
-                        <svg class="w-8 h-8 text-brand-orange group-hover:text-white" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-brand-dark mb-2">Tolerance for Failure</h3>
-                    <p class="text-sm text-gray-500">Embracing "fast fail" to accelerate learning.</p>
-                </div>
-                <!-- Value 3 -->
-                <div
-                    class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2 group">
-                    <div
-                        class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-500 transition-colors">
-                        <svg class="w-8 h-8 text-green-600 group-hover:text-white" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-brand-dark mb-2">Individual Brilliance</h3>
-                    <p class="text-sm text-gray-500">Recognizing talent within the context of team play.</p>
-                </div>
-                <!-- Value 4 -->
-                <div
-                    class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2 group">
-                    <div
-                        class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-500 transition-colors">
-                        <svg class="w-8 h-8 text-blue-600 group-hover:text-white" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-brand-dark mb-2">Value-based Relationships</h3>
-                    <p class="text-sm text-gray-500">Mutually beneficial relationships with all stakeholders.</p>
-                </div>
-            </div>
-
         </div>
     </div>
 </div>

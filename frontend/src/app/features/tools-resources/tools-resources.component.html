@@ -1,18 +1,18 @@
-<div class="bg-gray-50 min-h-screen pt-24 pb-12">
+<div class="bg-gray-50 min-h-screen pt-16 pb-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- Header -->
-        <div class="text-center mb-12">
+        <div class="text-center mb-2">
             <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl">
                 Tools & Resources
             </h1>
-            <p class="mt-4 text-xl text-gray-500 max-w-2xl mx-auto">
+            <p class="mt-1 text-xl text-gray-500 max-w-2xl mx-auto">
                 Discover our accelerators, white papers, and case studies designed to fast-track your data journey.
             </p>
         </div>
 
         <!-- Tabs -->
-        <div class="flex justify-center mb-12">
+        <div class="flex justify-center mb-4">
             <div class="bg-white p-1.5 rounded-2xl shadow-md inline-flex relative z-10">
                 <!-- Gliding Background/Pill could be implemented, but simple gradient buttons are requested -->
 
@@ -63,13 +63,13 @@
                         <p class="text-gray-600 mb-6 leading-relaxed">
                             {{ tool.description }}
                         </p>
-                        <a [href]="getMailToLink(tool, 'Tool')"
-                            class="inline-flex items-center text-brand-orange font-bold hover:text-brand-orange-dark transition-colors group/link">
-                            Request Info
+                        <a [routerLink]="['/tools', tool.id]"
+                            class="inline-flex items-center text-brand-orange font-bold hover:text-brand-orange-dark transition-colors group/link cursor-pointer">
+                            Read More
                             <svg class="ml-2 w-4 h-4 transform group-hover/link:translate-x-1 transition-transform"
                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3">
                                 </path>
                             </svg>
                         </a>
@@ -104,13 +104,13 @@
                         <p class="text-gray-600 mb-6 leading-relaxed">
                             {{ study.description }}
                         </p>
-                        <a [href]="getMailToLink(study, 'Case Study')"
-                            class="inline-flex items-center text-brand-purple font-bold hover:text-brand-purple-dark transition-colors group/link">
-                            Request Case Study
+                        <a [routerLink]="['/casestudies', study.id]"
+                            class="inline-flex items-center text-brand-purple font-bold hover:text-brand-purple-dark transition-colors group/link cursor-pointer">
+                            Read More
                             <svg class="ml-2 w-4 h-4 transform group-hover/link:translate-x-1 transition-transform"
                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3">
                                 </path>
                             </svg>
                         </a>

@@ -19,7 +19,7 @@ export class ContactComponent {
   contactForm: FormGroup = this.fb.group({
     name: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
-    phone: [''],
+    phone: ['', Validators.required],
     subject: [''],
     message: ['', Validators.required],
     attachment: [null]
@@ -40,6 +40,7 @@ export class ContactComponent {
 
   onSubmit() {
     if (this.contactForm.invalid) {
+      this.contactForm.markAllAsTouched();
       return;
     }
 
@@ -57,6 +58,17 @@ export class ContactComponent {
     if (this.contactForm.get('attachment')?.value) {
       formData.append('attachment', this.contactForm.get('attachment')?.value);
     }
+
+    // Direct Mailto Logic
+    const name = this.contactForm.get('name')?.value;
+    const email = this.contactForm.get('email')?.value;
+    const phone = this.contactForm.get('phone')?.value || 'Not Provided';
+    const msg = this.contactForm.get('message')?.value;
+
+    const subject = `Website Inquiry: ${name}`;
+    const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0A%0D%0AMessage:%0D%0A${msg}`;
+
+    window.location.href = `mailto:sales@kmati.in?subject=${subject}&body=${body}`;
 
     this.apiService.contact(formData).subscribe({
       next: (response) => {

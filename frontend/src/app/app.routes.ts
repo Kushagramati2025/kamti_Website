@@ -24,6 +24,8 @@ export const routes: Routes = [
             { path: '', component: HomeComponent },
             { path: 'services', component: ServicesComponent },
             { path: 'tools-resources', loadComponent: () => import('./features/tools-resources/tools-resources.component').then(m => m.ToolsResourcesComponent) },
+            { path: 'tools/:id', loadComponent: () => import('./features/tool-detail/tool-detail.component').then(m => m.ToolDetailComponent) },
+            { path: 'casestudies/:id', loadComponent: () => import('./features/casestudy-detail/casestudy-detail.component').then(m => m.CasestudyDetailComponent) },
             { path: 'industries', component: IndustryListComponent },
             { path: 'industries/:slug', component: IndustryDetailComponent },
             { path: 'careers', component: CareerListComponent },

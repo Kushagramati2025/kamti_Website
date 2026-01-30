@@ -60,8 +60,9 @@ class VisionMissionAdmin(admin.ModelAdmin):
 
 @admin.register(ContactMessage)
 class ContactMessageAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'subject', 'created_at')
+    list_display = ('name', 'email', 'phone', 'subject', 'message', 'attachment', 'created_at')
     readonly_fields = ('created_at',)
+    search_fields = ('name', 'email', 'phone', 'subject', 'message')
 
 @admin.register(SiteSetting)
 class SiteSettingAdmin(admin.ModelAdmin):

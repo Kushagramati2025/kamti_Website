@@ -243,6 +243,7 @@ class SiteSetting(models.Model):
 class Tool(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
+    content = models.TextField(blank=True, help_text="Detailed content for the Read More view")
     image = models.ImageField(upload_to='tools/images/', blank=True, null=True)
     pdf_file = models.FileField(upload_to='tools/pdfs/')
     order = models.IntegerField(default=0)
@@ -256,6 +257,7 @@ class Tool(models.Model):
 class CaseStudy(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
+    content = models.TextField(blank=True, help_text="Detailed content for the Read More view")
     image = models.ImageField(upload_to='casestudies/images/', blank=True, null=True)
     pdf_file = models.FileField(upload_to='casestudies/pdfs/')
     order = models.IntegerField(default=0)

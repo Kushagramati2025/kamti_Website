@@ -1,20 +1,11 @@
 <div class="min-h-screen bg-gray-50 font-sans">
     <!-- Compact Hero Banner -->
-    <div class="relative w-full h-[220px] bg-gray-900 overflow-hidden group">
+    <div class="relative w-full h-[180px] bg-gray-900 overflow-hidden group">
         <!-- Background Image -->
         <img src="assets/images/leadership/banner_new.png"
-            class="absolute inset-0 w-full h-full object-cover object-center opacity-80 transition-transform duration-700 group-hover:scale-105"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-90 transition-transform duration-700 group-hover:scale-105"
             alt="Leadership Banner">
-        <div class="absolute inset-0 bg-gradient-to-b from-brand-purple/60 via-brand-purple/40 to-brand-purple/90">
-        </div>
-
-        <!-- Content -->
-        <div class="absolute inset-0 flex flex-col items-center justify-center z-10 pb-8">
-            <h1
-                class="text-4xl md:text-5xl font-bold text-white tracking-[0.2em] uppercase drop-shadow-2xl mb-4 animate-fade-in-up">
-                Leadership
-            </h1>
-            <div class="w-16 h-1 bg-brand-orange rounded-full shadow-lg"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-purple/40 to-brand-purple/70">
         </div>
 
         <!-- Integrated Navigation -->
@@ -29,7 +20,8 @@
                         <a routerLink="/values" routerLinkActive="bg-brand-orange text-white"
                             class="px-3 py-1.5 rounded-full text-white/90 text-xs md:text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-300 uppercase tracking-wide">Values</a>
                         <a routerLink="/vision-mission" routerLinkActive="bg-brand-orange text-white"
-                            class="px-3 py-1.5 rounded-full text-white/90 text-xs md:text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-300 uppercase tracking-wide">Visionary</a>
+                            class="px-3 py-1.5 rounded-full text-white/90 text-xs md:text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-300 uppercase tracking-wide">Vision
+                            & Mission</a>
                         <a routerLink="/blog" routerLinkActive="bg-brand-orange text-white"
                             class="px-3 py-1.5 rounded-full text-white/90 text-xs md:text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-300 uppercase tracking-wide">Blog</a>
                         <a routerLink="/contact" routerLinkActive="bg-brand-orange text-white"
@@ -60,15 +52,14 @@
                             class="absolute -inset-4 bg-brand-purple/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                         </div>
 
-                        <img [src]="leader.image || 'assets/images/leadership/dr_anant_upload.png'"
+                        <img [src]="getImageUrl(leader.image) || 'assets/images/leadership/dr_anant_upload.png'"
                             class="w-full h-full object-cover object-top relative z-10" alt="{{leader.name}}"
                             onerror="this.src='assets/images/leadership/dr_anant_upload.png'">
                     </div>
                 </div>
 
                 <!-- Content Side -->
-                <div class="w-full lg:w-7/12 space-y-4 pt-2 text-center" [class.lg:text-left]="!isOdd"
-                    [class.lg:text-right]="isOdd">
+                <div class="w-full lg:w-7/12 space-y-4 pt-2 text-center lg:text-left">
                     <div
                         class="inline-block px-3 py-1 bg-brand-orange/10 text-brand-orange font-bold text-xs uppercase tracking-wider rounded-full mb-1">
                         {{ leader.position }}
@@ -79,10 +70,9 @@
                         {{ leader.name }}
                     </h2>
 
-                    <div class="w-16 h-1 bg-brand-purple rounded-full opacity-30 mx-auto" [class.lg:mx-0]="!isOdd"
-                        [class.lg:ml-auto]="isOdd"></div>
+                    <div class="w-16 h-1 bg-brand-purple rounded-full opacity-30 mx-auto lg:mx-0"></div>
 
-                    <p class="text-gray-600 text-base leading-relaxed text-justify">
+                    <p class="text-gray-600 text-base leading-relaxed text-justify lg:text-left">
                         {{ leader.bio }}
                     </p>
                 </div>
