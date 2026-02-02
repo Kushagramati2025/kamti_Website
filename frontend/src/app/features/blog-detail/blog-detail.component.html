@@ -2,7 +2,7 @@
     <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
 </div>
 
-<div *ngIf="!loading && post" class="relative py-16 bg-white overflow-hidden">
+<div *ngIf="!loading && post" class="relative py-8 bg-white overflow-hidden">
     <div class="relative px-4 sm:px-6 lg:px-8">
         <div class="text-lg max-w-prose mx-auto">
             <h1>
@@ -13,7 +13,8 @@
                     post.title }}</span>
             </h1>
             <div class="mt-8 flex justify-center">
-                <img class="rounded-lg shadow-lg object-cover h-96 w-full" [src]="post.image" alt="">
+                <img class="rounded-xl shadow-md object-contain max-h-[300px] w-auto max-w-full" [src]="post.image"
+                    alt="">
             </div>
             <p class="mt-8 text-xl text-gray-500 leading-8 text-justify whitespace-pre-wrap">{{ post.content }}</p>
         </div>
@@ -26,7 +27,7 @@
                 </div>
                 <div class="ml-3">
                     <p class="text-sm font-medium text-brand-dark">{{ post.author }}</p>
-                    <p class="text-sm text-gray-500">{{ post.created_at | date:'mediumDate' }}</p>
+
                 </div>
             </div>
         </div>
