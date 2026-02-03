@@ -1,4 +1,4 @@
-import { Component, OnInit, inject, signal } from '@angular/core';
+import { Component, OnInit, OnDestroy, inject, signal, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ApiService } from '../../core/services/api.service';
@@ -10,11 +10,12 @@ import { ApiService } from '../../core/services/api.service';
   templateUrl: './tools-resources.component.html',
   styleUrl: './tools-resources.component.css'
 })
-export class ToolsResourcesComponent implements OnInit {
+export class ToolsResourcesComponent implements OnInit, OnDestroy {
   private apiService = inject(ApiService);
 
   activeTab = signal<'tools' | 'casestudies' | 'usecases'>('tools');
   activeUseCaseCategory = signal<string>('ALL');
+  selectedImage = signal<string | null>(null);
 
   tools = signal<any[]>([]);
   caseStudies = signal<any[]>([]);
@@ -25,6 +26,18 @@ export class ToolsResourcesComponent implements OnInit {
     this.fetchTools();
     this.fetchCaseStudies();
     this.fetchUseCases();
+  }
+
+  ngOnDestroy() {
+    // Ensure scrolling is restored if component is destroyed while modal is open
+    this.closeImageModal();
+  }
+
+  @HostListener('document:keydown.escape', ['$event'])
+  onKeydownHandler(event: KeyboardEvent) {
+    if (this.selectedImage()) {
+      this.closeImageModal();
+    }
   }
 
   fetchTools() {
@@ -67,5 +80,17 @@ export class ToolsResourcesComponent implements OnInit {
     } else {
       this.computedUseCases.set(this.useCases().filter(uc => uc.category === category));
     }
+  }
+
+  openImageModal(imageUrl: string) {
+    this.selectedImage.set(imageUrl);
+    // Prevent scrolling when modal is open
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeImageModal() {
+    this.selectedImage.set(null);
+    // Restore scrolling
+    document.body.style.overflow = 'auto';
   }
 }

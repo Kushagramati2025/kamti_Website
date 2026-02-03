@@ -1,45 +1,6 @@
 [
 {
   "model": "core.banner",
-  "pk": 1,
-  "fields": {
-    "title": "Intelligent Analytics & Digital Transformation",
-    "subtitle": "For Healthcare, Automotive, Logistics, Pharma Sectors",
-    "image": "banners/banner1_XdnpmW9.gif",
-    "link": "",
-    "active": true,
-    "page": "HOME",
-    "order": 1
-  }
-},
-{
-  "model": "core.banner",
-  "pk": 2,
-  "fields": {
-    "title": "Innovation Leaders",
-    "subtitle": "We are ISO 9001:2015 certified company",
-    "image": "banners/banner2_mPW0Yc4.gif",
-    "link": "",
-    "active": true,
-    "page": "HOME",
-    "order": 2
-  }
-},
-{
-  "model": "core.banner",
-  "pk": 3,
-  "fields": {
-    "title": "About KMATI",
-    "subtitle": "Serial Entrepreneurs, top notch technocrats and domain experts.",
-    "image": "industries/about/about_team.jpg",
-    "link": "",
-    "active": true,
-    "page": "ABOUT",
-    "order": 0
-  }
-},
-{
-  "model": "core.banner",
   "pk": 4,
   "fields": {
     "title": "Our Services",
@@ -104,8 +65,86 @@
   }
 },
 {
-  "model": "core.servicecategory",
+  "model": "core.banner",
+  "pk": 64,
+  "fields": {
+    "title": "Intelligent Analytics & Digital Transformation",
+    "subtitle": "For healthcare, automotive, logistics, pharma sectors.",
+    "image": "banners/home_default.jpg",
+    "link": "",
+    "active": true,
+    "page": "HOME",
+    "order": 0
+  }
+},
+{
+  "model": "core.banner",
   "pk": 65,
+  "fields": {
+    "title": "Rich Insights",
+    "subtitle": "For optimal business decisions.",
+    "image": "banners/home_default.jpg",
+    "link": "",
+    "active": true,
+    "page": "HOME",
+    "order": 0
+  }
+},
+{
+  "model": "core.banner",
+  "pk": 66,
+  "fields": {
+    "title": "Insight-Driven Culture",
+    "subtitle": "Helping clients build a culture for better business.",
+    "image": "banners/home_default.jpg",
+    "link": "",
+    "active": true,
+    "page": "HOME",
+    "order": 0
+  }
+},
+{
+  "model": "core.banner",
+  "pk": 67,
+  "fields": {
+    "title": "Efficiency & Cost Savings",
+    "subtitle": "Data insights drive increased efficiency and cost savings.",
+    "image": "banners/home_default.jpg",
+    "link": "",
+    "active": true,
+    "page": "HOME",
+    "order": 0
+  }
+},
+{
+  "model": "core.banner",
+  "pk": 68,
+  "fields": {
+    "title": "Better Client Experience",
+    "subtitle": "Technology for enabling better client experience.",
+    "image": "banners/home_default.jpg",
+    "link": "",
+    "active": true,
+    "page": "HOME",
+    "order": 0
+  }
+},
+{
+  "model": "core.banner",
+  "pk": 69,
+  "fields": {
+    "title": "About <span class=\"text-brand-purple\">Kushagra</span><span class=\"text-brand-orange\">mati</span>",
+    "subtitle": "A team of serial entrepreneurs and domain experts.",
+    "image": "banners/about_default.jpg",
+    "link": "",
+    "active": true,
+    "page": "ABOUT",
+    "order": 0
+  }
+},
+{
+  "model": "core.servicecategory",
+  "pk": 289,
   "fields": {
     "name": "Application Services",
     "slug": "application-services",
@@ -116,7 +155,7 @@
 },
 {
   "model": "core.servicecategory",
-  "pk": 66,
+  "pk": 290,
   "fields": {
     "name": "Data Analytics",
     "slug": "data-analytics",
@@ -127,7 +166,7 @@
 },
 {
   "model": "core.servicecategory",
-  "pk": 67,
+  "pk": 291,
   "fields": {
     "name": "Embedded Consultancy",
     "slug": "embedded-consultancy",
@@ -138,7 +177,7 @@
 },
 {
   "model": "core.servicecategory",
-  "pk": 68,
+  "pk": 292,
   "fields": {
     "name": "Healthcare Solutions",
     "slug": "healthcare-solutions",
@@ -149,7 +188,7 @@
 },
 {
   "model": "core.servicecategory",
-  "pk": 69,
+  "pk": 293,
   "fields": {
     "name": "Automotive Solutions",
     "slug": "automotive-solutions",
@@ -160,7 +199,7 @@
 },
 {
   "model": "core.servicecategory",
-  "pk": 70,
+  "pk": 294,
   "fields": {
     "name": "Logistics Solutions",
     "slug": "logistics-solutions",
@@ -171,7 +210,7 @@
 },
 {
   "model": "core.servicecategory",
-  "pk": 71,
+  "pk": 295,
   "fields": {
     "name": "Pharma Solutions",
     "slug": "pharma-solutions",
@@ -182,11 +221,11 @@
 },
 {
   "model": "core.industry",
-  "pk": 32,
+  "pk": 160,
   "fields": {
     "name": "Healthcare",
     "slug": "healthcare",
-    "description": "Solutions for Healthcare sector.",
+    "description": "Increased prevalence of lifestyle disorders creating a huge demand of accessible healthcare systems. The healthcare market is being propelled with technological advancements with rising in healthcare costs & transparency. The biggest obstacles today comes up with handling huge volume of meta data to extract the significant information & providing superior customer experience",
     "icon": "",
     "banner_image": "industries/banners/healthcare_banner.jpg",
     "case_study": null,
@@ -195,7 +234,7 @@
 },
 {
   "model": "core.industry",
-  "pk": 33,
+  "pk": 161,
   "fields": {
     "name": "Automotive",
     "slug": "automotive",
@@ -208,7 +247,7 @@
 },
 {
   "model": "core.industry",
-  "pk": 34,
+  "pk": 162,
   "fields": {
     "name": "Logistics",
     "slug": "logistics",
@@ -221,7 +260,7 @@
 },
 {
   "model": "core.industry",
-  "pk": 35,
+  "pk": 163,
   "fields": {
     "name": "Pharma",
     "slug": "pharma",
@@ -234,9 +273,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 85,
+  "pk": 596,
   "fields": {
-    "industry": 32,
+    "industry": 160,
     "title": "Data insights drive increased efficiency cost savings",
     "content": "Increased prevalence of lifestyle disorders creating a huge demand of accessible healthcare systems. The healthcare market is being propelled with technological advancements with rising in healthcare costs & transparency. The biggest obstacles today comes up with handling huge volume of meta data to extract the significant information & providing superior customer experience.",
     "image": "industries/sections/data_insights.jpg",
@@ -245,9 +284,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 86,
+  "pk": 597,
   "fields": {
-    "industry": 32,
+    "industry": 160,
     "title": "Predictive disease analysis",
     "content": "When it comes to predicting future health outcomes, big data analysis is critical. As a result, there is a lot of research being done on predictive analytics and machine learning approaches to reveal improved decision making. Big data analysis opens up new avenues for predicting future health state based on health metrics and delivering the best results.",
     "image": "industries/sections/predictive_analysis.jpg",
@@ -256,9 +295,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 87,
+  "pk": 598,
   "fields": {
-    "industry": 32,
+    "industry": 160,
     "title": "Intelligent chatbot using AI/NLP",
     "content": "In the field of healthcare, maintaining a healthy lifestyle is crucial. It might be difficult to locate a doctor's consultation for health difficulties in some less-socialized places. The fundamental aim is to create a healthcare chatbot based on Artificial Intelligence and Natural Language Processing (NLP) that can identify a problem and offer necessary facts about it before consulting or visiting a doctor.",
     "image": "industries/sections/ai_chatbot.jpg",
@@ -267,9 +306,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 88,
+  "pk": 599,
   "fields": {
-    "industry": 32,
+    "industry": 160,
     "title": "Reduce Healthcare costs with benefits and recommendations",
     "content": "Advanced machine learning models, suitable laboratory equipment, machine learning, and data science, which assist in creating medicines to improve patients' fast treatment at a lower cost, can help identify between cancers and healthy anatomy with 3D radiological images to enable medical experts in radiation therapy and surgical planning.",
     "image": "industries/sections/cost_reduction.jpg",
@@ -278,20 +317,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 89,
+  "pk": 600,
   "fields": {
-    "industry": 32,
-    "title": "Optima x-ray predictor",
-    "content": "Case Study: Identifying between cancers and healthy anatomy with 3D radiological images to enable medical experts.<br><br><a href='http://127.0.0.1:8000/media/casestudies/pdfs/Optima_XRay_Predictor.pdf' target='_blank' class='btn-primary inline-flex items-center px-6 py-3 border border-transparent text-base font-bold rounded-lg text-white bg-brand-orange hover:bg-brand-orange-dark shadow-md transition-all duration-300'>Download Case Study</a>",
-    "image": "industries/sections/xray.jpg",
-    "order": 0
-  }
-},
-{
-  "model": "core.industrysection",
-  "pk": 90,
-  "fields": {
-    "industry": 33,
+    "industry": 161,
     "title": "Predictive Maintenance & AI-Powered Solutions",
     "content": "Predictive Modelling, leveraging historical and current data to extract crucial insights can significantly enhance strategic decision-making and help businesses maintain a competitive edge. Leveraging data analytics to monitor vehicle health, anticipate failures, and reduce unplanned downtime.",
     "image": "industries/sections/auto_predictive.jpg",
@@ -300,9 +328,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 91,
+  "pk": 601,
   "fields": {
-    "industry": 33,
+    "industry": 161,
     "title": "Connectivity & Data-Driven Service",
     "content": "Connectivity and data-driven services are transforming the automotive industry, enabling new capabilities and business models. Connected cars collect and transmit vehicle data, facilitating real-time monitoring, remote control, and the development of advanced features like over-the-air updates and predictive maintenance.",
     "image": "industries/sections/auto_connectivity.jpg",
@@ -311,9 +339,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 92,
+  "pk": 602,
   "fields": {
-    "industry": 33,
+    "industry": 161,
     "title": "Supply Chain & Inventory Management",
     "content": "Effective inventory and supply chain management are essential for productivity and profitability in the automobile sector. This entails organizing the movement of components, parts, and completed automobiles from suppliers to consumers. Optimizing inventory levels to reduce expenses and guarantee on-time delivery to satisfy client needs is a major priority.",
     "image": "industries/sections/auto_supply_chain.jpg",
@@ -322,9 +350,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 93,
+  "pk": 603,
   "fields": {
-    "industry": 34,
+    "industry": 162,
     "title": "Last Mile Delivery",
     "content": "Last-mile delivery is one of the most challenging components of the whole shipping process, despite being one of the most important variables in customer satisfaction. Processing of data collected from GPS helps build a system at its core. Optimizing the route with telematics databases can be tapped to automatically adjust the routes based on real-time data of the latest order, Routing, Address identification for ease of delivery.",
     "image": "industries/sections/logistics_last_mile.jpg",
@@ -333,10 +361,10 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 94,
+  "pk": 604,
   "fields": {
-    "industry": 26,
-    "title": "Warehouse surveillance â€“ Video Analytics",
+    "industry": 162,
+    "title": "Warehouse surveillance – Video Analytics",
     "content": "Securing warehouses from both external and Internal threats/thefts has been a critical challenge with the increase in the trading of goods. It is a critical decision to make sure the valuables are well protected from break-Ins in a commercial space which can now be enabled using smart video analytics application.",
     "image": "industries/sections/logistics_warehouse.jpg",
     "order": 0
@@ -344,9 +372,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 95,
+  "pk": 605,
   "fields": {
-    "industry": 34,
+    "industry": 162,
     "title": "Demand Forecasting",
     "content": "To anticipate future events using data analytics, the data sources and datasets are used with the combination of machine learning algorithms to discover patterns, demand signals, and spot intricate relationships. AI-powered forecasting models can cut errors by 30 to 50 percent with the increased accuracy resulting in a 65 percent reduction in missed sales.",
     "image": "industries/sections/logistics_forecasting.jpg",
@@ -355,20 +383,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 96,
+  "pk": 606,
   "fields": {
-    "industry": 34,
-    "title": "Sentiment analysis",
-    "content": "Classification of text based on keywords.<br><br><a href='http://127.0.0.1:8000/media/casestudies/pdfs/Sentiment_Analysis.pdf' target='_blank' class='btn-primary inline-flex items-center px-6 py-3 border border-transparent text-base font-bold rounded-lg text-white bg-brand-orange hover:bg-brand-orange-dark shadow-md transition-all duration-300'>Download Case Study</a>",
-    "image": "industries/sections/logistics_sentiment.jpg",
-    "order": 0
-  }
-},
-{
-  "model": "core.industrysection",
-  "pk": 97,
-  "fields": {
-    "industry": 35,
+    "industry": 163,
     "title": "Data Lake Preparation for Genomic Data",
     "content": "Practical challenges with genomic datasets containing semi-structured records layering with respect to its size & complexity while uncertainty in the interpretation of regulatory requirements for return of results. Data from Medical Devices, Medical Records, Images and Insurance claims (Stage-1).",
     "image": "industries/sections/pharma_data_lake.jpg",
@@ -377,9 +394,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 98,
+  "pk": 607,
   "fields": {
-    "industry": 35,
+    "industry": 163,
     "title": "Developing models to show correlation between Genomic data",
     "content": "The variation being less than 1% while comparing a healthy person Genome with a person having Genetic disorder as its needs a huge computation/processing to find the sequence of records to discover the variation patterns. Developing models to show correlation between Genomic data and other set of data to provide greater insights into research findings (Stage-2).",
     "image": "industries/sections/pharma_models.jpg",
@@ -388,9 +405,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 99,
+  "pk": 608,
   "fields": {
-    "industry": 35,
+    "industry": 163,
     "title": "Genomic Data Analysis for faster Drug Discovery",
     "content": "Genomic sequence can be Patient data analysis which can be performed combining the stage 1 records and stage 2 insights which helps for a drug discovery, Advance Personalization in healthcare & predict the hereditary diseases.",
     "image": "industries/sections/pharma_drug_discovery.jpg",
@@ -399,9 +416,9 @@
 },
 {
   "model": "core.industrysection",
-  "pk": 100,
+  "pk": 609,
   "fields": {
-    "industry": 35,
+    "industry": 163,
     "title": "Recommend next best steps for sales",
     "content": "The competitive landscape market for the Genomic insights & bioinformatics progression will boost the companies to excel their Diagnostics & Research Advancements resulting the spike in growth trajectory to Novel Pharma discoveries & Genetic solutions.",
     "image": "industries/sections/pharma_sales.jpg",
@@ -410,7 +427,7 @@
 },
 {
   "model": "core.pagesection",
-  "pk": 2,
+  "pk": 34,
   "fields": {
     "page": "CAREERS",
     "section_key": "OPEN_POSITIONS",
@@ -421,7 +438,7 @@
 },
 {
   "model": "core.department",
-  "pk": 6,
+  "pk": 134,
   "fields": {
     "name": "Engineering",
     "slug": "engineering"
@@ -429,7 +446,7 @@
 },
 {
   "model": "core.department",
-  "pk": 7,
+  "pk": 135,
   "fields": {
     "name": "Sales & Marketing",
     "slug": "sales-marketing"
@@ -437,7 +454,7 @@
 },
 {
   "model": "core.department",
-  "pk": 8,
+  "pk": 136,
   "fields": {
     "name": "Product Management",
     "slug": "product-management"
@@ -445,7 +462,7 @@
 },
 {
   "model": "core.department",
-  "pk": 9,
+  "pk": 137,
   "fields": {
     "name": "Consulting",
     "slug": "consulting"
@@ -453,44 +470,44 @@
 },
 {
   "model": "core.careerjob",
-  "pk": 24,
+  "pk": 121,
   "fields": {
     "title": "Senior Data Engineer",
-    "department": null,
+    "department": 134,
     "location": "Bangalore / Hybrid",
     "job_type": "Full-time",
-    "is_remote": false,
-    "salary_range": "",
+    "is_remote": true,
+    "salary_range": "$30k - $50k",
     "description": "We are looking for an experienced Data Engineer to join our team. You will be responsible for expanding and optimizing our data and data pipeline architecture, as well as optimizing data flow and collection for cross functional teams.",
     "requirements": "5+ years of Python/SQL experience. Experience with Databricks and Spark.",
     "application_link": "",
-    "posted_date": "2026-01-29",
+    "posted_date": "2026-02-03",
     "active": true
   }
 },
 {
   "model": "core.careerjob",
-  "pk": 25,
+  "pk": 122,
   "fields": {
     "title": "AI/ML Solutions Architect",
-    "department": null,
+    "department": 134,
     "location": "Bangalore",
     "job_type": "Full-time",
     "is_remote": false,
-    "salary_range": "",
+    "salary_range": "$40k - $70k",
     "description": "Design and implement machine learning applications and systems. You will be selecting the appropriate algorithms and tools, allowing us to generate accurate predictions and insights.",
     "requirements": "Strong background in Deep Learning, NLP, and Cloud AI services.",
     "application_link": "",
-    "posted_date": "2026-01-29",
+    "posted_date": "2026-02-03",
     "active": true
   }
 },
 {
   "model": "core.careerjob",
-  "pk": 27,
+  "pk": 123,
   "fields": {
     "title": "Business Analyst - Healthcare",
-    "department": 9,
+    "department": 137,
     "location": "Remote",
     "job_type": "Contract",
     "is_remote": true,
@@ -498,59 +515,87 @@
     "description": "Bridge the gap between IT and the business using data analytics to assess processes, determine requirements and deliver data-driven recommendations.",
     "requirements": "Experience in Healthcare domain and commercially aware.",
     "application_link": "",
-    "posted_date": "2026-01-29",
+    "posted_date": "2026-02-03",
     "active": true
   }
 },
 {
   "model": "core.blogpost",
-  "pk": 23,
+  "pk": 167,
   "fields": {
-    "title": "The Future of AI in Healthcare",
-    "slug": "the-future-of-ai-in-healthcare",
-    "content": "Artificial Intelligence is revolutionizing the healthcare industry. From predictive analytics to personalized medicine, AI is enabling doctors to make better decisions...",
-    "image": "",
-    "author": "Dr. Anant R. Koppar",
-    "created_at": "2026-01-29T06:56:36.205Z",
-    "updated_at": "2026-01-29T06:56:36.205Z",
+    "title": "Role of OpenCV in Image Preprocessing",
+    "slug": "role-of-opencv-in-image-preprocessing",
+    "content": "Open CV is a huge open-source library for Computer Vision, Machine Learning and Image Processing. It focuses on image processing, video capture and analysis including face-detection and object detection. It can identify faces, objects or even the hand-writing of a human.\n\nWhen it is integrated with NumPy (highly optimized library for numerical operations), whatever operations one can do in NumPy can be combined with OpenCV.\n\nOpenCV supports a wide variety of programming languages such as C++, Python, Java etc. and is available on different platforms. It runs on both desktop (Windows, Linux, Android, MacOS, FreeBSD, OpenBSD) and mobile (Android, Maemo, iOS).\nIt is a cross-platform library.\n\n# Computer Vision\nComputer Vision is the way of teaching intelligence to machines and making them see things just like humans. In its simplest form, Computer Vision is what allows computer to see and process visual data just like humans. It involves analyzing images and videos to produce useful information.\n\n# Applications:\nA few of its applications are given below.\n- Face Detection\n- Cancer Detection\n- COVID-19 diagnosis\n- Movement Analysis\n- Mask detection\n- Traffic Flow Analysis\n- Driver Attentiveness Detection\n- Customer Tracking\n- Theft Detection\n\nImage processing is the most basic and one of the important concepts in Computer Vision. Just as we do data preprocessing techniques in Machine Learning to make our data ready for easy computation, images should also go through the same preprocessing techniques.\n\n# Image Preprocessing:\nIn order to add a dataset of images to a convolutional network, all of the images should be of same size. Preprocessing includes image resizing, geometric and color transformations, gray-scale conversion, background removal, noise removal, edge detection and many more.\n\nThe acquired data is usually messy and come from different sources. To feed them to the ML model (or neural network), they need to be standardized and cleaned up. This can be done with the help of OpenCV. Preprocessing is used to conduct steps that reduce the complexity and increase the accuracy of the applied algorithm. We cannot write a unique algorithm for each of the condition in which an image is taken, thus, when we acquire an image, we convert it into a form that allows a general algorithm to solve it. This is the importance of image preprocessing.\n\nLet’s take an example of an Image Classification problem.\nConsider the image given below:\nYou can easily recognize it. It’s a car. When you were shown an image, you classified it to a class it belonged to (car, in this instance). This is what an image classification is all about. When you are given a dataset containing a massive number of images (say 10,000 or 1,00,000), manually checking and classifying is a tedious task. Here we have to build an image classification model.\n\nSelf-driving car is a great example where image classification is used in real world. To enable autonomous driving, we have to build an image classification model to recognize various objects like vehicles, people, obstacles, moving objects etc. on the road. So, the entire problem involves 4 steps;\n1. Loading and preprocessing data\n2. Defining model architecture\n3. Training the model\n4. Estimation of performance\n\nNow, let us have a look at the role of OpenCV in Image Preprocessing techniques. This is used in cases when you want to analyze the images manually before feeding them into the training model.\n\n1. Converting to Gray scale image\nGray-scale images reduces the complexity of computation as it removes all the unwanted information from the image.\n\n2. Edge Detection\nCanny edge detection is used to detect the edges in an image. It accepts a gray scale image as input and it uses a multistage algorithm which involves noise reduction, finding the edge gradient and direction, non-maximum suppression to remove any unwanted pixels which may not constitute the edge and Hysteresis thresholding to decide which all edges are really edges and which are not based on two threshold values ‘minVal’ and ‘maxVal’.\n\n3. Noise Removal\n\n4. Image Contouring\n\n5. Blurring and Smoothing\nIt is done to find features or to remove noise from features. There are many methods available in OpenCV for performing blurring and smoothing. It includes:\n- Gaussian Blurring\n- Median Blurring\n- Bilateral Blurring\n- Gamma Correction\n- Using built-in kernels\n- Using user-defined kernels\n\n6. Line Detection\nThis is done to detect the lines in images. For that, we use cv2.HoughLines(P) for doing that along with creating a mask through which we create the edges using Canny edge detector and then apply that output in the Hough line prediction function.\n\nThese are few of the image processing techniques which can be done using OpenCV. Other techniques include:\n- Removing background from the image\n- Color Detection\n- Extracting text from image\n- Rotate an image\n- Adjust image contrast\n- Crop an image\n- Apply mask for colored image\n- Centroid detection, etc.\n\nImage processing allows a much wider range of algorithms to be applied to input data. The aim of image processing is to improve the image data (features) by suppressing unwanted distortions and enhancement of some important image features so that our training models can benefit from this improved data to work on which in turn improves the performance of the model.",
+    "image": "blog/opencv.jpg",
+    "author": "Neha V S",
+    "created_at": "2026-02-03T06:55:03.402Z",
+    "updated_at": "2026-02-03T06:55:03.402Z",
     "active": true
   }
 },
 {
   "model": "core.blogpost",
-  "pk": 24,
+  "pk": 168,
   "fields": {
-    "title": "Optimizing Supply Chains with Big Data",
-    "slug": "optimizing-supply-chains-with-big-data",
-    "content": "In today's volatile market, supply chain visibility is key. Big Data analytics allows companies to predict disruptions and optimize routes in real-time...",
-    "image": "",
-    "author": "Vishwanath Honnungar",
-    "created_at": "2026-01-29T06:56:36.211Z",
-    "updated_at": "2026-01-29T06:56:36.211Z",
+    "title": "Time Series Forecasting on COVID 19 using ARIMA",
+    "slug": "time-series-forecasting-on-covid-19-using-arima",
+    "content": "Time Series data is experimental data that has been observed at different points in time (usually evenly spaced, like once a day). For example, the data of airline ticket sales per day is a time series. However, just because a series of events has a time element does not automatically make it a time series, such as the dates of major airline disasters, which are randomly spaced and are not time series. These types of random processes are known as point process.\n\n# Time Series Basics\nTime Series have several key features such as trend, seasonality, and noise.\n\n# Variation\nOne of the most important features of a time series is variation. Variations are patterns in the times series data. A time series that has patterns that repeat over known and fixed periods of time is said to have seasonality. Seasonality is a general term for variations that periodically repeat in data. In general, we think of variations as 4 categories: Seasonal, Cyclic, Trend, and Irregular fluctuations.\n\nSeasonal variation is usually defined as variation that is annual in period, such as sweaters sales being higher in winter and lower in summer. Cyclic Variation is a variation that occurs at other fixed periods, such as the daily variation in temperature. Both Seasonal and Cyclic variation would be examples of seasonality in a time series data set.\n\nTrends are long-term changes in the mean level, relative to the number of observations.\n\n# Steps for ARIMA implementation\nThe general steps to implement an ARIMA model are:\n- Load the data: The first step for model building is of course to load the dataset\n- Preprocessing: Depending on the dataset, the steps of preprocessing will be defined. This will include creating timestamps, converting the dtype of date/time column, making the series univariate, etc.\n- Make series stationary: In order to satisfy the assumption, it is necessary to make the series stationary. This would include checking the stationarity of the series and performing required transformations\n- Determine d value: For making the series stationary, the number of times the difference operation was performed will be taken as the d value\n- Determine the p and q values: Read the values of p and q using auto_arima model\n- Fit ARIMA model: Using the processed data and parameter values we calculated from the previous steps, fit the ARIMA model\n- Predict values on validation set: Predict the future values\n- Calculate MAPE: To check the performance of the model, check the MAPE value using the predictions and actual values on the validation set\n\nLet’s explore the COVID 19 Indian dataset statewise cases. \n\nProcessing the Data\nPandas makes this easy, let’s quickly check the head of the data (the first 5 rows) to see what default format it comes in. Data contains statewise confirmed, recovered and death cases on daily basis count.\n\nConverting the “Date_YMD” column into a proper timestamps format with the help of pandas. Setting up the “Date_YMD” as index, that way our forecasting analysis will be able to interpret these values.\n\nWe are predicting on daily basis, so resampling our data into Daily and taking the mean, which is similar to our original data. If we are predicting either weekly or monthly or yearly, then the mean value will change.\n\n# Auto ARIMA\nUsually, in the basic ARIMA model, we need to provide the p, d, and q values which are essential. We use statistical techniques to generate these values by performing the difference to eliminate the non-stationarity and plotting ACF and PACF graphs. In Auto ARIMA, the model itself will generate the optimal p, d, and q values which would be suitable for the data set to provide better forecasting.\n\nOnce fitting the whole dataset into auto_arima model, it will generate the best fit values of p, d and q which is suitable for our data.\n\nFinalized the best model – ARIMA (5, 1, 2) – (p, d, q). Last 3 zeros (0, 0, 0) represents that, our data does not have any seasonality.\n\nUsing the above steps, we able to train and test our model for confirmed cases, death cases, cured cases, gender wise getting vaccination, brand wise vaccination (covaxin & covishield).",
+    "image": "blog/timeseries.jpg",
+    "author": "Mohan Baabu",
+    "created_at": "2026-02-03T06:55:03.406Z",
+    "updated_at": "2026-02-03T06:55:03.406Z",
     "active": true
   }
 },
 {
   "model": "core.blogpost",
-  "pk": 25,
+  "pk": 169,
   "fields": {
-    "title": "Why Databricks for your Lakehouse?",
-    "slug": "why-databricks-for-your-lakehouse",
-    "content": "The Lakehouse architecture combines the best elements of data lakes and data warehouses. Databricks provides a unified platform for data engineering, science, and analytics...",
-    "image": "",
-    "author": "Pradeep N",
-    "created_at": "2026-01-29T06:56:36.215Z",
-    "updated_at": "2026-01-29T06:56:36.215Z",
+    "title": "Social Media Analytics for National Security",
+    "slug": "social-media-analytics-for-national-security",
+    "content": "Social media has evolved into an extremely powerful tool, not only for its users, but also for the public data it provides. In our digital age, social media intelligence is a critical component for keeping people and nations safe.\n\nWe know how open-source intelligence is moving up the priority list for intelligence professionals. Social media intelligence has emerged within the realm of open sources to support security initiatives. While social media sites are a valuable source of security information, they also present intelligence teams with a number of challenges\n\nWhat exactly is social media intelligence, and how can intelligence teams effectively use it in today's information environment?\n\nWhat is Social Media Intelligence?\nSocial Media Intelligence is the process of collecting and analyzing social media data to gain meaningful insights, usually using specialized tools and methodologies, known as social media intelligence. The term \"social media monitoring\" is also used to describe the general practice of gathering and analyzing public social media activity, though not always in the context of intelligence. \"Social listening\" refers to the collection of larger data sets in order to extract general trends and insights, and it is frequently used in commercial and marketing applications\n\nWhy is Social Media Intelligence Valuable for National security?\nSOCMINT is useful in national security for a variety of reasons. The spread of social media provides analysts with a wealth of security information that would otherwise be unavailable via other channels, such as classified INTs.\n\nSocial media intelligence also sheds light on broader trends in a specific information environment. This provides more comprehensive insights, especially when other intelligence types concentrate on specific targets rather than broad populations.\n\nHow do Social Media Intelligence Tools Address These Challenges?\nIn a country like India, Internal security forces are becoming overburdened as a result of armed struggle and separatist calls from across the country.\n- Provoking statements made in the news media\n- Increase in divisive propaganda on social media\n- Unusual funds transfer from foreign countries\n- Unusual pattern of cash withdrawal\n- Rapid increase in SIM card sales\n- Changes in an area's demographic pattern\n- An area's economic activity\n- Face recognition using video analytics\n\nDetails of all of the activities listed above are available in the public domain. The problem is that this is unstructured data, which makes it difficult to generate appropriate analytical insights.\n\nThis is where modern big data analytics platforms, such as Databricks, come in. These platforms can ingest information from thousands of streams of data in a variety of formats.\n\nThe majority of the data for ingesting can be obtained from the service providers themselves as a statutory requirement.\n\nAs more data is ingested, the data that drives the Social Analytics Dashboard and the Occurrence Predictability Model can be refined to improve accuracy.\n\nSocial Media Intelligence is a newer intelligence discipline in the government. Emerging technologies assist in addressing common challenges associated with large-scale leveraging of public social data, such as data overload, information gaps and data privacy.\n\nHope this blog is informative and interesting and we are taking these steps on a journey that benefits all of us.",
+    "image": "blog/socialmedia.jpg",
+    "author": "Genevive Gloria Mendonca",
+    "created_at": "2026-02-03T06:55:03.411Z",
+    "updated_at": "2026-02-03T06:55:03.411Z",
+    "active": true
+  }
+},
+{
+  "model": "core.blogpost",
+  "pk": 170,
+  "fields": {
+    "title": "Graph Database: Wave of the future in documenting Data",
+    "slug": "graph-database-wave-of-the-future-in-documenting-data",
+    "content": "In Today’s world, Customers' demand for immediate access to services and money transfers creates chances for criminals. For instance, payment service apps work to send money as soon as possible to legitimate users while simultaneously ensuring that it isn't transmitted for illegal purposes or used to conceal the genuine recipient by taking devious ways. This necessitates real-time fraud detection. Graphs increase access to data and allow for lightning-fast response times to queries, graphs have gained popularity as a solution for real-time fraud detection.\n\nNot just the transactions themselves can be modeled in graphs when analyzing transactions with graph technology. Due to the tremendous flexibility of graphs, it is possible to model the varied surrounding information. For example, the connections between client IP addresses, ATM geolocation, card numbers, and account IDs can all become vertices. The rules for identifying fraud can be designed by users based on datasets in online banking and ATM location research.\n\nDetection rules can be setup for:\n- IPs that sign in using several cards that are registered in various locations\n- Cards used across numerous locations at great distances\n- Accounts receiving one-time inbound transactions from other accounts registered in various places\n\nIn the modern world, Companies are aware of the need to innovate or risk being disrupted. Using a graph database, you can see the data landscape quite differently. It helps to Gain new knowledge, resolve difficult issues, and unlock countless opportunities\n\nA customized, single-purpose platform for building and modifying graphs is referred to as a graph database. Graphs contain nodes, edges, and properties, all of which are used to represent and store data in a way that relational databases are not equipped to do. Data is saved in a manner akin to how thoughts could be scribbled on a whiteboard. Your data is kept in a way that doesn't limit it to a pre-established model, enabling very flexible thinking and usage.\n\nHow Graphs and Graph Database work\nFor displaying data relationships, graphs and graph databases offer graph models. They enable \"traversal queries\" based on connections and use graph algorithms to find patterns, paths, communities, influencers, single points of failure, and other relationships, allowing for more effective analysis at scale against enormous amounts of data. The power of graphs is in analytics, the insights they provide, and their ability to link disparate data sources. Algorithms investigate the paths and distance between the vertices, their significance, and the clustering of the vertices when studying graphs. For instance, algorithms will frequently consider the relevance of nearby vertices, incoming edges, and other indicators when determining importance.\n\nUnderstanding things that are challenging to see with other techniques is made feasible by graph algorithms, operations specifically designed to evaluate linkages and behaviours among data in graphs. Algorithms investigate the pathways and separation between the vertices, their significance, and the clustering of the vertices when studying graphs. In order to determine relevance, the algorithms frequently consider incoming edges, the significance of nearby vertices, and other signs. For example, Graph algorithms can determine which person or thing is more related to others in social networks or commercial procedures. The algorithms will often look at incoming edges, importance of neighboring vertices, and other indicators to help determine importance\n\nAdvantages of Graph databases\nWhen looking for distant relationships or analysing data based on factors like relationship strength or quality, the graph format offers a more versatile platform. For a variety of corporate use cases, such as fraud detection in banking, detecting connections in social networks, and customer 360, graphs enable you to explore and uncover connections and patterns in social networks, IoT, big data, data warehouses, as well as complex transaction data. To make links in relationships more understandable, graph databases are now being used more and more in data science.\n\nThe image provides a visual representation of the well- known party game \"Six Degrees of Kevin Bacon,\" which challenges players to identify connections between Kevin Bacon and other actors based on a series of mutual films. It is the best technique to illustrate graph analytics since it places a strong emphasis on relationships. Imagine a data set with two categories of nodes: every film ever made and every actor that has been in those films. Then, using graphs, we run a query asking to connect Kevin Bacon to Muppet icon Miss Piggy. In this example, the available nodes (vertices) are both actors and films and the relationships (edges) are the status of “acted in.” From this we can find that Kevin Bacon acted in The River Wild with Meryl Streep.  Meryl Streep acted in Lemony Snicket’s A Series of Unfortunate Events with Billy Connolly and also, Billy Connolly acted in Muppet Treasure Island with Miss Piggy.\n\nGraph database use cases\nThe areas listed below are just a few where Graph Database can be effectively used:\n- Near-real-time retail trend analysis\n- Fraud / Crime detection by identifying anti-patterns\n- Database-driven workflows in Robotic Process Automation\n- Alternate route identification in Logistics\n- Production Planning in Manufacturing\n- Customer profiling & product cross-Selling\n\nThe future of graph databases",
+    "image": "blog/graphdb.jpg",
+    "author": "Panchami V T",
+    "created_at": "2026-02-03T06:55:03.412Z",
+    "updated_at": "2026-02-03T06:55:03.412Z",
+    "active": true
+  }
+},
+{
+  "model": "core.blogpost",
+  "pk": 171,
+  "fields": {
+    "title": "Let’s Discover the EC2 Service from Amazon Web Services (AWS)",
+    "slug": "lets-discover-the-ec2-service-from-amazon-web-services-aws",
+    "content": "Kushagramati Analytics was where I started in the vast world of data. The training opportunities provided by this job have been extraordinary to say the least, and the freedom to learn has been extremely encouraging. I began by learning Python, Pandas and NumPy, followed by numerous courses in Databricks and Boomi Integration, and then moved on to the Cloud platform.\n\nCloud computing is like a bus. You didn’t have to buy, maintain, or operate the vehicle, yet somehow you can still use it to get around and pay only for your trip. The cloud is like that, you don’t have to buy, maintain, or operate servers, you just pay for running your website or web service on them, and leave the maintenance and operations to someone else to deal with.\n\nSo, what does the cloud look like to someone using it? A lot of people are unaware that Amazon, in addition to being the most well-known online retailer, is also one of the top suppliers of cloud computing services i.e., Amazon Web Services.\n\nAWS is the world's most comprehensive and broadly adopted cloud platform, offering over 200 fully featured services from data centres globally. Google is another major cloud provider which is called Google cloud computing, we also have another player from Microsoft called Microsoft Azure Cloud Computing Platform & Services and IBM’s IBM Cloud. The list goes on. As you can see, cloud services are big business today; some of the tech industry giants are in on the game.\n\nLet’s peek behind the scenes at what it looks like to be using the cloud. When we log into AWS, here is what we see:\n\nThis is a list of pretty much ALL the cloud services that AWS provides. A lot of them have very specific purposes, and most applications only need to use a fraction of these services. The reason there are so many is because the cloud industry has moved forward from just providing a “server” that looks and feels just like one you might set up yourself (known as “Platform as a Service”), to providing access to just the actual software you’d run, so you no longer have to even deal with installation, configuration, and upgrading (known as “Software as a Service”).",
+    "image": "blog/aws_ec2.jpg",
+    "author": "Syeda Arfa",
+    "created_at": "2026-02-03T06:55:03.416Z",
+    "updated_at": "2026-02-03T06:55:03.416Z",
     "active": true
   }
 },
 {
   "model": "core.leadershipmember",
-  "pk": 45,
+  "pk": 205,
   "fields": {
     "name": "Dr. Anant R. Koppar",
-    "position": "CEO & Founder",
-    "bio": "A visionary technocrat and serial entrepreneur with over 3 decades of experience in the IT industry. Founder of Kshema Technologies and KTwo Technologies. He was the first CEO in India to receive PMP certification. Recipient of the Karnataka Rajyotsava Award for his contributions to the IT sector.",
+    "position": "Chief Executive Officer and Managing Director",
+    "bio": "Dr. Anant R Koppar drives business strategy and relationships in Kushagramati Analytics. He was the Founder President of Kshema Technologies, one of India's first venture capital-funded software services companies. He worked as the President of the Technologies Division of MphasiS BFL Limited post the acquisition of Kshema by MphasiS. A certified 'Project Management Professional' by PMI, Anant Koppar was the first CEO in India to get this certification. His last venture was KTwo Technology Solutions. He is a recognized leader in the software industry and has been awarded the highest civilian award “Karnataka Rajyotsava“ by the Karnataka Government for outstanding contributions to the growth of the IT Industry in Karnataka, India.",
     "image": "",
     "linkedin_url": "",
     "order": 0
@@ -558,11 +603,11 @@
 },
 {
   "model": "core.leadershipmember",
-  "pk": 46,
+  "pk": 206,
   "fields": {
     "name": "Vishwanath Honnungar",
-    "position": "CTO",
-    "bio": "Expert in Cloud Computing, AI, and Big Data with over 24 years of experience. He has been the lead architect for large-scale digital transformation projects and focuses on driving technical innovation to help clients build an insight-driven culture.",
+    "position": "Chief Technology Officer",
+    "bio": "With 30 years of experience in the IT services industry, Vishwanath brings strategic insight to Kushagramati’s leadership team, and deep operational knowledge of driving business growth, furthering partnerships, and leading cross-cultural teams. In his role he will be responsible for focus on strategy, business development, account management and digital transformation solutions, with a special focus on Data Analytics services, to leverage the company’s strengths in cognitive solutions. He has in-depth global experience in the services industry with an outstanding track record in leading and growing small and large business units. Vishwanth brings in extensive knowledge and experience in architecture, design, development methodologies, testing, and quality processes.",
     "image": "",
     "linkedin_url": "",
     "order": 0
@@ -570,11 +615,11 @@
 },
 {
   "model": "core.leadershipmember",
-  "pk": 47,
+  "pk": 207,
   "fields": {
     "name": "Pradeep N",
     "position": "Industry Expert and Operations",
-    "bio": "Focuses on business operations, industry-specific solution design, and operational excellence. He brings deep domain expertise to ensure that our solutions meet the specific needs of our clients in various sectors.",
+    "bio": "With 6 years in Manufacturing and 30 years in IT services industry, Pradeep brings in a rich domain experience in the process automation of Manufacturing, Healthcare, Financial Services and Logistics. In his previous organizations, he has brought about improvement in operational efficiency, closer integration of various departments and businesses, risk management and operational cost effectiveness. His specialization is in Digital Transformation, Program Management, Delivery Management and Process re-engineering. In his role, he is responsible for scoping, delivering, and successfully closing projects, managing and accelerating account growth, augment revenue with existing & prospective clients. On the technology front, he is exposed to Big Data Analytics, Master Data Management for Business 360 view and on using Automation Tools in all stages of Software Design, Development and Testing.",
     "image": "",
     "linkedin_url": "",
     "order": 0
@@ -582,11 +627,11 @@
 },
 {
   "model": "core.leadershipmember",
-  "pk": 48,
+  "pk": 208,
   "fields": {
     "name": "Dayanand Yardi",
     "position": "Finance and Administration",
-    "bio": "Leads the Finance and Administration functions, ensuring robust financial health and operational smoothness for the organization.",
+    "bio": "As an established finance leader for 30 plus years’, Dayanand has extensive global leadership experience including shareholder value creation, mergers and acquisitions, financial and strategic planning, and budgeting. He has vast experience in managing finance and account functions in corporate as well as public sector companies. In his role at Kushagramti, Dayanand is responsible for the finance function which includes Corporate Finance, Business Finance, Business Planning, Treasury, Taxation, and Investor relations.",
     "image": "",
     "linkedin_url": "",
     "order": 0
@@ -594,11 +639,11 @@
 },
 {
   "model": "core.leadershipmember",
-  "pk": 49,
+  "pk": 209,
   "fields": {
     "name": "Shruthi Malagi",
     "position": "Business Development",
-    "bio": "Leads Business Development initiatives, fostering strategic partnerships and driving growth by identifying new market opportunities and client needs.",
+    "bio": "Shruthi Malagi is an astute & result oriented Bid management professional with more than a decade of experience working in a leading IT services company. Her career growth has been in IT & ITES in strategic Business Development, Pre-sales and complex Bid Management across industries and geographies. With strong passion towards business development, she drives company operations, human resources and manages vendor relations.",
     "image": "",
     "linkedin_url": "",
     "order": 0
@@ -606,67 +651,127 @@
 },
 {
   "model": "core.partner",
-  "pk": 30,
+  "pk": 293,
   "fields": {
     "name": "Databricks",
-    "logo": "",
+    "logo": "partners/databricks_Logo.avif",
     "website": "https://databricks.com",
     "order": 0
   }
 },
 {
   "model": "core.partner",
-  "pk": 31,
+  "pk": 294,
+  "fields": {
+    "name": "Databricks Consulting Partner",
+    "logo": "partners/databricks_badge_v2.avif",
+    "website": "https://databricks.com/partners",
+    "order": 0
+  }
+},
+{
+  "model": "core.partner",
+  "pk": 295,
+  "fields": {
+    "name": "Computomic",
+    "logo": "partners/Computomic-Logo.avif",
+    "website": "https://computomic.com",
+    "order": 0
+  }
+},
+{
+  "model": "core.partner",
+  "pk": 296,
+  "fields": {
+    "name": "Snowflake",
+    "logo": "partners/snowflake.avif",
+    "website": "https://www.snowflake.com",
+    "order": 0
+  }
+},
+{
+  "model": "core.partner",
+  "pk": 297,
   "fields": {
     "name": "Microsoft Azure",
-    "logo": "",
+    "logo": "partners/Microsoft.avif",
     "website": "https://azure.microsoft.com",
     "order": 0
   }
 },
 {
   "model": "core.partner",
-  "pk": 32,
+  "pk": 298,
   "fields": {
     "name": "AWS",
-    "logo": "",
+    "logo": "partners/aws.avif",
     "website": "https://aws.amazon.com",
     "order": 0
   }
 },
 {
   "model": "core.partner",
-  "pk": 33,
+  "pk": 299,
   "fields": {
-    "name": "Google Cloud",
-    "logo": "",
-    "website": "https://cloud.google.com",
+    "name": "MSME",
+    "logo": "partners/msme.avif",
+    "website": "https://msme.gov.in",
     "order": 0
   }
 },
 {
   "model": "core.companyvalue",
-  "pk": 1,
+  "pk": 138,
   "fields": {
-    "title": "Integrity",
+    "title": "Freedom to Innovate",
     "icon": "",
-    "description": "We do the right thing.",
+    "description": "We believe in giving our team the freedom to explore new ideas and innovate without boundaries.",
     "order": 0
   }
 },
 {
   "model": "core.companyvalue",
-  "pk": 2,
+  "pk": 139,
   "fields": {
-    "title": "Innovation",
+    "title": "Tolerance for Failure",
     "icon": "",
-    "description": "We create the future.",
+    "description": "Adopting the concept of 'fast fail' - we see failure as a stepping stone to success and learning.",
+    "order": 0
+  }
+},
+{
+  "model": "core.companyvalue",
+  "pk": 140,
+  "fields": {
+    "title": "Individual Brilliance in Team Play",
+    "icon": "",
+    "description": "We recognize and celebrate individual brilliance, but always within the context of supportive team play.",
+    "order": 0
+  }
+},
+{
+  "model": "core.companyvalue",
+  "pk": 141,
+  "fields": {
+    "title": "Mutually Beneficial Relationships",
+    "icon": "",
+    "description": "Building value-based, mutually beneficial relationships with all our stakeholders is at our core.",
+    "order": 0
+  }
+},
+{
+  "model": "core.companyvalue",
+  "pk": 142,
+  "fields": {
+    "title": "Ethical Business Practices",
+    "icon": "",
+    "description": "We uphold the highest order of ethical business practices in everything we do.",
     "order": 0
   }
 },
 {
   "model": "core.visionmission",
-  "pk": 21,
+  "pk": 85,
   "fields": {
     "type": "Mission",
     "content": "To be a globally dominant platform-based services company in chosen industry segments by 2025. We strive to enhance the quality of life by building world-class products and solutions through the innovative application of technology. To become the most treasured business partner."
@@ -674,20 +779,46 @@
 },
 {
   "model": "core.visionmission",
-  "pk": 22,
+  "pk": 86,
   "fields": {
     "type": "Vision",
     "content": "To help companies make data-driven decisions. To be a dream destination for innovators. To be a predominantly employee-owned organization."
   }
 },
 {
+  "model": "core.contactmessage",
+  "pk": 7,
+  "fields": {
+    "name": "Arockia George Fernandaz P",
+    "email": "george3032003@gmail.com",
+    "phone": "6381095766",
+    "subject": "",
+    "message": "testing",
+    "attachment": "",
+    "created_at": "2026-01-30T11:35:38.428Z"
+  }
+},
+{
+  "model": "core.contactmessage",
+  "pk": 8,
+  "fields": {
+    "name": "Arockia George Fernandaz P",
+    "email": "george3032003@gmail.com",
+    "phone": "06381095766",
+    "subject": "",
+    "message": "tesing",
+    "attachment": "",
+    "created_at": "2026-01-30T11:38:40.357Z"
+  }
+},
+{
   "model": "core.sitesetting",
-  "pk": 11,
+  "pk": 43,
   "fields": {
     "site_name": "KMATI",
     "contact_email": "sales@kmati.in",
     "contact_phone": "9148544466",
-    "address": "#2nd Floor, No.16, 17th Cross, M C Road, Near Maruthi Mandir, Vijayanagar, Bangalore â€“ 560040",
+    "address": "#2nd Floor, No.16, 17th Cross, M C Road, Near Maruthi Mandir, Vijayanagar, Bangalore – 560040",
     "facebook_url": "",
     "twitter_url": "",
     "instagram_url": "",
@@ -696,10 +827,11 @@
 },
 {
   "model": "core.tool",
-  "pk": 1,
+  "pk": 4,
   "fields": {
-    "title": "Kushagramati Migration Accelerator",
+    "title": "<span class=\"text-brand-purple\">Kushagra</span><span class=\"text-brand-orange\">mati</span> Migration Accelerator",
     "description": "An accelerator for efficient migration to Databricks, featuring unified configuration, AI-driven script modification, and automated notebook generation.",
+    "content": "\n<h3>Accelerate Your Move to Databricks</h3>\n<p>The <span class=\"text-brand-purple\">Kushagra</span><span class=\"text-brand-orange\">mati</span> Migration Accelerator is designed to simplify and speed up your migration journey to the Databricks Lakehouse Platform. By automating complex tasks, we reduce migration time by up to 40%.</p>\n\n<h4>Key Features:</h4>\n<ul>\n    <li><strong>Unified Configuration Management:</strong> Centralized control over all migration parameters.</li>\n    <li><strong>AI-Driven Code Conversion:</strong> Automatically converts legacy SQL/Python scripts to optimized Spark code.</li>\n    <li><strong>Automated Notebook Generation:</strong> Creates Databricks notebooks ready for immediate use.</li>\n    <li><strong>Data Validation Framework:</strong> Built-in checks to ensure data integrity pre- and post-migration.</li>\n</ul>\n\n<h4>Benefits:</h4>\n<ul>\n    <li>Reduced Risk of Human Error</li>\n    <li>Faster Time-to-Value</li>\n    <li>Cost-Effective Migration Strategy</li>\n</ul>\n",
     "image": "",
     "pdf_file": "tools/pdfs/Kushagramati_Migration_Accelerator__GHBW_16_September_2025_1.pdf",
     "order": 0
@@ -707,10 +839,11 @@
 },
 {
   "model": "core.tool",
-  "pk": 2,
+  "pk": 5,
   "fields": {
     "title": "Platform Optimization Solution",
-    "description": "Comprehensive solution for optimizing your data platform performance and costs.",
+    "description": "A holistic solution to analyze and enhance your data ecosystem. We identify bottlenecks, optimize cloud usage, and implement cost-saving strategies to ensure maximum value.",
+    "content": "\n<h3>Maximize ROI on Your Data Platform</h3>\n<p>Our Platform Optimization Solution provides a 360-degree view of your data infrastructure health. We go beyond simple monitoring to provide actionable insights for tuning and cost reduction.</p>\n\n<h4>What We Analyze:</h4>\n<ul>\n    <li>Compute Utilization & auto-scaling patterns</li>\n    <li>Storage Lifecycle policies and tiering</li>\n    <li>Query Performance and indexing strategies</li>\n    <li>Security & Access Control audits</li>\n</ul>\n\n<h4>The Outcome:</h4>\n<p>Clients typically see a <strong>20-30% reduction in cloud costs</strong> and a significant improvement in job reliability and performance.</p>\n",
     "image": "",
     "pdf_file": "tools/pdfs/Kushagramati_Platform_Optimization_Solution_Flyer_New_V1.0.pdf",
     "order": 0
@@ -718,10 +851,11 @@
 },
 {
   "model": "core.tool",
-  "pk": 3,
+  "pk": 6,
   "fields": {
     "title": "Platform Tuning Services",
-    "description": "Expert services to tune and refine your platform for maximum efficiency.",
+    "description": "Specialized deep-dive performance tuning. From query optimization to cluster configuration, we fine-tune every layer of your platform to achieve high throughput and low latency.",
+    "content": "\n<h3>Deep-Dive Performance Engineering</h3>\n<p>When 'good enough' isn't enough, our Platform Tuning Services extract every ounce of performance from your data platform. Ideal for mission-critical SLAs and high-frequency data applications.</p>\n\n<h4>Our Approach:</h4>\n<ul>\n    <li><strong>Cluster Sizing:</strong> Right-sizing instance types and worker counts.</li>\n    <li><strong>Spark Config Tuning:</strong> Optimizing shuffle partitions, memory fraction, and serialization.</li>\n    <li><strong>Data Layout Optimization:</strong> Z-Ordering, Partitioning, and File Compaction strategies.</li>\n    <li><strong>Code Profiling:</strong> Identifying hotspots in your ETL pipelines.</li>\n</ul>\n\n<p><em>Get the performance you paid for. Eliminate waste and latency.</em></p>\n",
     "image": "",
     "pdf_file": "tools/pdfs/Platform_Tuning_Services_Summary-New.pdf",
     "order": 0
@@ -729,10 +863,11 @@
 },
 {
   "model": "core.casestudy",
-  "pk": 1,
+  "pk": 3,
   "fields": {
     "title": "Optima X-Ray Predictor",
     "description": "An advanced AI solution for predictive X-ray analysis in healthcare contexts.",
+    "content": "\n<h3>Revolutionizing Radiology with AI</h3>\n<p>The Optima X-Ray Predictor leverages deep learning convolutional neural networks (CNNs) to assist radiologists in detecting anomalies with higher accuracy and speed.</p>\n\n<h4>Problem Statement:</h4>\n<p>Radiologists often face high workloads, leading to fatigue and potential diagnostic errors. Early detection of conditions like Pneumonia or nodules is critical but challenging in standard X-rays.</p>\n\n<h4>Our Solution:</h4>\n<ul>\n    <li><strong>Automated Screening:</strong> Pre-screens X-rays to flag potential issues before a doctor reviews them.</li>\n    <li><strong>Heatmap Visualization:</strong> Highlights suspicious regions on the image using Grad-CAM technology.</li>\n    <li><strong>Integration:</strong> Seamlessly integrates with existing PACS (Picture Archiving and Communication Systems).</li>\n</ul>\n\n<h4>Results:</h4>\n<p>Achieved a <strong>94% accuracy rate</strong> in detecting common chest pathologies and reduced reporting turnaround time by 50%.</p>\n",
     "image": "",
     "pdf_file": "casestudies/pdfs/Optima_XRay_Predictor.pdf",
     "order": 0
@@ -740,12 +875,363 @@
 },
 {
   "model": "core.casestudy",
-  "pk": 2,
+  "pk": 4,
   "fields": {
     "title": "Sentiment Analysis Classification",
     "description": "Classification of text based on keywords for enhanced customer insight and data processing.",
+    "content": "\n<h3>Understanding Customer Voice at Scale</h3>\n<p>In the digital age, customer feedback is abundant but unstructured. Our Sentiment Analysis engine processes thousands of reviews, tweets, and emails to gauge public opinion in real-time.</p>\n\n<h4>Methodology:</h4>\n<p>We utilize Natural Language Processing (NLP) techniques, including Tokenization, Lemmatization, and Bag-of-Words models, trained on domain-specific datasets.</p>\n\n<h4>Key Capabilities:</h4>\n<ul>\n    <li><strong>Aspect-Based Sentiment:</strong> Identifies sentiment towards specific product features (e.g., \"Display is great, but battery is bad\").</li>\n    <li><strong>Real-time Monitoring:</strong> Dashboard alerts for sudden spikes in negative sentiment.</li>\n    <li><strong>Multi-language Support:</strong> Capable of processing English, Spanish, and French feedback.</li>\n</ul>\n\n<h4>Impact:</h4>\n<p>Enabled a leading retailer to identify a product defect within 48 hours of launch, saving an estimated $2M in potential returns and brand damage.</p>\n",
     "image": "",
     "pdf_file": "casestudies/pdfs/Sentiment_Analysis.pdf",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 62,
+  "fields": {
+    "title": "Financial Loan Management System",
+    "category": "AI_APP_DEV",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Intelligent Analytics-1,Intelligent Analytics-2,Intelligent Analytics-3\\Intelligent Analytics-2.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 63,
+  "fields": {
+    "title": "Leave Management System",
+    "category": "AI_APP_DEV",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Intelligent Analytics-1,Intelligent Analytics-2,Intelligent Analytics-3\\Intelligent Analytics-3.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 64,
+  "fields": {
+    "title": "KMATI Accelerator (Migration tool)",
+    "category": "AI_APP_DEV",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Intelligent Analytics-1,Intelligent Analytics-2,Intelligent Analytics-3\\Intelligent Analytics-4.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 65,
+  "fields": {
+    "title": "Real-Time Products Recommendation System",
+    "category": "AI_APP_DEV",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Intelligent Analytics-1,Intelligent Analytics-2,Intelligent Analytics-3\\Intelligent Analytics-5.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 66,
+  "fields": {
+    "title": "Databrick workflow Framework",
+    "category": "AI_APP_DEV",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Intelligent Analytics-1,Intelligent Analytics-2,Intelligent Analytics-3\\Intelligent Analytics-6.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 69,
+  "fields": {
+    "title": "Migration from Cloudera to Databricks",
+    "category": "DATABRICKS",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Kushagramati Master Use Case List V1.2(1)-1,Kushagramati Master Use Case List V1.2(1)-2,Kushagr[...]\\Kushagramati Master Use Case List V1.2(1)-10.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 71,
+  "fields": {
+    "title": "Contracts Data Integration and BI Reporting - SAP data to databricks",
+    "category": "DATABRICKS",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Kushagramati Master Use Case List V1.2(1)-1,Kushagramati Master Use Case List V1.2(1)-2,Kushagr[...]\\Kushagramati Master Use Case List V1.2(1)-12.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 72,
+  "fields": {
+    "title": "Creating Data Pipelines for Call Center Conversations",
+    "category": "DATABRICKS",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Kushagramati Master Use Case List V1.2(1)-1,Kushagramati Master Use Case List V1.2(1)-2,Kushagr[...]\\Kushagramati Master Use Case List V1.2(1)-13.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 73,
+  "fields": {
+    "title": "Scalable Data Pipeline for Customer Information Processing",
+    "category": "DATABRICKS",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Kushagramati Master Use Case List V1.2(1)-1,Kushagramati Master Use Case List V1.2(1)-2,Kushagr[...]\\Kushagramati Master Use Case List V1.2(1)-14.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 74,
+  "fields": {
+    "title": "Real Time Streaming for Quotes and Policy for an US Insurance Company",
+    "category": "DATABRICKS",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Kushagramati Master Use Case List V1.2(1)-1,Kushagramati Master Use Case List V1.2(1)-2,Kushagr[...]\\Kushagramati Master Use Case List V1.2(1)-15.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 75,
+  "fields": {
+    "title": "Implementing Unified Data Platform for an Airline Company",
+    "category": "DATABRICKS",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Kushagramati Master Use Case List V1.2(1)-1,Kushagramati Master Use Case List V1.2(1)-2,Kushagr[...]\\Kushagramati Master Use Case List V1.2(1)-16.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 76,
+  "fields": {
+    "title": "Implementing AI/ML Solution for Airline Operations",
+    "category": "DATABRICKS",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Kushagramati Master Use Case List V1.2(1)-1,Kushagramati Master Use Case List V1.2(1)-2,Kushagr[...]\\Kushagramati Master Use Case List V1.2(1)-17.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 78,
+  "fields": {
+    "title": "Migrating from HMS to Databricks Unity Catalog for Large Pharma company",
+    "category": "DATABRICKS",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Kushagramati Master Use Case List V1.2(1)-1,Kushagramati Master Use Case List V1.2(1)-2,Kushagr[...]\\Kushagramati Master Use Case List V1.2(1)-19.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 80,
+  "fields": {
+    "title": "Migrating from legacy to Databricks Unity Catalog for US Insurance Company",
+    "category": "DATABRICKS",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Kushagramati Master Use Case List V1.2(1)-1,Kushagramati Master Use Case List V1.2(1)-2,Kushagr[...]\\Kushagramati Master Use Case List V1.2(1)-20.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 82,
+  "fields": {
+    "title": "Increasing Job Success Rate",
+    "category": "DATABRICKS",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Kushagramati Master Use Case List V1.2(1)-1,Kushagramati Master Use Case List V1.2(1)-2,Kushagr[...]\\Kushagramati Master Use Case List V1.2(1)-22.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 83,
+  "fields": {
+    "title": "Improved Performance for Queries",
+    "category": "DATABRICKS",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Kushagramati Master Use Case List V1.2(1)-1,Kushagramati Master Use Case List V1.2(1)-2,Kushagr[...]\\Kushagramati Master Use Case List V1.2(1)-23.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 84,
+  "fields": {
+    "title": "Optimized Resource Utilization",
+    "category": "DATABRICKS",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Kushagramati Master Use Case List V1.2(1)-1,Kushagramati Master Use Case List V1.2(1)-2,Kushagr[...]\\Kushagramati Master Use Case List V1.2(1)-24.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 85,
+  "fields": {
+    "title": "Data Re-partitioning",
+    "category": "DATABRICKS",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Kushagramati Master Use Case List V1.2(1)-1,Kushagramati Master Use Case List V1.2(1)-2,Kushagr[...]\\Kushagramati Master Use Case List V1.2(1)-25.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 87,
+  "fields": {
+    "title": "Optimizing Robotic Telemetry Data Processing for Healthcare",
+    "category": "DATABRICKS",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Kushagramati Master Use Case List V1.2(1)-1,Kushagramati Master Use Case List V1.2(1)-2,Kushagr[...]\\Kushagramati Master Use Case List V1.2(1)-3.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 88,
+  "fields": {
+    "title": "Creating Data Pipelines for Large Data",
+    "category": "DATABRICKS",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Kushagramati Master Use Case List V1.2(1)-1,Kushagramati Master Use Case List V1.2(1)-2,Kushagr[...]\\Kushagramati Master Use Case List V1.2(1)-4.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 89,
+  "fields": {
+    "title": "Migration to Databricks Workspace 2.0 for Advanced Analytics",
+    "category": "DATABRICKS",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Kushagramati Master Use Case List V1.2(1)-1,Kushagramati Master Use Case List V1.2(1)-2,Kushagr[...]\\Kushagramati Master Use Case List V1.2(1)-5.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 90,
+  "fields": {
+    "title": "Migration from Synapse to Databricks using BladeBridge",
+    "category": "DATABRICKS",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Kushagramati Master Use Case List V1.2(1)-1,Kushagramati Master Use Case List V1.2(1)-2,Kushagr[...]\\Kushagramati Master Use Case List V1.2(1)-6.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 91,
+  "fields": {
+    "title": "Migration from GCP to Azure Databricks",
+    "category": "DATABRICKS",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Kushagramati Master Use Case List V1.2(1)-1,Kushagramati Master Use Case List V1.2(1)-2,Kushagr[...]\\Kushagramati Master Use Case List V1.2(1)-7.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 92,
+  "fields": {
+    "title": "Migration from Oracle to Azure Databricks",
+    "category": "DATABRICKS",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Kushagramati Master Use Case List V1.2(1)-1,Kushagramati Master Use Case List V1.2(1)-2,Kushagr[...]\\Kushagramati Master Use Case List V1.2(1)-8.jpg",
+    "order": 0
+  }
+},
+{
+  "model": "core.usecase",
+  "pk": 93,
+  "fields": {
+    "title": "Migration from Informatica SQL to Azure Databricks",
+    "category": "DATABRICKS",
+    "challenge": "Content extraction pending.",
+    "solution": "Content extraction pending.",
+    "approach": "Content extraction pending.",
+    "benefits": "Content extraction pending.",
+    "image": "Kushagramati Master Use Case List V1.2(1)-1,Kushagramati Master Use Case List V1.2(1)-2,Kushagr[...]\\Kushagramati Master Use Case List V1.2(1)-9.jpg",
     "order": 0
   }
 }

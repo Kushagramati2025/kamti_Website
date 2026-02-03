@@ -196,101 +196,118 @@
                         <!-- Slide Body -->
                         <div class="p-6 flex-grow grid gap-6">
 
-                            <!-- Challenge -->
-                            <div class="bg-red-50 p-4 rounded-xl border border-red-100">
-                                <div class="flex items-start">
-                                    <div class="flex-shrink-0 mt-1">
-                                        <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
-                                            <svg class="w-4 h-4 text-red-600" fill="none" viewBox="0 0 24 24"
-                                                stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="ml-4">
-                                        <h4 class="text-sm font-bold text-red-900 uppercase tracking-wide mb-1">
-                                            Challenge
-                                        </h4>
-                                        <p class="text-sm text-gray-700 whitespace-pre-wrap">{{ uc.challenge }}</p>
-                                    </div>
+                            <!-- Image Display (If image exists) -->
+                            <div *ngIf="uc.image" class="w-full cursor-pointer group/image"
+                                (click)="openImageModal(uc.image)">
+                                <div class="relative overflow-hidden rounded-lg">
+                                    <img [src]="uc.image" [alt]="uc.title"
+                                        class="w-full h-auto shadow-sm border border-gray-100 object-contain max-h-[500px] transition-transform duration-500 group-hover/image:scale-105">
                                 </div>
                             </div>
 
-                            <!-- Solution -->
-                            <div class="bg-blue-50 p-4 rounded-xl border border-blue-100">
-                                <div class="flex items-start">
-                                    <div class="flex-shrink-0 mt-1">
-                                        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
-                                            <svg class="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24"
-                                                stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                                            </svg>
+                            <!-- Text Content (Only if no image, or as fallback/supplement) -->
+                            <ng-container *ngIf="!uc.image">
+                                <!-- Challenge -->
+                                <div class="bg-red-50 p-4 rounded-xl border border-red-100">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div
+                                                class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
+                                                <svg class="w-4 h-4 text-red-600" fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                                </svg>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="ml-4">
-                                        <h4 class="text-sm font-bold text-blue-900 uppercase tracking-wide mb-1">
-                                            Solution
-                                        </h4>
-                                        <p class="text-sm text-gray-700 whitespace-pre-wrap">{{ uc.solution }}</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Approach -->
-                            <div class="bg-indigo-50 p-4 rounded-xl border border-indigo-100">
-                                <div class="flex items-start">
-                                    <div class="flex-shrink-0 mt-1">
-                                        <div
-                                            class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center">
-                                            <svg class="w-4 h-4 text-indigo-600" fill="none" viewBox="0 0 24 24"
-                                                stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="ml-4">
-                                        <h4 class="text-sm font-bold text-indigo-900 uppercase tracking-wide mb-1">
-                                            Approach
-                                        </h4>
-                                        <p class="text-sm text-gray-700 whitespace-pre-wrap">{{ uc.approach }}</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Benefits -->
-                            <div class="bg-green-50 p-4 rounded-xl border border-green-100 flex-grow">
-                                <div class="flex items-start h-full">
-                                    <div class="flex-shrink-0 mt-1">
-                                        <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
-                                            <svg class="w-4 h-4 text-green-600" fill="none" viewBox="0 0 24 24"
-                                                stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="ml-4 w-full">
-                                        <h4 class="text-sm font-bold text-green-900 uppercase tracking-wide mb-1">
-                                            Benefits
-                                        </h4>
-                                        <div class="text-sm text-gray-700 whitespace-pre-line">
-                                            {{ uc.benefits }}
+                                        <div class="ml-4">
+                                            <h4 class="text-sm font-bold text-red-900 uppercase tracking-wide mb-1">
+                                                Challenge
+                                            </h4>
+                                            <p class="text-sm text-gray-700 whitespace-pre-wrap">{{ uc.challenge }}</p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
+                                <!-- Solution -->
+                                <div class="bg-blue-50 p-4 rounded-xl border border-blue-100">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div
+                                                class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                                <svg class="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <h4 class="text-sm font-bold text-blue-900 uppercase tracking-wide mb-1">
+                                                Solution
+                                            </h4>
+                                            <p class="text-sm text-gray-700 whitespace-pre-wrap">{{ uc.solution }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Approach -->
+                                <div class="bg-indigo-50 p-4 rounded-xl border border-indigo-100">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div
+                                                class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center">
+                                                <svg class="w-4 h-4 text-indigo-600" fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <h4 class="text-sm font-bold text-indigo-900 uppercase tracking-wide mb-1">
+                                                Approach
+                                            </h4>
+                                            <p class="text-sm text-gray-700 whitespace-pre-wrap">{{ uc.approach }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Benefits -->
+                                <div class="bg-green-50 p-4 rounded-xl border border-green-100 flex-grow">
+                                    <div class="flex items-start h-full">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div
+                                                class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
+                                                <svg class="w-4 h-4 text-green-600" fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4 w-full">
+                                            <h4 class="text-sm font-bold text-green-900 uppercase tracking-wide mb-1">
+                                                Benefits
+                                            </h4>
+                                            <div class="text-sm text-gray-700 whitespace-pre-line">
+                                                {{ uc.benefits }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-container>
                         </div>
 
                         <!-- Footer / Branding -->
                         <div
-                            class="px-6 py-4 bg-gray-50 border-t border-gray-100 flex justify-between items-center text-xs text-gray-400 font-medium">
+                            class="px-6 py-4 bg-gray-50 border-t border-gray-100 flex justify-center items-center text-xs text-gray-400 font-medium">
                             <span><span class="text-brand-purple font-bold">Kushagra</span><span
                                     class="text-brand-orange font-bold">mati</span> Analytics</span>
-                            <span>Success Story {{ uc.id }}</span>
                         </div>
 
                     </div>
@@ -304,5 +321,40 @@
             </div>
         </div>
 
+    </div>
+</div>
+
+<!-- Image Lightbox Modal -->
+<div *ngIf="selectedImage()" class="fixed inset-0 z-[100] overflow-y-auto animate-fadeIn" (click)="closeImageModal()">
+
+    <!-- Fixed Backdrop -->
+    <div class="fixed inset-0 bg-gray-900/98 backdrop-blur-md -z-10"></div>
+
+    <!-- Scrollable Content Wrapper -->
+    <div class="min-h-screen flex items-center justify-center p-4 md:p-12 lg:p-20">
+
+        <div class="relative max-w-[95vw] lg:max-w-7xl w-full animate-zoomIn" (click)="$event.stopPropagation()">
+
+            <!-- Close Button (High Visibility with Background) -->
+            <button (click)="closeImageModal()"
+                class="absolute -top-12 right-0 md:-top-4 md:-right-14 text-white bg-black/60 hover:bg-brand-orange border border-white/20 backdrop-blur-md transition-all p-2.5 rounded-full z-[120] shadow-2xl group">
+                <svg class="w-8 h-8 transform group-hover:rotate-90 transition-transform duration-300" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <!-- Main Image Frame -->
+            <div
+                class="bg-white p-1 md:p-3 rounded-xl md:rounded-3xl shadow-[0_0_50px_-12px_rgba(0,0,0,0.5)] shadow-brand-purple/30 overflow-hidden">
+                <img [src]="selectedImage()" alt="Full Preview" class="w-full h-auto rounded-lg md:rounded-2xl">
+            </div>
+
+            <!-- Bottom Hint -->
+            <div class="mt-6 text-center text-white/60 text-sm font-medium animate-pulse">
+                Click anywhere outside to close
+            </div>
+
+        </div>
     </div>
 </div>
