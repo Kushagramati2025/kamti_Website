@@ -87,11 +87,7 @@ def populate():
             "content": "Advanced machine learning models, suitable laboratory equipment, machine learning, and data science, which assist in creating medicines to improve patients' fast treatment at a lower cost, can help identify between cancers and healthy anatomy with 3D radiological images to enable medical experts in radiation therapy and surgical planning.",
             "image": "industries/sections/cost_reduction.jpg"
         },
-        {
-            "title": "Optima x-ray predictor",
-            "content": "Case Study: Identifying between cancers and healthy anatomy with 3D radiological images to enable medical experts.<br><br><a href='http://127.0.0.1:8000/media/casestudies/pdfs/Optima_XRay_Predictor.pdf' target='_blank' class='btn-primary inline-flex items-center px-6 py-3 border border-transparent text-base font-bold rounded-lg text-white bg-brand-orange hover:bg-brand-orange-dark shadow-md transition-all duration-300'>Download Case Study</a>",
-            "image": "industries/sections/xray.jpg"
-        }
+
     ]
 
     for section in healthcare_sections:
@@ -148,11 +144,7 @@ def populate():
             "content": "To anticipate future events using data analytics, the data sources and datasets are used with the combination of machine learning algorithms to discover patterns, demand signals, and spot intricate relationships. AI-powered forecasting models can cut errors by 30 to 50 percent with the increased accuracy resulting in a 65 percent reduction in missed sales.",
             "image": "industries/sections/logistics_forecasting.jpg"
         },
-        {
-            "title": "Sentiment analysis",
-            "content": "Classification of text based on keywords.<br><br><a href='http://127.0.0.1:8000/media/casestudies/pdfs/Sentiment_Analysis.pdf' target='_blank' class='btn-primary inline-flex items-center px-6 py-3 border border-transparent text-base font-bold rounded-lg text-white bg-brand-orange hover:bg-brand-orange-dark shadow-md transition-all duration-300'>Download Case Study</a>",
-            "image": "industries/sections/logistics_sentiment.jpg"
-        }
+
     ]
 
     for section in logistics_sections:
@@ -297,10 +289,48 @@ def populate():
     print("Updated Site Settings.")
 
     # 5. Update Banners
-    # Ensure page banners exist
+    # 5. Update Banners
+    # Explicitly update HOME banners as per user request
+    Banner.objects.filter(page='HOME').delete()
+    
+    home_banners = [
+        {
+            "title": "Intelligent Analytics & Digital Transformation",
+            "subtitle": "For healthcare, automotive, logistics, pharma sectors."
+        },
+        {
+            "title": "Rich Insights",
+            "subtitle": "For optimal business decisions."
+        },
+        {
+            "title": "Insight-Driven Culture",
+            "subtitle": "Helping clients build a culture for better business."
+        },
+        {
+            "title": "Efficiency & Cost Savings",
+            "subtitle": "Data insights drive increased efficiency and cost savings."
+        },
+        {
+            "title": "Better Client Experience",
+            "subtitle": "Technology for enabling better client experience."
+        }
+    ]
+    
+    for b in home_banners:
+        Banner.objects.create(
+            page='HOME',
+            title=b['title'],
+            subtitle=b['subtitle'],
+            image='banners/home_default.jpg', # Using default placeholder, component handles bg images
+            active=True
+        )
+
+    # Explicitly update ABOUT banner to ensure new branding applies
+    Banner.objects.filter(page='ABOUT').delete()
+
+    # Ensure other page banners exist
     banner_configs = [
-        ('HOME', 'Data-Driven Decisions', 'Helping clients build an insight-driven culture for better business.'),
-        ('ABOUT', 'About Kushagramati', 'A team of serial entrepreneurs and domain experts.'),
+        ('ABOUT', 'About <span class="text-brand-purple">Kushagra</span><span class="text-brand-orange">mati</span>', 'A team of serial entrepreneurs and domain experts.'),
         ('SERVICES', 'Our Expertise', 'From Cloud Strategy to AI/ML Modelling and Industry Solutions.'),
         ('CONTACT', 'Get in Touch', 'Visit us in Vijayanagar, Bangalore.'),
         ('INDUSTRIES', 'Industry Solutions', 'Specialized solutions for Healthcare, Automotive, Logistics, and Pharma.'),
@@ -323,7 +353,7 @@ def populate():
         {"name": "Databricks", "website": "https://databricks.com", "logo": "partners/databricks_Logo.avif"},
         {"name": "Databricks Consulting Partner", "website": "https://databricks.com/partners", "logo": "partners/databricks_badge_v2.avif"},
 
-        {"name": "Boomi", "website": "https://boomi.com", "logo": "partners/boomi_v2.avif"},
+
         {"name": "Computomic", "website": "https://computomic.com", "logo": "partners/Computomic-Logo.avif"},
         {"name": "Snowflake", "website": "https://www.snowflake.com", "logo": "partners/snowflake.avif"},
         {"name": "Microsoft Azure", "website": "https://azure.microsoft.com", "logo": "partners/Microsoft.avif"},

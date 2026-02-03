@@ -5,7 +5,7 @@ from .views import (
     CareerJobViewSet, BlogPostViewSet, LeadershipMemberViewSet, 
     PartnerViewSet, CompanyValueViewSet, VisionMissionViewSet, 
     ContactMessageViewSet, SiteSettingViewSet, ToolViewSet, CaseStudyViewSet,
-    PageSectionViewSet, DepartmentViewSet
+    PageSectionViewSet, DepartmentViewSet, UseCaseViewSet
 )
 
 router = DefaultRouter()
@@ -24,6 +24,7 @@ router.register(r'contact', ContactMessageViewSet)
 router.register(r'settings', SiteSettingViewSet)
 router.register(r'tools', ToolViewSet)
 router.register(r'case-studies', CaseStudyViewSet)
+router.register(r'use-cases', UseCaseViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

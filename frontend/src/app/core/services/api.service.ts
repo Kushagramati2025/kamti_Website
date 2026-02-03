@@ -94,6 +94,14 @@ export class ApiService {
         return this.http.get<any>(`${this.apiUrl}/case-studies/${id}/`);
     }
 
+    getUseCases(category?: string): Observable<any[]> {
+        let url = `${this.apiUrl}/use-cases/`;
+        if (category) {
+            url += `?category=${category}`;
+        }
+        return this.http.get<any[]>(url);
+    }
+
     contact(data: any): Observable<any> {
         return this.http.post(`${this.apiUrl}/contact/`, data);
     }

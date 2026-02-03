@@ -45,7 +45,26 @@
                         <div class="flex flex-col lg:flex-row gap-12 lg:gap-8 items-stretch justify-between">
                             <!-- Industries Grid -->
                             <div class="flex-1">
-                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+
+                                    <!-- Our Services -->
+                                    <a routerLink="/services"
+                                        class="group bg-white rounded-xl shadow-xl p-6 flex flex-col items-center text-center transform hover:scale-110 hover:-translate-y-4 transition-all duration-300 border border-gray-100 hover:border-brand-orange hover:shadow-2xl hover:shadow-brand-orange/20 h-full animate-fade-in-up cursor-pointer"
+                                        style="animation-delay: 0.05s">
+                                        <div
+                                            class="w-14 h-14 mb-4 flex items-center justify-center rounded-full bg-brand-light group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
+                                            <svg class="w-8 h-8 text-brand-orange group-hover:text-white" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                            </svg>
+                                        </div>
+                                        <h3
+                                            class="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-orange transition-colors">
+                                            Our Services</h3>
+                                        <p class="text-sm font-bold text-gray-700 group-hover:text-gray-900">
+                                            Explore our full range of technical expertise.</p>
+                                    </a>
 
                                     <!-- Healthcare -->
                                     <a routerLink="/industries/healthcare"

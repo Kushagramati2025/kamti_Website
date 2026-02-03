@@ -34,10 +34,9 @@ import { ApiService } from '../../../core/services/api.service';
                  [ngClass]="{'opacity-100 pointer-events-auto': i === currentBannerIndex, 'opacity-0 pointer-events-none': i !== currentBannerIndex}">
                 
                 <div class="text-center px-4 max-w-5xl mx-auto">
-                    <!-- Animated Text -->
                     <h1 class="text-4xl md:text-5xl lg:text-5xl font-extrabold text-white tracking-tight mb-6 opacity-0 shadow-sm"
-                        [ngClass]="{'animate-fade-in-up': i === currentBannerIndex}" style="animation-delay: 200ms;">
-                        {{ banner.title }}
+                        [ngClass]="{'animate-fade-in-up': i === currentBannerIndex}" style="animation-delay: 200ms;"
+                        [innerHTML]="banner.title">
                     </h1>
                     <p class="text-lg md:text-xl text-gray-100 font-medium mb-10 opacity-0 max-w-3xl mx-auto leading-relaxed shadow-sm"
                        [ngClass]="{'animate-fade-in-up': i === currentBannerIndex}" style="animation-delay: 400ms;">
@@ -56,7 +55,7 @@ import { ApiService } from '../../../core/services/api.service';
         <!-- Fallback Content -->
         <div *ngIf="!loading && banners.length === 0" class="relative z-10 flex items-center justify-center h-full text-white">
              <div class="text-center">
-                 <h1 class="text-4xl font-bold mb-4">{{ fallbackTitle }}</h1>
+                 <h1 class="text-4xl font-bold mb-4" [innerHTML]="fallbackTitle"></h1>
                  <p class="text-gray-200">{{ fallbackSubtitle }}</p>
              </div>
         </div>

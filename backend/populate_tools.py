@@ -14,11 +14,11 @@ def populate_tools():
     
     tools_data = [
         {
-            "title": "Kushagramati Migration Accelerator",
+            "title": """<span class="text-brand-purple">Kushagra</span><span class="text-brand-orange">mati</span> Migration Accelerator""",
             "description": "An accelerator for efficient migration to Databricks, featuring unified configuration, AI-driven script modification, and automated notebook generation.",
             "content": """
 <h3>Accelerate Your Move to Databricks</h3>
-<p>The Kushagramati Migration Accelerator is designed to simplify and speed up your migration journey to the Databricks Lakehouse Platform. By automating complex tasks, we reduce migration time by up to 40%.</p>
+<p>The <span class="text-brand-purple">Kushagra</span><span class="text-brand-orange">mati</span> Migration Accelerator is designed to simplify and speed up your migration journey to the Databricks Lakehouse Platform. By automating complex tasks, we reduce migration time by up to 40%.</p>
 
 <h4>Key Features:</h4>
 <ul>

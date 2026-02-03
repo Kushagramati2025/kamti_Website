@@ -268,3 +268,24 @@ class CaseStudy(models.Model):
 
     def __str__(self):
         return self.title
+
+class UseCase(models.Model):
+    CATEGORY_CHOICES = (
+        ('DATABRICKS', 'Databricks'),
+        ('AI_APP_DEV', 'AI Application Development'),
+        ('OTHER', 'Other'),
+    )
+    title = models.CharField(max_length=200)
+    category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, default='DATABRICKS')
+    challenge = models.TextField()
+    solution = models.TextField()
+    approach = models.TextField()
+    benefits = models.TextField(help_text="List of benefits, will be split by newlines")
+    image = models.ImageField(upload_to='usecases/images/', blank=True, null=True)
+    order = models.IntegerField(default=0)
+
+    class Meta:
+        ordering = ['order', 'title']
+
+    def __str__(self):
+        return f"{self.title} ({self.get_category_display()})"

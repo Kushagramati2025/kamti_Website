@@ -3,14 +3,14 @@ from .models import (
     Banner, ServiceCategory, Industry, CareerJob, 
     BlogPost, LeadershipMember, Partner, CompanyValue, 
     VisionMission, ContactMessage, SiteSetting, Tool, CaseStudy,
-    PageSection, Department
+    PageSection, Department, UseCase
 )
 from .serializers import (
     BannerSerializer, ServiceCategorySerializer, IndustrySerializer, 
     CareerJobSerializer, BlogPostSerializer, LeadershipMemberSerializer, 
     PartnerSerializer, CompanyValueSerializer, VisionMissionSerializer, 
     ContactMessageSerializer, SiteSettingSerializer, ToolSerializer, CaseStudySerializer,
-    PageSectionSerializer, DepartmentSerializer
+    PageSectionSerializer, DepartmentSerializer, UseCaseSerializer
 )
 
 class BannerViewSet(viewsets.ModelViewSet):
@@ -155,8 +155,23 @@ class ToolViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = ToolSerializer
     permission_classes = [permissions.AllowAny]
 
+
 class CaseStudyViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = CaseStudy.objects.all()
     serializer_class = CaseStudySerializer
     permission_classes = [permissions.AllowAny]
+
+
+class UseCaseViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = UseCase.objects.all()
+    serializer_class = UseCaseSerializer
+    permission_classes = [permissions.AllowAny]
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        category = self.request.query_params.get('category')
+        if category:
+            qs = qs.filter(category=category)
+        return qs
+
 

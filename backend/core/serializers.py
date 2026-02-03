@@ -3,8 +3,14 @@ from .models import (
     Banner, ServiceCategory, Industry, IndustrySection, CareerJob, 
     BlogPost, LeadershipMember, Partner, CompanyValue, 
     VisionMission, ContactMessage, SiteSetting, Tool, CaseStudy,
-    PageSection, Department
+    PageSection, Department, UseCase
 )
+
+class UseCaseSerializer(serializers.ModelSerializer):
+    category_display = serializers.CharField(source='get_category_display', read_only=True)
+    class Meta:
+        model = UseCase
+        fields = '__all__'
 
 class ToolSerializer(serializers.ModelSerializer):
     class Meta:
