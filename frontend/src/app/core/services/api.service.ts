@@ -7,7 +7,14 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
     private http = inject(HttpClient);
-    private apiUrl = 'http://127.0.0.1:8000/api';
+    private baseUrl = 'http://192.168.1.8:8000';
+    private apiUrl = `${this.baseUrl}/api`;
+
+    getImageUrl(path: string): string {
+        if (!path) return '';
+        if (path.startsWith('http')) return path;
+        return `${this.baseUrl}${path.startsWith('/') ? '' : '/'}${path}`;
+    }
 
     getBanners(page: string = 'HOME'): Observable<any[]> {
         return this.http.get<any[]>(`${this.apiUrl}/banners/?page=${page}`);

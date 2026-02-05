@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { BannerCarouselComponent } from '../../shared/components/banner-carousel/banner-carousel.component';
 
+import { ApiService } from '../../core/services/api.service';
+import { inject } from '@angular/core';
+
 @Component({
   selector: 'app-about',
   standalone: true,
@@ -10,4 +13,6 @@ import { BannerCarouselComponent } from '../../shared/components/banner-carousel
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
-export class AboutComponent { }
+export class AboutComponent {
+  apiService = inject(ApiService);
+}

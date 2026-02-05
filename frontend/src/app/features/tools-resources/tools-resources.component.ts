@@ -11,20 +11,20 @@ import { ApiService } from '../../core/services/api.service';
   styleUrl: './tools-resources.component.css'
 })
 export class ToolsResourcesComponent implements OnInit, OnDestroy {
-  private apiService = inject(ApiService);
+  public apiService = inject(ApiService);
 
-  activeTab = signal<'tools' | 'casestudies' | 'usecases'>('tools');
+  activeTab = signal<'tools' | 'usecases'>('tools');
   activeUseCaseCategory = signal<string>('ALL');
   selectedImage = signal<string | null>(null);
 
   tools = signal<any[]>([]);
-  caseStudies = signal<any[]>([]);
+
   useCases = signal<any[]>([]);
   computedUseCases = signal<any[]>([]);
 
   ngOnInit() {
     this.fetchTools();
-    this.fetchCaseStudies();
+
     this.fetchUseCases();
   }
 
@@ -47,12 +47,7 @@ export class ToolsResourcesComponent implements OnInit, OnDestroy {
     });
   }
 
-  fetchCaseStudies() {
-    this.apiService.getCaseStudies().subscribe({
-      next: (data) => this.caseStudies.set(data),
-      error: (err) => console.error('Error fetching case studies:', err)
-    });
-  }
+
 
   fetchUseCases() {
     this.apiService.getUseCases().subscribe({
@@ -64,7 +59,7 @@ export class ToolsResourcesComponent implements OnInit, OnDestroy {
     });
   }
 
-  setActiveTab(tab: 'tools' | 'casestudies' | 'usecases') {
+  setActiveTab(tab: 'tools' | 'usecases') {
     this.activeTab.set(tab);
   }
 

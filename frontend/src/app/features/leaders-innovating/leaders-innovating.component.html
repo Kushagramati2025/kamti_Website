@@ -9,8 +9,8 @@
                 Harnessing The Power Of AI
             </h2>
             <div class="w-full h-80 sm:h-96 rounded-2xl overflow-hidden shadow-xl mb-8">
-                <img src="http://127.0.0.1:8000/media/industries/about/anant_koppar_leaders.png" alt="Anant R Koppar"
-                    class="w-full h-full object-cover object-top">
+                <img [src]="apiService.getImageUrl('/media/industries/about/anant_koppar_leaders.png')"
+                    alt="Anant R Koppar" class="w-full h-full object-cover object-top">
             </div>
         </div>
 

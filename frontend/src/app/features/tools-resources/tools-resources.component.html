@@ -6,10 +6,12 @@
             <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl">
                 Tools & Resources
             </h1>
-            <p class="mt-1 text-xl text-gray-500 max-w-2xl mx-auto">
-                Discover our accelerators, white papers, and case studies designed to fast-track your data journey.
+            <p class="mt-1 text-xl text-gray-500 max-w-3xl mx-auto">
+                Discover our accelerators and real-world use cases designed to fast-track your data journey.
             </p>
         </div>
+
+
 
         <!-- Tabs -->
         <div class="flex justify-center mb-4">
@@ -23,17 +25,6 @@
                     [class.text-gray-500]="activeTab() !== 'tools'" [class.hover:bg-gray-50]="activeTab() !== 'tools'"
                     class="px-6 md:px-10 py-3 rounded-xl text-sm font-extrabold uppercase tracking-wide transition-all duration-300 ease-out transform hover:scale-105">
                     Tools
-                </button>
-
-                <button (click)="setActiveTab('casestudies')" [class.bg-gradient-to-r]="activeTab() === 'casestudies'"
-                    [class.from-brand-purple]="activeTab() === 'casestudies'"
-                    [class.to-brand-orange]="activeTab() === 'casestudies'"
-                    [class.text-white]="activeTab() === 'casestudies'" [class.shadow-lg]="activeTab() === 'casestudies'"
-                    [class.scale-105]="activeTab() === 'casestudies'"
-                    [class.text-gray-500]="activeTab() !== 'casestudies'"
-                    [class.hover:bg-gray-50]="activeTab() !== 'casestudies'"
-                    class="px-6 md:px-10 py-3 rounded-xl text-sm font-extrabold uppercase tracking-wide transition-all duration-300 ease-out transform hover:scale-105 md:ml-4">
-                    Case Studies
                 </button>
 
                 <button (click)="setActiveTab('usecases')" [class.bg-gradient-to-r]="activeTab() === 'usecases'"
@@ -90,46 +81,7 @@
                 </div>
             </div>
 
-            <!-- Case Studies Section -->
-            <div *ngIf="activeTab() === 'casestudies'" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                <div *ngFor="let study of caseStudies()"
-                    class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-gray-100">
-                    <div class="h-2 bg-brand-purple w-full"></div>
-                    <div class="p-8">
-                        <div
-                            class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <svg class="w-6 h-6 text-brand-purple" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3
-                            class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-purple transition-colors">
-                            {{ study.title }}
-                        </h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            {{ study.description }}
-                        </p>
-                        <a [routerLink]="['/casestudies', study.id]"
-                            class="inline-flex items-center text-brand-purple font-bold hover:text-brand-purple-dark transition-colors group/link cursor-pointer">
-                            Read More
-                            <svg class="ml-2 w-4 h-4 transform group-hover/link:translate-x-1 transition-transform"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M14 5l7 7m0 0l-7 7m7-7H3">
-                                </path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
 
-                <!-- Empty State for Case Studies -->
-                <div *ngIf="caseStudies().length === 0" class="col-span-full text-center py-12">
-                    <p class="text-gray-500 text-lg">No case studies currently available.</p>
-                </div>
-            </div>
 
             <!-- Use Cases Section (PPT Style) -->
             <div *ngIf="activeTab() === 'usecases'">
@@ -198,9 +150,9 @@
 
                             <!-- Image Display (If image exists) -->
                             <div *ngIf="uc.image" class="w-full cursor-pointer group/image"
-                                (click)="openImageModal(uc.image)">
+                                (click)="openImageModal(apiService.getImageUrl(uc.image))">
                                 <div class="relative overflow-hidden rounded-lg">
-                                    <img [src]="uc.image" [alt]="uc.title"
+                                    <img [src]="apiService.getImageUrl(uc.image)" [alt]="uc.title"
                                         class="w-full h-auto shadow-sm border border-gray-100 object-contain max-h-[500px] transition-transform duration-500 group-hover/image:scale-105">
                                 </div>
                             </div>

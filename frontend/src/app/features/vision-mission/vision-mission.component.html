@@ -33,14 +33,55 @@
     </div>
 
     <!-- Main Content -->
-    <div class="max-w-7xl mx-auto px-4 py-8">
-        <!-- Infographic Section - Blended -->
-        <div class="flex justify-center mb-12 animate-fade-in-scale">
-            <img src="assets/images/vision-mission/mission-infographic.avif" alt="Vision and Mission Infographic"
-                class="max-w-full md:max-w-4xl h-auto max-h-[600px] object-contain drop-shadow-xl hover:scale-[1.01] transition-transform duration-500">
+    <div
+        class="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden bg-white/50 py-12 lg:py-0">
+
+        <div *ngIf="loading" class="absolute inset-0 flex justify-center items-center z-50">
+            <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-brand-purple"></div>
         </div>
 
-        <!-- Detailed Text Section (Optional Supplemental) -->
+        <div *ngIf="!loading" class="w-full h-full absolute inset-0 z-0">
+            <!-- Blobs for extra background depth -->
+            <div
+                class="absolute top-0 left-0 w-[500px] h-[500px] bg-brand-purple/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2">
+            </div>
+            <div
+                class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-brand-orange/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2">
+            </div>
 
+            <!-- Main Background Image -->
+            <img [src]="apiService.getImageUrl('/media/mission-infographic.jpg')" alt="Vision and Mission Background"
+                class="w-full h-full object-cover lg:object-contain opacity-40 blur-[4px] scale-110 lg:scale-100 transition-transform duration-700">
+        </div>
+
+        <!-- Content Overlay -->
+        <div *ngIf="!loading"
+            class="relative z-10 w-full max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+
+            <!-- LEFT: VISION (Purple) -->
+            <div
+                class="flex flex-col items-center lg:items-end text-center lg:text-right bg-white/60 lg:bg-transparent p-6 lg:p-0 rounded-2xl backdrop-blur-sm lg:backdrop-blur-none shadow-lg lg:shadow-none">
+                <h2
+                    class="text-4xl lg:text-5xl font-extrabold text-brand-purple uppercase tracking-widest mb-6 drop-shadow-sm">
+                    Vision</h2>
+                <!-- Dynamic Content -->
+                <div *ngIf="vision" [innerHTML]="vision.content"
+                    class="text-gray-900 text-lg lg:text-xl font-bold leading-relaxed vision-content drop-shadow-sm">
+                </div>
+            </div>
+
+            <!-- RIGHT: MISSION (Orange) -->
+            <div
+                class="flex flex-col items-center lg:items-start text-center lg:text-left bg-white/60 lg:bg-transparent p-6 lg:p-0 rounded-2xl backdrop-blur-sm lg:backdrop-blur-none shadow-lg lg:shadow-none">
+                <h2
+                    class="text-4xl lg:text-5xl font-extrabold text-brand-orange uppercase tracking-widest mb-6 drop-shadow-sm">
+                    Mission</h2>
+                <!-- Dynamic Content -->
+                <div *ngIf="mission" [innerHTML]="mission.content"
+                    class="text-gray-900 text-lg lg:text-xl font-bold leading-relaxed mission-content drop-shadow-sm">
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>

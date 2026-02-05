@@ -28,7 +28,7 @@
                             <div
                                 class="absolute inset-0 bg-brand-purple/10 group-hover:bg-transparent transition-colors">
                             </div>
-                            <img src="http://127.0.0.1:8000/media/industries/careers/career_culture.jpg"
+                            <img [src]="apiService.getImageUrl('/media/industries/careers/career_culture.jpg')"
                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
                                 alt="Culture">
                         </div>
@@ -44,7 +44,7 @@
                             <div
                                 class="absolute inset-0 bg-brand-orange/10 group-hover:bg-transparent transition-colors">
                             </div>
-                            <img src="http://127.0.0.1:8000/media/industries/careers/career_growth.jpg"
+                            <img [src]="apiService.getImageUrl('/media/industries/careers/career_growth.jpg')"
                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
                                 alt="Growth">
                         </div>
@@ -59,7 +59,7 @@
                         <div class="h-24 w-full mb-4 rounded-xl overflow-hidden relative">
                             <div class="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors">
                             </div>
-                            <img src="http://127.0.0.1:8000/media/industries/about/about_innovation.jpg"
+                            <img [src]="apiService.getImageUrl('/media/industries/about/about_innovation.jpg')"
                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
                                 alt="Innovation">
                         </div>

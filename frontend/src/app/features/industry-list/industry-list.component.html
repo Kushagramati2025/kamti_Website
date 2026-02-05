@@ -15,7 +15,8 @@
             <div *ngFor="let industry of industries"
                 class="flex flex-col rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
                 <div class="flex-shrink-0">
-                    <img class="h-48 w-full object-cover" [src]="industry.banner_image || 'assets/placeholder.jpg'"
+                    <img class="h-48 w-full object-cover"
+                        [src]="apiService.getImageUrl(industry.banner_image) || 'assets/placeholder.jpg'"
                         [alt]="industry.name">
                 </div>
                 <div class="flex-1 bg-white p-6 flex flex-col justify-between">

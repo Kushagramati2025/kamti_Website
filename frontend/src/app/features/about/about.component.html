@@ -1,91 +1,23 @@
 <div class="bg-gray-50 min-h-screen">
     <!-- Dynamic Banner Carousel -->
     <app-banner-carousel pageContext="ABOUT"
-        fallbackTitle="About <span class='text-brand-purple'>Kushagra</span><span class='text-brand-orange'>mati</span>"
-        fallbackSubtitle="Serial Entrepreneurs, top notch technocrats and domain experts."
-        heightClass="h-[20vh] min-h-[160px]"
-        gradientClass="bg-gradient-to-r from-brand-purple/90 via-brand-purple/80 to-brand-orange/70 mix-blend-multiply">
+        fallbackTitle="<span class='text-brand-purple'>Kushagra</span><span class='text-brand-orange'>mati Analytics</span>"
+        fallbackSubtitle="A team of serial entrepreneurs and domain experts." heightClass="h-[20vh] min-h-[160px]"
+        gradientClass="bg-black/40">
     </app-banner-carousel>
 
-    <!-- Overlapping Values Section (Matching Careers Page Design) -->
-    <div class="relative w-full z-30 -mt-8 md:-mt-12 pb-4">
-        <div class="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-                <!-- Value 1 -->
-                <div
-                    class="group bg-white rounded-xl shadow-xl p-6 flex flex-col items-center text-center transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-brand-purple hover:shadow-2xl hover:shadow-brand-purple/20 h-full animate-fade-in-up">
-                    <div
-                        class="w-16 h-16 bg-brand-purple/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-purple transition-colors">
-                        <svg class="w-8 h-8 text-brand-purple group-hover:text-white" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-brand-dark mb-2">Freedom to Innovate</h3>
-                    <p class="text-sm text-gray-500">We encourage creativity and new ideas.</p>
-                </div>
-
-                <!-- Value 2 -->
-                <div class="group bg-white rounded-xl shadow-xl p-6 flex flex-col items-center text-center transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-brand-orange hover:shadow-2xl hover:shadow-brand-orange/20 h-full animate-fade-in-up"
-                    style="animation-delay: 100ms;">
-                    <div
-                        class="w-16 h-16 bg-brand-orange/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-orange transition-colors">
-                        <svg class="w-8 h-8 text-brand-orange group-hover:text-white" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-brand-dark mb-2">Tolerance for Failure</h3>
-                    <p class="text-sm text-gray-500">Embracing "fast fail" to accelerate learning.</p>
-                </div>
-
-                <!-- Value 3 -->
-                <div class="group bg-white rounded-xl shadow-xl p-6 flex flex-col items-center text-center transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-green-600 hover:shadow-2xl hover:shadow-green-600/20 h-full animate-fade-in-up"
-                    style="animation-delay: 200ms;">
-                    <div
-                        class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500 transition-colors">
-                        <svg class="w-8 h-8 text-green-600 group-hover:text-white" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-brand-dark mb-2">Individual Brilliance</h3>
-                    <p class="text-sm text-gray-500">Recognizing talent within the context of team play.</p>
-                </div>
-
-                <!-- Value 4 -->
-                <div class="group bg-white rounded-xl shadow-xl p-6 flex flex-col items-center text-center transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-600/20 h-full animate-fade-in-up"
-                    style="animation-delay: 300ms;">
-                    <div
-                        class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500 transition-colors">
-                        <svg class="w-8 h-8 text-blue-600 group-hover:text-white" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-brand-dark mb-2">Value-based Relationships</h3>
-                    <p class="text-sm text-gray-500">Mutually beneficial relationships with all stakeholders.</p>
-                </div>
-
-            </div>
-        </div>
-    </div>
 
     <!-- Main Content Section: Who We Are -->
-    <div class="relative pt-0 pb-12 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="relative pt-10 pb-12 px-4 sm:px-6 lg:px-8 bg-white">
         <div class="w-[90%] 2xl:w-[85%] mx-auto">
-            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
                 <!-- Image Side -->
                 <div class="relative opacity-0 animate-slide-in-right" style="animation-fill-mode: forwards;">
                     <div
-                        class="max-w-md mx-auto w-full h-64 sm:h-80 object-cover rounded-2xl shadow-2xl overflow-hidden transform hover:rotate-1 transition-transform duration-500">
-                        <img src="http://127.0.0.1:8000/media/industries/about/about_team.jpg" alt="Team collaboration"
-                            class="w-full h-full object-cover">
+                        class="w-full h-80 lg:h-[450px] rounded-2xl shadow-2xl overflow-hidden transform hover:rotate-1 transition-transform duration-500">
+                        <img [src]="apiService.getImageUrl('/media/industries/about/about_team.jpg')"
+                            alt="Team collaboration" class="w-full h-full object-cover">
                     </div>
                 </div>
 
@@ -96,7 +28,7 @@
                     <p class="text-base text-gray-600 mb-4 leading-relaxed">
                         Serial Entrepreneurs, top notch technocrats and domain experts come together to drive the
                         objectives of <span class="text-brand-purple font-bold">Kushagra</span><span
-                            class="text-brand-orange font-bold">mati</span>. This team of next gen leaders are
+                            class="text-brand-orange font-bold">mati Analytics</span>. This team of next gen leaders are
                         high-potential professionals with
                         rich experience in Data Analytics, Cloud computing, Artificial Intelligence & Machine Learning.
                         Each bring impressive track records to complement one another to positively disrupt and uncover
@@ -149,7 +81,7 @@
 
                 <div class="bg-white rounded-2xl shadow-xl overflow-hidden lg:grid lg:grid-cols-2">
                     <div class="relative h-64 lg:h-auto">
-                        <img src="http://127.0.0.1:8000/media/industries/about/ceo_placeholder.png"
+                        <img [src]="apiService.getImageUrl('/media/industries/about/ceo_placeholder.png')"
                             alt="Dr. Anant R. Koppar" class="absolute inset-0 w-full h-full object-cover object-top">
                     </div>
                     <div class="p-8 lg:p-12 flex flex-col justify-center">

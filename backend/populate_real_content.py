@@ -231,11 +231,41 @@ def populate():
     VisionMission.objects.all().delete()
     VisionMission.objects.create(
         type='Mission', 
-        content="To be a globally dominant platform-based services company in chosen industry segments by 2025. We strive to enhance the quality of life by building world-class products and solutions through the innovative application of technology. To become the most treasured business partner."
+        content="""
+        <ul class="space-y-4">
+            <li class="flex items-start">
+                <span class="mr-2 text-brand-orange font-bold">•</span>
+                <span>Enhance the quality of life by building world class products and solutions through innovative application of technology</span>
+            </li>
+            <li class="flex items-start">
+                <span class="mr-2 text-brand-orange font-bold">•</span>
+                <span>To become the most treasured business partner to all our customers with a customer-first philosophy</span>
+            </li>
+        </ul>
+        """
     )
     VisionMission.objects.create(
         type='Vision', 
-        content="To help companies make data-driven decisions. To be a dream destination for innovators. To be a predominantly employee-owned organization."
+        content="""
+        <ul class="space-y-4">
+            <li class="flex items-start justify-end text-right">
+                <span>To be a globally dominant platform based services company in the industry segments of our choice by 2025</span>
+                <span class="ml-2 text-brand-purple font-bold">•</span>
+            </li>
+            <li class="flex items-start justify-end text-right">
+                <span>Be a predominantly employee owned organization</span>
+                <span class="ml-2 text-brand-purple font-bold">•</span>
+            </li>
+            <li class="flex items-start justify-end text-right">
+                <span>Be a dream destination for every innovator to unleash their creativity by fostering a world class environment</span>
+                <span class="ml-2 text-brand-purple font-bold">•</span>
+            </li>
+            <li class="flex items-start justify-end text-right">
+                <span>To help companies make data driven business decisions</span>
+                <span class="ml-2 text-brand-purple font-bold">•</span>
+            </li>
+        </ul>
+        """
     )
     print("Updated Vision and Mission.")
 
@@ -330,7 +360,7 @@ def populate():
 
     # Ensure other page banners exist
     banner_configs = [
-        ('ABOUT', 'About <span class="text-brand-purple">Kushagra</span><span class="text-brand-orange">mati</span>', 'A team of serial entrepreneurs and domain experts.'),
+        ('ABOUT', '<span class="text-brand-purple">Kushagra</span><span class="text-brand-orange">mati Analytics</span>', 'A team of serial entrepreneurs and domain experts.'),
         ('SERVICES', 'Our Expertise', 'From Cloud Strategy to AI/ML Modelling and Industry Solutions.'),
         ('CONTACT', 'Get in Touch', 'Visit us in Vijayanagar, Bangalore.'),
         ('INDUSTRIES', 'Industry Solutions', 'Specialized solutions for Healthcare, Automotive, Logistics, and Pharma.'),

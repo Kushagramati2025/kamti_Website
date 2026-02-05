@@ -12,13 +12,14 @@ import { BannerCarouselComponent } from '../../shared/components/banner-carousel
   styleUrl: './services.component.css'
 })
 export class ServicesComponent implements OnInit {
+  apiService = inject(ApiService);
   activeTab: string = 'Kusha at glance';
 
   tabs = [
     'Kusha at glance',
     'Application Services',
     'Data Analytics',
-    'Embedded-consultancy'
+    'Embedded-Software'
   ];
 
   ngOnInit() {

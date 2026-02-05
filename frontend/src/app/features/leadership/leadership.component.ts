@@ -29,8 +29,6 @@ export class LeadershipComponent implements OnInit {
   }
 
   getImageUrl(path: string | null): string {
-    if (!path) return '';
-    if (path.startsWith('http')) return path;
-    return `http://127.0.0.1:8000${path}`;
+    return this.apiService.getImageUrl(path || '');
   }
 }

@@ -21,7 +21,7 @@
         <div *ngIf="activeTab === 'Kusha at glance'"
             class="w-[90%] max-w-6xl animate-fade-in-up flex justify-center perspective-1000">
             <div class="relative group transition-all duration-500 transform hover:-translate-y-2">
-                <img src="http://localhost:8000/media/service/Kusha at glance.avif" alt="Kusha at Glance"
+                <img [src]="apiService.getImageUrl('/media/service/Kusha at glance.avif')" alt="Kusha at Glance"
                     class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.01]">
             </div>
         </div>
@@ -30,7 +30,8 @@
         <div *ngIf="activeTab === 'Application Services'"
             class="w-[90%] max-w-6xl animate-fade-in-up flex justify-center perspective-1000">
             <div class="relative group transition-all duration-500 transform hover:-translate-y-2">
-                <img src="http://localhost:8000/media/service/Application Services.avif" alt="Application Services"
+                <img [src]="apiService.getImageUrl('/media/service/Application Services.avif')"
+                    alt="Application Services"
                     class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.01]">
             </div>
         </div>
@@ -39,16 +40,16 @@
         <div *ngIf="activeTab === 'Data Analytics'"
             class="w-[80%] max-w-5xl animate-fade-in-up flex justify-center perspective-1000">
             <div class="relative group transition-all duration-500 transform hover:-translate-y-2">
-                <img src="http://localhost:8000/media/service/data analytics info.avif" alt="Data Analytics"
+                <img [src]="apiService.getImageUrl('/media/service/data analytics info.avif')" alt="Data Analytics"
                     class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.01]">
             </div>
         </div>
 
-        <!-- Tab 4: Embedded-consultancy -->
-        <div *ngIf="activeTab === 'Embedded-consultancy'"
+        <!-- Tab 4: Embedded-Software -->
+        <div *ngIf="activeTab === 'Embedded-Software'"
             class="w-[80%] max-w-5xl animate-fade-in-up flex justify-center perspective-1000">
             <div class="relative group transition-all duration-500 transform hover:-translate-y-2">
-                <img src="http://localhost:8000/media/service/Embedded-consultancy.avif" alt="Embedded Consultancy"
+                <img [src]="apiService.getImageUrl('/media/service/Embedded-consultancy.avif')" alt="Embedded Software"
                     class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.01]">
             </div>
         </div>
