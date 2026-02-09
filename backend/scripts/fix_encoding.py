@@ -28,4 +28,10 @@ def check_encoding(filename):
         print(f"File access error: {e}")
 
 if __name__ == "__main__":
-    check_encoding("core/fixtures/core_data.json")
+    # Get the directory of this script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    # Construct absolute path to the fixture file (parent of scripts is backend)
+    fixture_path = os.path.join(script_dir, "..", "core", "fixtures", "core_data.json")
+    
+    print(f"Checking encoding for: {fixture_path}")
+    check_encoding(fixture_path)

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
     private http = inject(HttpClient);
-    private baseUrl = 'http://192.168.1.8:8000';
+    private baseUrl = 'http://localhost:8000';
     private apiUrl = `${this.baseUrl}/api`;
 
     getImageUrl(path: string): string {
